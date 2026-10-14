@@ -75,3 +75,26 @@ Netlify 部署：6acfc61c6d2b65496d29f38a；状态 ready；commit_ref 与 SEO �
 - OpenAI 爬虫：https://developers.openai.com/api/docs/bots
 - Perplexity 爬虫：https://docs.perplexity.ai/docs/resources/perplexity-crawlers
 - Anthropic 爬虫：https://privacy.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler
+
+## 2026-10-15 — 按 Google SEO 入门指南复查与改进
+
+本轮依据：https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=zh-cn 。结合当前单页科研主页，重点落实网址统一、清楚的链接文字和可访问资源，并检查既有标题、摘要、结构化数据、站点地图和内容结构。
+
+### 本轮新增
+
+- 网址统一：/index.html 和 mayu-homepage.netlify.app 的生产入口使用 301 跳转至 mayu.my；资源路径保持对应关系。www 已有跳转继续有效。
+- 描述性链接：六篇论文的完整标题直接链接至论文页面；资源文字使用 arXiv preprint、Publisher page、Source code、Model weights，辅助标签包含对应论文标题。
+- 身份数据：Person 的别名采用主页可见的中文姓名；ScholarlyArticle 的 sameAs 采用论文的其他版本链接，代码和模型作为页面资源链接提供。
+- 构建新增 _redirects；当前构建复制五个文件。研究介绍、论文作者、出版信息和英文页面语言沿用既有内容。
+
+### 本轮验收
+
+源码提交：4b6a1f814a019ddbf994a3a95a5e64d8a0c00c86。Netlify 部署：6acfc7c13cf80d991aec86ad，状态 ready，commit_ref 一致。前一轮本地说明提交随本轮推送同步到 GitHub。
+
+实际检查：正式首页、CSS、robots、sitemap 返回 200；/index.html、Netlify 默认域名首页和其 CSS 入口返回正确的 301；www 返回正确的 301；不存在的地址返回 404。线上首页包含六个完整论文标题链接及描述性资源标签。证据：qa/seo-guide-deploy-status.json 和 qa/seo-guide-live-checks.json。
+
+已检查 qa/seo-guide-desktop.png 与 qa/seo-guide-mobile.png。桌面视口及页面宽度均为 1440px；手机视口及页面宽度均为 390px，论文标题与资源链接排版正常。
+
+### 后续工作
+
+三个站长平台的所有权验证与主动提交仍待用户取得账户专属验证标签。随后通过平台实时抓取诊断与索引状态确认实际搜索引擎访问。建议维护 Google Scholar、GitHub 和学校资料中的正式主页链接；内容扩充优先采用经过论文原文核验、能帮助访客理解研究的介绍。
