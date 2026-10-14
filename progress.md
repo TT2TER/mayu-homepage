@@ -62,3 +62,11 @@
 - 重复生产入口已 301 统一；六篇论文标题可直接访问论文；资源链接和结构化身份信息已完善。
 - 九项线上响应检查通过，桌面与 390px 手机截图已检查。详情见 SEO.md / SEO.html，原始证据位于 qa/seo-guide-*。
 - 当前站长平台验证等待用户账户生成的验证标签。本轮验收文档已本地提交。
+
+## 2026-10-15 — Google / 百度验证标签发布
+
+- Google 与百度验证标签均已在生产首页 head 中核验。平台验证待用户点击确认。
+- 最新网站提交 `858bdec56c691fb6554bfd09d720ec1e70b416ad`；Netlify 部署 `6acfcb1d043a65b501f2c8a8` ready。
+- 新增百度专用 sitemap-baidu.xml，以 pc,mobile 标明同一网址的自适应页面；标准 sitemap 继续供 Google 使用。两个 XML 返回 200 且带 ETag。
+- 用户决定先配置 Google、百度，Bing 后续从 Google 导入。操作步骤与来源见 SEO.md / SEO.html；生产检查证据位于 qa/baidu-*。
+- 本轮验证与提交说明在本地提交。

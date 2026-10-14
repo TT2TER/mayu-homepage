@@ -98,3 +98,23 @@ Netlify 部署：6acfc61c6d2b65496d29f38a；状态 ready；commit_ref 与 SEO �
 ### 后续工作
 
 三个站长平台的所有权验证与主动提交仍待用户取得账户专属验证标签。随后通过平台实时抓取诊断与索引状态确认实际搜索引擎访问。建议维护 Google Scholar、GitHub 和学校资料中的正式主页链接；内容扩充优先采用经过论文原文核验、能帮助访客理解研究的介绍。
+
+## 2026-10-15 — Google / 百度验证配置与普通收录准备
+
+当前生产提交：858bdec56c691fb6554bfd09d720ec1e70b416ad；Netlify 部署 6acfcb1d043a65b501f2c8a8，状态 ready，commit_ref 一致。Google 验证标签于提交 354ffa9fe4dd68f1753d08e68ce6f021c9fed75f 发布，百度验证标签于当前提交发布；两个标签在生产首页 head 中各出现一次。平台上的验证结果待用户点击验证后确认。
+
+用户选定顺序：先配置 Google 和百度，随后由 Bing 导入 Google 站点。
+
+百度参考页面：https://ziyuan.baidu.com/college/courseinfo?id=267&page=2 。该页主题为普通收录，正文通过 curl 获取；网页检索工具遇到重定向循环。页面展示的章节更新时间为 2020-08-14，实际可用提交方式与额度应按登录后的平台页面确认。
+
+新增 https://mayu.my/sitemap-baidu.xml，使用百度文档定义的 mobile 命名空间和 type="pc,mobile"，声明首页采用桌面 / 手机共用的自适应页面。标准 https://mayu.my/sitemap.xml 继续供 Google 使用。两个 sitemap 都只包含正式首页这个独立网址，返回 200 / application/xml，并带有 ETag。build.mjs 当前复制六个文件。
+
+本地构建与精确标签 / XML 检查通过。生产首页、标准 sitemap、百度 sitemap、robots 使用 Baiduspider User-Agent 检查均返回 200。此检查使用本次环境网络出口，真实百度爬虫访问仍需平台抓取诊断确认。证据位于 qa/baidu-verification-build.log、qa/baidu-verification-deploy.json、qa/baidu-live-checks.json。
+
+### 验证后的提交步骤
+
+1. Google Search Console 点击验证，随后提交 https://mayu.my/sitemap.xml，并用网址检查工具检查正式首页。
+2. 百度搜索资源平台点击验证。在普通收录的手动提交入口提交 https://mayu.my/。如果账号提供 sitemap 提交功能，提交 https://mayu.my/sitemap-baidu.xml；按页面要求选择 URL 列表和合适的抓取周期。
+3. Bing 后续使用用户选定的 Google 导入方式，并确认站点地图已导入。
+
+当前单页主页采用一次首页提交与 sitemap 发现方式。后续新增独立页面时更新 sitemap；API 推送可在取得平台额度及安全配置推送凭据后设置。百度验证 meta 标签与 API 推送凭据用途不同；后者应存入本地凭据文件或托管平台的秘密变量。平台返回的提交数量与实际收录数量分别记录，实际收录以索引数据为准。
