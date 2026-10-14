@@ -6,20 +6,24 @@ Static academic homepage for Yu Ma. The page is in English with a bilingual name
 
 - `index.html`: biography, research interests, publications, funding, and profile links.
 - `style.css`: responsive typography and layout, based on https://dythuhu.cn/.
-- `.nojekyll`: serves the static files directly on GitHub Pages.
-- `netlify.toml`: optional Netlify configuration.
+- `build.mjs`: copies the website files into `dist/` for publication.
+- `netlify.toml`: Netlify build and publication configuration.
 
 ## Hosting
 
 GitHub repository: https://github.com/TT2TER/mayu-homepage
 
-GitHub Pages: https://tt2ter.github.io/mayu-homepage/
+Netlify: https://mayu-homepage.netlify.app/
 
-Publish from the `main` branch and repository root in Settings → Pages. Updating the website files and pushing to `main` triggers publication.
+Build command: `node build.mjs`. Publish directory: `dist`.
 
-Custom domain target: `mayu.my`. The domain is registered with Porkbun and its DNS is managed by Cloudflare. Domain binding is configured separately from the initial GitHub Pages deployment.
+The initial release uses the Netlify CLI with the existing account. GitHub stores the source. To enable publication after each push, import this repository in Netlify and use the supplied build settings.
 
-GitHub documentation: https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site
+For a manual update, run `node build.mjs 2>&1 | tee build.log`, then `netlify deploy --prod --no-build --dir dist 2>&1 | tee deploy.log`.
+
+Custom domain target: `mayu.my`. The domain is registered with Porkbun and its DNS is managed by Cloudflare. Domain binding is configured separately from the initial Netlify deployment.
+
+Netlify documentation: https://docs.netlify.com/start/quickstarts/deploy-from-repository/
 
 ## Content
 
