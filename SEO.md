@@ -118,3 +118,19 @@ Netlify 部署：6acfc61c6d2b65496d29f38a；状态 ready；commit_ref 与 SEO �
 3. Bing 后续使用用户选定的 Google 导入方式，并确认站点地图已导入。
 
 当前单页主页采用一次首页提交与 sitemap 发现方式。后续新增独立页面时更新 sitemap；API 推送可在取得平台额度及安全配置推送凭据后设置。百度验证 meta 标签与 API 推送凭据用途不同；后者应存入本地凭据文件或托管平台的秘密变量。平台返回的提交数量与实际收录数量分别记录，实际收录以索引数据为准。
+
+## 2026-10-15 — 百度验证连接失败诊断
+
+用户确认 Google 已验证成功，Bing 已从 Google 导入成功。百度为 https://mayu.my/，HTML 标签验证失败，平台原因为“无法连接到您网站的服务器”。
+
+当前生产首页的百度标签内容与用户提供值相符，位于 head 内。普通 User-Agent、Baiduspider 和完整百度 User-Agent 请求均取得 200；正式 HTTPS 首页跳转次数为零。HTTP 与 www 入口在最多两次跳转后取得带正确标签的页面。本次请求来源为当前检查环境，并非百度验证服务器。
+
+公共 DNS 对照：Google、Cloudflare 和 DNSPod 返回 104.21.88.66 / 172.67.173.161；阿里 DNS 两次返回 207.207.210.107 / 207.207.210.229。保留 mayu.my 的 SNI 与证书校验、绕过本机代理直连后，两条阿里返回地址均发生 TLS 握手失败；104.21.88.66 返回 200。DNS 差异及部分地址握手失败已复现，百度实际采用的解析地址待确认。
+
+按 Netlify 官方公布的 75.2.60.5 直连源站，HTTPS 证书校验通过，返回 200 且包含百度标签。当前通常访问路径也返回 200。当前环境 IPv6 直连失败；此结果仅说明当前出口无法完成该连接。
+
+证据：qa/baidu-failure-responses.json、qa/baidu-connectivity-checks.json、qa/baidu-dns-comparison.json、qa/baidu-dns-address-connectivity.json、qa/baidu-origin-comparison.json。
+
+下一步：结合百度重试结果和 Cloudflare DNS / 安全事件判断真实访问路径。如进行 DNS-only 路径对照，先确认现有根域名记录目标、保留回退信息，并取得用户对临时绕过 Cloudflare 代理及其安全防护的授权。随后复查公共 DNS、HTTPS、标签与百度验证结果。源站已通过直连检查，具体 CDN 调整尚未执行。
+
+百度官方验证故障说明：https://ziyuan.baidu.com/college/courseinfo?id=267&page=21 。Netlify 外部 DNS 说明：https://docs.netlify.com/manage/domains/configure-domains/configure-external-dns/ 。

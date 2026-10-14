@@ -70,3 +70,10 @@
 - 新增百度专用 sitemap-baidu.xml，以 pc,mobile 标明同一网址的自适应页面；标准 sitemap 继续供 Google 使用。两个 XML 返回 200 且带 ETag。
 - 用户决定先配置 Google、百度，Bing 后续从 Google 导入。操作步骤与来源见 SEO.md / SEO.html；生产检查证据位于 qa/baidu-*。
 - 本轮验证与提交说明在本地提交。
+
+## 2026-10-15 — 百度验证连接错误
+
+- 用户确认 Google 已验证、Bing 导入成功；百度 https://mayu.my/ 报无法连接服务器。
+- 标签、正式首页与模拟百度 User-Agent 响应正常；公共 DNS 结果有差异，一组地址 TLS 握手失败，Netlify HTTPS 源站直连成功。
+- 原始检查已保存于 qa/baidu-*，完整边界和后续对照步骤见 SEO.md / SEO.html。
+- 下一步需要百度重试 / Cloudflare 事件证据，或用户批准的临时 DNS-only 路径对照。
