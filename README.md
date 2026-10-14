@@ -17,7 +17,7 @@ Netlify: https://mayu-homepage.netlify.app/
 
 Build command: `node build.mjs`. Publish directory: `dist`.
 
-The initial release uses the Netlify CLI with the existing account. GitHub stores the source. To enable publication after each push, import this repository in Netlify and use the supplied build settings.
+The existing Netlify project is connected to `TT2TER/mayu-homepage`. Commits pushed to `main`, including edits committed through the GitHub website, automatically trigger a Netlify build and production deployment. The build runs `node build.mjs` and publishes `dist/`.
 
 For a manual update, run `node build.mjs 2>&1 | tee build.log`, then `netlify deploy --prod --no-build --dir dist 2>&1 | tee deploy.log`.
 
