@@ -77,3 +77,12 @@
 - 标签、正式首页与模拟百度 User-Agent 响应正常；公共 DNS 结果有差异，一组地址 TLS 握手失败，Netlify HTTPS 源站直连成功。
 - 原始检查已保存于 qa/baidu-*，完整边界和后续对照步骤见 SEO.md / SEO.html。
 - 下一步需要百度重试 / Cloudflare 事件证据，或用户批准的临时 DNS-only 路径对照。
+
+## 2026-10-15 — Google / Bing 真实平台验收
+
+- Google sitemap 已成功处理，发现 1 页；实时测试通过，个人资料结构化数据有效；首页已请求编入索引。
+- Bing sitemap 提交成功、正在处理；实时测试通过，SEO/GEO 问题为零；首页已请求编入索引。
+- 当前生产提交 `156a92f3ecb57f4039ad66a10dce6f1cd25f553c`，部署 `6acfcfa419176816085ab3f5` ready。
+- 原始部署与生产网页证据位于 qa/search-console-final-*；平台回执和截图见本次会话工具记录。完整记录见 SEO.md / SEO.html。
+- 用户决定保持 DNS / Cloudflare 原样，百度延后。一次复查任务 mayu-my 定于北京时间 2026-10-16 09:00。
+- Google/Bing 实际收录和 Bing sitemap 处理结果待后续平台确认。本轮记录已本地提交。

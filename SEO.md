@@ -134,3 +134,37 @@ Netlify 部署：6acfc61c6d2b65496d29f38a；状态 ready；commit_ref 与 SEO �
 下一步：结合百度重试结果和 Cloudflare DNS / 安全事件判断真实访问路径。如进行 DNS-only 路径对照，先确认现有根域名记录目标、保留回退信息，并取得用户对临时绕过 Cloudflare 代理及其安全防护的授权。随后复查公共 DNS、HTTPS、标签与百度验证结果。源站已通过直连检查，具体 CDN 调整尚未执行。
 
 百度官方验证故障说明：https://ziyuan.baidu.com/college/courseinfo?id=267&page=21 。Netlify 外部 DNS 说明：https://docs.netlify.com/manage/domains/configure-domains/configure-external-dns/ 。
+
+## 2026-10-15 — Google / Bing 平台提交与真实抓取验收
+
+用户要求保留当前 DNS 与 Cloudflare 代理配置，百度延后复查。通过 Safari 现有登录会话操作已验证的 https://mayu.my/ 资源。
+
+### Google
+
+- 提交 https://mayu.my/sitemap.xml，平台回执为“已成功提交站点地图”；详情最终为“已成功处理站点地图”，已发现网页 1 个。
+- 首页索引历史状态为“已发现 - 尚未编入索引”。
+- 实时抓取测试发现 ProfilePage 的六项对象类型错误，页面报告支持的主体类型为 Person / Organization。当前结构化数据由 ProfilePage 指向本人 Person，论文作为 hasPart 引用的 ScholarlyArticle；论文的全文网址指向 arXiv / 出版平台。
+- 修正论文与个人主页的主体关系后重新执行 Google 实时测试，平台显示“网址可编入 Google 索引”，个人资料页面“检测到了 1 项有效内容”。测试时间为北京时间 2026-10-15 02:53。
+- 点击请求编入索引，平台回执为“已请求编入索引”，并说明网址进入优先抓取队列。
+
+### Bing
+
+- 用户已由 Google 成功导入站点；本轮检查发现站点地图列表为空，已另行提交 https://mayu.my/sitemap.xml。
+- 提交回执为成功，站点地图状态 Processing；实际读取结果待后续确认。
+- 首页索引历史状态为已发现、尚未抓取。实时抓取成功并提示元描述长度问题；按平台 25–160 字符建议，将首页 description 调整为 151 个字符。
+- 再次实时抓取测试显示“URL can be indexed by Bing”和“No SEO/GEO issues found”。测试时间为北京时间 2026-10-15 02:54。
+- 提交首页索引申请，平台显示“Indexing requested.”。
+
+### 发布与证据
+
+最终网站源码提交：156a92f3ecb57f4039ad66a10dce6f1cd25f553c。Netlify 部署：6acfcfa419176816085ab3f5；state=ready，commit_ref 一致。
+
+本地 build 和 git diff --check 通过。生产 HTML 已核验 151 字符 description、八个结构化实体和修正后的主体关系。部署回执及线上 HTML 保存为 qa/search-console-final-deploy.json、qa/search-console-final-live.html；平台操作回执与 Google / Bing 成功页面截图已在本次会话工具记录中核验。
+
+上述结果确认真实平台抓取可用及索引申请已接收。Google 与 Bing 的实际索引收录和搜索展示待平台后续处理；Bing sitemap 处理结果待确认。
+
+### 延后复查
+
+用户要求继续保持原有 DNS 和 Cloudflare 代理配置。已在当前聊天创建一次百度复查任务，时间为北京时间 2026-10-16 09:00，automationId 为 mayu-my。复查包含公共 DNS、HTTPS、标签和既有登录会话中的一次百度 HTML 验证；遇到登录或验证码时交接给用户。相同错误且无新证据时保持安静，验证成功、新故障或需要用户操作时通知。Google / Bing 索引申请已提交，后续依据平台处理状态检查。
+
+Google ProfilePage 参考：https://developers.google.com/search/docs/appearance/structured-data/profile-page 。
