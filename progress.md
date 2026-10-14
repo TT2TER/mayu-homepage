@@ -94,3 +94,11 @@
 - 博客源码目录为 /Users/ma/Documents/TT2TER.Github.io，发布来源为 source 分支。导航栏新增“科研主页”，关于页新增“我的科研主页”及说明；提交 `cf6ec95f229adf7555406fbadea520cfd9eb36f4` 已推送。
 - npm run build 通过；首页和关于页构建产物含正确链接，截图已检查。线上 https://blog.1314171.xyz/ 与 /about/ 返回 200，均包含新链接。
 - 截图副本位于 qa/inbound-blog-nav.png、qa/inbound-blog-about.png。构建日志位于 /tmp/mayu-blog-link-build.log。
+
+## 2026-10-15 — 本轮收尾与博士帽入口验收
+
+- 科研主页完成搜索元数据、规范网址、抓取规则、站点地图及结构化数据；Google/Bing 平台的真实抓取与索引申请已在前条记录验收。实际收录及 Bing sitemap 读取结果待下一轮检查。
+- 博客科研主页入口现为导航博士帽、头像下博士帽图标；图标行顺序为博士帽、GitHub、微信、RSS。关于页采用现有简洁图标布局。
+- 博客最新发布提交 `91b239f8c6b354f4fb4b58b743cd0c40af7487f1`，Netlify 部署 `6acfd5fadaaf766c5dbc6189` ready。关于页、版本化 CSS、SVG 均返回 200；本地与线上截图已检查图标。
+- README 和 PLAN_NEXT 已更新为当前六文件构建、两个仓库的发布分支及百度/Google/Bing 后续检查流程。博客目录新增 README / progress 说明维护入口。
+- 本次 wrap-up 文档只本地提交；源码与公开 README 的先前发布已经完成。一次百度复查任务 mayu-my 当前 ACTIVE，安排在北京时间 2026-10-16 09:00。

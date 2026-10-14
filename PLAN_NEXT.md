@@ -1,35 +1,45 @@
-# 后续维护交接
+# 下一轮交接
 
 ## 起点
 
-v0.1 已上线，下一阶段由用户提出具体内容或视觉需求后开始。先读取 README.md、progress.md、index.html 和 style.css。
+先读 README.md、progress.md 和 SEO.md 的最新记录。本目录为 /Users/ma/Documents/projects/mayu-homepage；关联博客目录为 /Users/ma/Documents/TT2TER.Github.io。
 
-- 目录：`/Users/ma/Documents/projects/mayu-homepage`。
-- 仓库：`TT2TER/mayu-homepage`，分支 `main`。
-- 生产地址：https://mayu.my/ 。
-- Netlify 项目 ID：`4c8c43b4-cb8d-4fb8-8a46-06fde81dc2bd`。
+当前网站源码已发布；收尾文档提交保留在本地。开始工作时检查 git status、git log 和远程分支关系，再决定是否快进更新。
 
-## 修改流程
+## 第一优先：百度复查
 
-1. 检查工作区和本地提交；本次 wrap-up 文档仅在本地提交。
-2. 获取远程最新 main，并检查是否包含用户通过 GitHub 网页所做修改。工作区干净且分支关系允许时才使用 fast-forward 拉取。
-3. 按明确需求修改源文件。研究介绍采用适合公开主页的宽泛描述；论文元数据按原文和用户提供的 BibTeX 保持准确。
-4. 执行 `node build.mjs 2>&1 | tee build.log`。仅 index.html、style.css 被复制到 dist/。
-5. 用临时本机 HTTP 服务预览，截图检查涉及的页面区域；遇到线上浏览器读取超时时，使用同版本本地预览检查排版，并单独核验线上 HTML。
-6. 对保存的文字运行 no-negative-echo 检测。依据用户请求决定是否提交和推送；推送到 main 会自动发布。
-7. 用 Netlify 部署状态确认 commit_ref 对应本次提交、state 为 ready，并读取线上内容核验更改。
+用户决定保持 DNS 与 Cloudflare 代理原样，待解析稳定后再验证。已有一次自动复查任务 mayu-my，安排在北京时间 2026-10-16 09:00；先查看任务状态与最新项目记录，复用已有任务。
 
-## 注意事项
+1. 检查 https://mayu.my/ 的 HTTP 状态、HTTPS 与百度验证标签。
+2. 比较阿里、DNSPod、Google、Cloudflare 公共解析；必要时指定解析地址对照 TLS，保留域名 SNI 和证书校验。
+3. 打开已有百度账号的 https://mayu.my/ HTML 标签验证，重试一次并保存准确结果。遇到登录或验证码时交接用户。
+4. 成功后按账号可用功能提交首页及 https://mayu.my/sitemap-baidu.xml；保存提交回执。
+5. 若仍有连接错误，结合新 DNS 与 Cloudflare 安全事件证据诊断。DNS/CDN 配置变更需先取得用户确认。
 
-- 直接编辑 index.html / style.css；dist 是构建产物。
-- .netlify/ 中的本机关联状态不提交。认证信息沿用现有 CLI 配置，避免输出凭据和 webhook 地址。
-- 公共 DNS 查询在橙云状态下不能显示实际 CNAME 目标。
-- DNS、证书、重定向检查使用 `curl -q` 排除本地 curl 配置；必要时加 `--noproxy '*'` 对照，保留 TLS 校验。
-- mayu.my 为用户选定的主域名。DNS 负责定位，www 到根域名的 301 由 Netlify 返回。
+验收：平台明确显示验证成功，或保存新故障证据与具体所需用户操作。不同检查出口的访问结果分别记录。
 
-## 验收标准
+## 第二优先：Google / Bing 处理状态
 
-- 公开内容和布局符合本轮需求，新增或修改外部链接已核对。
-- 本地截图没有明显重叠、溢出或断行问题。
-- 若请求上线，GitHub 提交对应的 Netlify 自动发布为 ready，mayu.my 实际返回更新内容。
-- 若修改域名配置，重新检查根域名及 www 的证书和完整跳转链。
+- Google 已成功处理 sitemap，发现 1 页；实时测试确认首页可索引、个人资料结构化数据有效；索引申请已接收。
+- Bing sitemap 已提交、当次为 Processing；实时测试确认首页可索引、SEO/GEO 问题为零；索引申请已接收。
+- 下一轮查看实际索引状态、Bing sitemap 读取结果和平台新增错误。已有申请保持等待，出现新问题再处理。
+
+验收：区分平台已接收申请、实时抓取通过、已编入索引与搜索展示；按当前平台证据报告。
+
+## 博客维护
+
+博士帽入口在博客 source 分支的 _config.fluid.yml；SVG 为 source/img/graduation-cap.svg，CSS 位于 source/css/custom.css。关于页正文保持当前简洁布局。
+
+构建使用既有依赖：
+
+```sh
+npm run build 2>&1 | tee build.log
+```
+
+构建后截图检查、按请求推送 source，再核对 Netlify ready、commit_ref 与正式网页。更新自定义 CSS 时同步更换 custom_css 的版本参数。源码发布使用 GitHub source → Netlify 的现有流程。
+
+## 证据位置
+
+- 科研主页历史证据：qa/seo-*、qa/baidu-*、qa/search-console-final-*。
+- 博客入口与图标截图：qa/inbound-blog-*、qa/blog-cap-*。
+- GitHub/博客部署提交与回执：progress.md 最新条目。
