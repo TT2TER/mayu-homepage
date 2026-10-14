@@ -21,10 +21,14 @@ The existing Netlify project is connected to `TT2TER/mayu-homepage`. Commits pus
 
 For a manual update, run `node build.mjs 2>&1 | tee build.log`, then `netlify deploy --prod --no-build --dir dist 2>&1 | tee deploy.log`.
 
-Custom domain target: `mayu.my`. The domain is registered with Porkbun and its DNS is managed by Cloudflare. Domain binding is configured separately from the initial Netlify deployment.
+Primary custom domain: https://mayu.my/ . The domain is registered with Porkbun and its DNS is managed by Cloudflare. Both the primary domain and `www.mayu.my` use the Cloudflare proxy. Netlify redirects `www.mayu.my` to the primary domain and has issued a certificate covering both hostnames. The Powered by Netlify badge is disabled.
 
 Netlify documentation: https://docs.netlify.com/start/quickstarts/deploy-from-repository/
 
 ## Content
 
 Publication metadata follows the supplied BibTeX; preprint titles and author lists were also checked against arXiv. The Funding section lists the Beijing Natural Science Foundation Undergraduate "Qiyan" Program, with the role Grant Recipient and the period 2024–2026.
+
+## Maintenance
+
+See `progress.md` for deployment and verification receipts, and `PLAN_NEXT.md` for the maintenance workflow. Fetch the remote branch before editing to account for updates made through the GitHub website.
