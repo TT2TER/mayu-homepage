@@ -45,3 +45,13 @@
 - Netlify DNS：https://docs.netlify.com/manage/domains/configure-domains/configure-external-dns/
 - Netlify 根域名与 www 跳转：https://docs.netlify.com/manage/domains/manage-domains/manage-multiple-domains/
 - Cloudflare 根域名 CNAME flattening：https://developers.cloudflare.com/dns/cname-flattening/set-up-cname-flattening/
+
+## 2026-10-15 — SEO 配置发布
+
+- SEO 提交 `43839756ea95f17fb13393e740770675232aecec` 已推送至 main，Netlify 部署 `6acfc61c6d2b65496d29f38a` 为 ready。
+- 已加入 canonical、姓名与研究方向元数据、学者及六篇论文 JSON-LD、论文锚点、robots.txt 与 sitemap.xml，并更新构建复制列表。
+- 线上三类资源返回 200，八种搜索爬虫 User-Agent 请求返回包含 JSON-LD 的主页；这些检查使用本次环境的网络出口。
+- 桌面截图与 390px 手机视口截图已人工检查；手机 innerWidth / scrollWidth 均为 390。
+- 用户确认三个站长平台均尚未验证。下一步：用户登录平台取得 HTML 验证标签；加入首页并部署，再完成平台验证、sitemap 提交与抓取诊断。
+- 完整设置与验收记录见 SEO.md / SEO.html，原始部署状态、线上抓取和截图位于忽略目录 qa/。
+- 本次文档提交在本地保留，网站 SEO 代码已同步远程。
