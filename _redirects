@@ -1,0 +1,3 @@
+# Consolidate homepage aliases and the production hosting domain.
+/index.html https://mayu.my/ 301!
+https://mayu-homepage.netlify.app/* https://mayu.my/:splat 301!
