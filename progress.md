@@ -86,3 +86,11 @@
 - 原始部署与生产网页证据位于 qa/search-console-final-*；平台回执和截图见本次会话工具记录。完整记录见 SEO.md / SEO.html。
 - 用户决定保持 DNS / Cloudflare 原样，百度延后。一次复查任务 mayu-my 定于北京时间 2026-10-16 09:00。
 - Google/Bing 实际收录和 Bing sitemap 处理结果待后续平台确认。本轮记录已本地提交。
+
+## 2026-10-15 — GitHub 与博客主页链接
+
+- GitHub 个人资料的网站栏已核验指向 mayu.my。
+- TT2TER/TT2TER 的个人 README 新增科研主页链接，提交 `1cac2aad40604982a0b88b26cc59ee2bf72ffa72`；API 回读和 GitHub 渲染页面均确认链接存在。
+- 博客源码目录为 /Users/ma/Documents/TT2TER.Github.io，发布来源为 source 分支。导航栏新增“科研主页”，关于页新增“我的科研主页”及说明；提交 `cf6ec95f229adf7555406fbadea520cfd9eb36f4` 已推送。
+- npm run build 通过；首页和关于页构建产物含正确链接，截图已检查。线上 https://blog.1314171.xyz/ 与 /about/ 返回 200，均包含新链接。
+- 截图副本位于 qa/inbound-blog-nav.png、qa/inbound-blog-about.png。构建日志位于 /tmp/mayu-blog-link-build.log。
