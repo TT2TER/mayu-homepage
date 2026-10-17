@@ -1,0 +1,140 @@
+[
+  {
+    "id": "01",
+    "blackBody": "rgb(0, 0, 0)",
+    "blackHeading": "rgb(0, 0, 0)",
+    "venue": "rgb(54, 92, 112)",
+    "cueCount": 1,
+    "scripts": [
+      "scene-data.js",
+      "foreground-data.js",
+      "cairn-mask.js",
+      "candle-core.js",
+      "scene-core.js",
+      "market-candles.js",
+      "name-studies.js",
+      "signal-network.js",
+      "scene-depth.js",
+      "idle-market-sweep.js",
+      "study-j.js",
+      "about-options.js"
+    ],
+    "introRight": 575.984375,
+    "scrollWorked": true
+  },
+  {
+    "id": "02",
+    "blackBody": "rgb(0, 0, 0)",
+    "blackHeading": "rgb(0, 0, 0)",
+    "venue": "rgb(54, 92, 112)",
+    "cueCount": 1,
+    "scripts": [
+      "scene-data.js",
+      "foreground-data.js",
+      "cairn-mask.js",
+      "candle-core.js",
+      "scene-core.js",
+      "market-candles.js",
+      "name-studies.js",
+      "signal-network.js",
+      "scene-depth.js",
+      "idle-market-sweep.js",
+      "study-j.js",
+      "about-options.js"
+    ],
+    "introRight": 575.984375,
+    "scrollWorked": true
+  },
+  {
+    "id": "03",
+    "blackBody": "rgb(0, 0, 0)",
+    "blackHeading": "rgb(0, 0, 0)",
+    "venue": "rgb(54, 92, 112)",
+    "cueCount": 1,
+    "scripts": [
+      "scene-data.js",
+      "foreground-data.js",
+      "cairn-mask.js",
+      "candle-core.js",
+      "scene-core.js",
+      "market-candles.js",
+      "name-studies.js",
+      "signal-network.js",
+      "scene-depth.js",
+      "idle-market-sweep.js",
+      "study-j.js",
+      "about-options.js"
+    ],
+    "introRight": 577.2692337036133,
+    "scrollWorked": true
+  },
+  {
+    "id": "04",
+    "blackBody": "rgb(0, 0, 0)",
+    "blackHeading": "rgb(0, 0, 0)",
+    "venue": "rgb(54, 92, 112)",
+    "cueCount": 1,
+    "scripts": [
+      "scene-data.js",
+      "foreground-data.js",
+      "cairn-mask.js",
+      "candle-core.js",
+      "scene-core.js",
+      "market-candles.js",
+      "name-studies.js",
+      "signal-network.js",
+      "scene-depth.js",
+      "idle-market-sweep.js",
+      "study-j.js",
+      "about-options.js"
+    ],
+    "introRight": 575.984375,
+    "scrollWorked": true
+  },
+  {
+    "id": "05",
+    "blackBody": "rgb(0, 0, 0)",
+    "blackHeading": "rgb(0, 0, 0)",
+    "venue": "rgb(54, 92, 112)",
+    "cueCount": 1,
+    "scripts": [
+      "scene-data.js",
+      "foreground-data.js",
+      "cairn-mask.js",
+      "candle-core.js",
+      "scene-core.js",
+      "market-candles.js",
+      "name-studies.js",
+      "signal-network.js",
+      "scene-depth.js",
+      "idle-market-sweep.js",
+      "study-j.js",
+      "about-options.js"
+    ],
+    "introRight": 575.984375,
+    "scrollWorked": true
+  },
+  {
+    "id": "06",
+    "blackBody": "rgb(0, 0, 0)",
+    "blackHeading": "rgb(0, 0, 0)",
+    "venue": "rgb(54, 92, 112)",
+    "cueCount": 1,
+    "scripts": [
+      "scene-data.js",
+      "foreground-data.js",
+      "cairn-mask.js",
+      "candle-core.js",
+      "scene-core.js",
+      "market-candles.js",
+      "name-studies.js",
+      "signal-network.js",
+      "scene-depth.js",
+      "idle-market-sweep.js",
+      "study-j.js",
+      "about-options.js"
+    ],
+    "introRight": 575.984375,
+    "scrollWorked": true
+  }
+]

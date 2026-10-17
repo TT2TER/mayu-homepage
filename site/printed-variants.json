@@ -1,0 +1,6 @@
+[
+  {"id":"left-small","class":"pv-left","title":"Left · smaller type","说明":"保留照片左侧位置，介绍由22px减为20px；联系方式也采用逐行白底黑字。"},
+  {"id":"right-wide","class":"pv-wide","title":"Right · open column","说明":"移至人物上身右上方，31%页宽的单栏；20px文字保持较自然的句子长度。"},
+  {"id":"right-narrow","class":"pv-narrow","title":"Right · narrow margin","说明":"靠右边缘的23%窄栏，18.5px文字；将人物和姓名之间的空间保留下来。"},
+  {"id":"right-split","class":"pv-split","title":"Right · two passages","说明":"右侧将身份与研究分为上下两组逐行白底文字，联系方式置于其下；19px文字。"}
+]

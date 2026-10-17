@@ -1,0 +1,218 @@
+[
+  {
+    "id": "left",
+    "mode": "desktop",
+    "errors": [],
+    "overflow": false,
+    "copy": "I am Yu Ma (马煜), a Ph.D. student at Beijing Institute of Technology and Beijing Zhongguancun Academy. My research focuses on AI for finance and token (semantic) communication.\n\nyu.ma@bit.edu.cn\nGoogle Scholar\nGitHub\nBlog",
+    "rect": {
+      "x": 57.59375,
+      "y": 477.171875,
+      "width": 518.390625,
+      "height": 195.78125,
+      "top": 477.171875,
+      "right": 575.984375,
+      "bottom": 672.953125,
+      "left": 57.59375
+    },
+    "hero": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 782.265625,
+      "top": 0,
+      "right": 1440,
+      "bottom": 782.265625,
+      "left": 0
+    }
+  },
+  {
+    "id": "left",
+    "mode": "mobile",
+    "errors": [],
+    "overflow": false,
+    "copy": "I am Yu Ma (马煜), a Ph.D. student at Beijing Institute of Technology and Beijing Zhongguancun Academy. My research focuses on AI for finance and token (semantic) communication.\n\nyu.ma@bit.edu.cn\nGoogle Scholar\nGitHub\nBlog",
+    "rect": {
+      "x": 23.390625,
+      "y": 239.859375,
+      "width": 343.21875,
+      "height": 209.03125,
+      "top": 239.859375,
+      "right": 366.609375,
+      "bottom": 448.890625,
+      "left": 23.390625
+    },
+    "hero": {
+      "x": 0,
+      "y": 0,
+      "width": 390,
+      "height": 482.890625,
+      "top": 0,
+      "right": 390,
+      "bottom": 482.890625,
+      "left": 0
+    }
+  },
+  {
+    "id": "wide",
+    "mode": "desktop",
+    "errors": [],
+    "overflow": false,
+    "copy": "I am Yu Ma (马煜), a Ph.D. student at Beijing Institute of Technology and Beijing Zhongguancun Academy. My research focuses on AI for finance and token (semantic) communication.\n\nyu.ma@bit.edu.cn\nGoogle Scholar\nGitHub\nBlog",
+    "rect": {
+      "x": 936,
+      "y": 402.859375,
+      "width": 446.390625,
+      "height": 195.78125,
+      "top": 402.859375,
+      "right": 1382.390625,
+      "bottom": 598.640625,
+      "left": 936
+    },
+    "hero": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 782.265625,
+      "top": 0,
+      "right": 1440,
+      "bottom": 782.265625,
+      "left": 0
+    }
+  },
+  {
+    "id": "wide",
+    "mode": "mobile",
+    "errors": [],
+    "overflow": false,
+    "copy": "I am Yu Ma (马煜), a Ph.D. student at Beijing Institute of Technology and Beijing Zhongguancun Academy. My research focuses on AI for finance and token (semantic) communication.\n\nyu.ma@bit.edu.cn\nGoogle Scholar\nGitHub\nBlog",
+    "rect": {
+      "x": 23.390625,
+      "y": 239.859375,
+      "width": 343.21875,
+      "height": 209.03125,
+      "top": 239.859375,
+      "right": 366.609375,
+      "bottom": 448.890625,
+      "left": 23.390625
+    },
+    "hero": {
+      "x": 0,
+      "y": 0,
+      "width": 390,
+      "height": 482.890625,
+      "top": 0,
+      "right": 390,
+      "bottom": 482.890625,
+      "left": 0
+    }
+  },
+  {
+    "id": "narrow",
+    "mode": "desktop",
+    "errors": [],
+    "overflow": false,
+    "copy": "I am Yu Ma (马煜), a Ph.D. student at Beijing Institute of Technology and Beijing Zhongguancun Academy. My research focuses on AI for finance and token (semantic) communication.\n\nyu.ma@bit.edu.cn\nGoogle Scholar\nGitHub\nBlog",
+    "rect": {
+      "x": 1051.1875,
+      "y": 359.828125,
+      "width": 331.1875,
+      "height": 206.5625,
+      "top": 359.828125,
+      "right": 1382.375,
+      "bottom": 566.390625,
+      "left": 1051.1875
+    },
+    "hero": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 782.265625,
+      "top": 0,
+      "right": 1440,
+      "bottom": 782.265625,
+      "left": 0
+    }
+  },
+  {
+    "id": "narrow",
+    "mode": "mobile",
+    "errors": [],
+    "overflow": false,
+    "copy": "I am Yu Ma (马煜), a Ph.D. student at Beijing Institute of Technology and Beijing Zhongguancun Academy. My research focuses on AI for finance and token (semantic) communication.\n\nyu.ma@bit.edu.cn\nGoogle Scholar\nGitHub\nBlog",
+    "rect": {
+      "x": 23.390625,
+      "y": 239.859375,
+      "width": 343.21875,
+      "height": 207.03125,
+      "top": 239.859375,
+      "right": 366.609375,
+      "bottom": 446.890625,
+      "left": 23.390625
+    },
+    "hero": {
+      "x": 0,
+      "y": 0,
+      "width": 390,
+      "height": 480.890625,
+      "top": 0,
+      "right": 390,
+      "bottom": 480.890625,
+      "left": 0
+    }
+  },
+  {
+    "id": "split",
+    "mode": "desktop",
+    "errors": [],
+    "overflow": false,
+    "copy": "I am Yu Ma (马煜), a Ph.D. student at Beijing Institute of Technology and Beijing Zhongguancun Academy.My research focuses on AI for finance and token (semantic) communication.\n\nyu.ma@bit.edu.cn\nGoogle Scholar\nGitHub\nBlog",
+    "rect": {
+      "x": 921.59375,
+      "y": 391.125,
+      "width": 460.796875,
+      "height": 197.15625,
+      "top": 391.125,
+      "right": 1382.390625,
+      "bottom": 588.28125,
+      "left": 921.59375
+    },
+    "hero": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 782.265625,
+      "top": 0,
+      "right": 1440,
+      "bottom": 782.265625,
+      "left": 0
+    }
+  },
+  {
+    "id": "split",
+    "mode": "mobile",
+    "errors": [],
+    "overflow": false,
+    "copy": "I am Yu Ma (马煜), a Ph.D. student at Beijing Institute of Technology and Beijing Zhongguancun Academy.\nMy research focuses on AI for finance and token (semantic) communication.\n\nyu.ma@bit.edu.cn\nGoogle Scholar\nGitHub\nBlog",
+    "rect": {
+      "x": 23.390625,
+      "y": 239.859375,
+      "width": 343.21875,
+      "height": 242.03125,
+      "top": 239.859375,
+      "right": 366.609375,
+      "bottom": 481.890625,
+      "left": 23.390625
+    },
+    "hero": {
+      "x": 0,
+      "y": 0,
+      "width": 390,
+      "height": 515.890625,
+      "top": 0,
+      "right": 390,
+      "bottom": 515.890625,
+      "left": 0
+    }
+  }
+]

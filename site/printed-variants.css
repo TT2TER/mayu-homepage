@@ -1,0 +1,35 @@
+/* Printed introduction variants: 20px type, individual white lines. */
+.printed-study .scene-fade,.printed-study .scroll-cue{display:none}
+.printed-study .about-landscape .identity{position:absolute;top:61%;left:4%;width:36%;max-width:none;padding:0;background:none;border:0;border-radius:0;box-shadow:none;backdrop-filter:none;transform:none;color:#000;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:20px;line-height:1.65;font-weight:400;letter-spacing:-.02em;text-shadow:none}
+.printed-study .identity:before{display:none}
+.printed-study .identity p{display:block;margin:0;font-size:inherit;line-height:inherit}
+.printed-study .identity .intro-first,.printed-study .identity .intro-second{display:inline;margin:0;padding:2px 0;border:0;background:#fff;box-shadow:6px 0 #fff,-6px 0 #fff;box-decoration-break:clone;-webkit-box-decoration-break:clone;font-family:inherit;font-size:inherit;line-height:inherit}
+.printed-study .about-landscape .identity strong{font-weight:500}
+.printed-study .identity a{color:inherit;text-decoration:none;text-shadow:none}
+.printed-study .identity a:hover{text-decoration:underline;text-decoration-color:currentColor}
+.printed-study .identity .contact-row{display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:4px;margin-top:15px;padding:0;border:0;color:#000;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;line-height:1.6;font-weight:400;letter-spacing:0;text-shadow:none}
+.printed-study .identity .contact-row .links{display:flex;flex-wrap:wrap;gap:6px 18px;background:none}
+.printed-study .identity .contact-row>a,.printed-study .identity .contact-row .links a{display:inline-block;max-width:100%;margin:0;padding:0 5px;background:#fff;box-shadow:none;text-shadow:none;overflow-wrap:anywhere}
+.printed-study .identity .contact-row .links span{display:none}
+.printed-study.pv-left .about-landscape .identity{top:63%;left:4%;width:36%}
+.printed-study.pv-wide .about-landscape .identity{top:51.5%;left:65%;width:31%}
+.printed-study.pv-narrow .about-landscape .identity{top:46%;left:73%;width:23%;font-size:18.5px;line-height:1.6}
+.printed-study.pv-narrow .identity .contact-row{font-size:13px;margin-top:13px}
+.printed-study.pv-narrow .identity .contact-row .links{gap:5px 12px}
+.printed-study.pv-split .about-landscape .identity{top:50%;left:64%;width:32%;font-size:19px;line-height:1.6}
+.printed-study.pv-split .identity p{display:block}
+.printed-study.pv-split .identity .intro-second:before{content:"";display:block;height:13px;background:none}
+.printed-study.pv-split .identity .contact-row{margin-top:17px;font-size:13px}
+@media(max-width:1100px){
+ .printed-study .about-landscape{position:relative;inset:auto;padding:28px 6% 34px;background:#fff;color:#000}
+ .printed-study .about-landscape .identity,.printed-study.pv-left .about-landscape .identity,.printed-study.pv-wide .about-landscape .identity,.printed-study.pv-narrow .about-landscape .identity,.printed-study.pv-split .about-landscape .identity{position:relative;inset:auto;width:100%;font-size:19px;line-height:1.65;max-width:none}
+ .printed-study .identity .contact-row{font-size:14px}
+ .printed-study .hero{padding-bottom:0}
+ .printed-study.pv-split .identity p{display:block}
+ .printed-study.pv-split .identity .intro-second{display:block;margin-top:14px}
+}
+@media(max-width:600px){.printed-study .about-landscape .identity,.printed-study.pv-left .about-landscape .identity,.printed-study.pv-wide .about-landscape .identity,.printed-study.pv-narrow .about-landscape .identity,.printed-study.pv-split .about-landscape .identity{font-size:18px}.printed-study .identity .contact-row,.printed-study.pv-narrow .identity .contact-row,.printed-study.pv-split .identity .contact-row{font-size:13px}.printed-study .identity .contact-row .links{gap:7px 18px}}
+/* Selected left treatment: profile links remain white type over the rock. */
+.printed-study.pv-left .identity .contact-row{color:#fff;font-weight:500;text-shadow:0 1px 2px #000,0 2px 5px #000}
+.printed-study.pv-left .identity .contact-row>a,.printed-study.pv-left .identity .contact-row .links a{background:transparent;color:inherit;text-shadow:inherit}
+@media(max-width:1100px){.printed-study.pv-left .identity .contact-row{color:#000;text-shadow:none}}

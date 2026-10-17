@@ -1,0 +1,45 @@
+/* Six independent treatments of the same alpine introduction. */
+.intro-study .identity:before{display:none}
+.intro-study .about-landscape .identity{top:61.5%;left:4%;width:42%;max-width:680px}
+.intro-study .about-landscape .identity strong{font-weight:600}
+.intro-study .about-landscape .identity p{font-size:inherit;line-height:inherit}
+.intro-study .identity .contact-row{display:flex;flex-direction:column;align-items:flex-start;gap:0;margin-top:18px;line-height:1.65;font-size:15px;font-family:"Helvetica Neue",Arial,sans-serif}
+.intro-study .identity .contact-row .links{display:flex;flex-wrap:wrap;gap:24px}
+.intro-study .identity .contact-row .links a{margin:0}
+.intro-study .identity a{text-decoration:none}
+.intro-study .identity p a{text-decoration:underline;text-decoration-thickness:1px;text-decoration-color:#ffffff55}
+.intro-study .identity a:hover{text-decoration:underline;text-decoration-color:currentColor}
+.intro-study .identity a:focus-visible{outline:2px solid currentColor;outline-offset:4px}
+/* The photograph remains visible between every letter. */
+.intro-01 .identity{font-family:Georgia,"Times New Roman",serif;font-size:23px;line-height:1.42;letter-spacing:-.015em;color:white;text-shadow:0 1px 2px #000,0 2px 6px #000,0 0 18px #0008}
+.intro-01 .identity .contact-row{font-size:16px;text-shadow:inherit}
+/* A dark optical surface gives contemporary sans-serif a quiet field. */
+.intro-02 .about-landscape .identity{top:60.5%;width:43%;padding:23px 27px;background:#101b24a3;backdrop-filter:blur(7px);border:1px solid #ffffff32;border-radius:3px;box-shadow:0 9px 30px #0003;color:white;font-family:"Helvetica Neue",Arial,sans-serif;font-size:20px;line-height:1.55;text-shadow:none}
+.intro-02 .identity .contact-row{text-shadow:none;padding-top:13px;border-top:1px solid #ffffff3d}
+/* White paper deliberately sits in front of the landscape. */
+.intro-03 .about-landscape .identity{top:60.5%;width:43%;padding:24px 28px;background:#fffffff2;color:#000;box-shadow:0 4px 0 #0002,0 12px 30px #0003;font-family:Georgia,"Times New Roman",serif;font-size:21px;line-height:1.45;transform:rotate(-.55deg);text-shadow:none}
+.intro-03 .identity p a{text-decoration-color:#0005}
+.intro-03 .identity .contact-row{color:#000;text-shadow:none;font-size:14px;padding-top:12px;border-top:1px solid #0003}
+/* Identity and research form two compact, unequal columns. */
+.intro-04 .about-landscape .identity{top:62%;width:44%;font-family:"Helvetica Neue",Arial,sans-serif;font-size:19px;line-height:1.5;color:white;text-shadow:0 1px 2px #000,0 3px 8px #000}
+.intro-04 .identity p{display:grid;grid-template-columns:1.2fr 1fr;gap:30px}
+.intro-04 .intro-first{font-family:Georgia,serif;font-size:23px;line-height:1.3}
+.intro-04 .intro-second{padding-top:2px;padding-left:22px;border-left:1px solid #ffffffb3}
+.intro-04 .identity .contact-row{margin-top:22px;flex-direction:row;flex-wrap:wrap;gap:8px 22px;font-size:14px;text-shadow:inherit}
+/* A precise technical note on the rock, with no card boundary. */
+.intro-05 .about-landscape .identity{top:61.5%;width:43%;padding:12px 22px;border-left:3px solid white;background:linear-gradient(90deg,#000a,#0007 70%,transparent);font-family:Menlo,"Courier New",monospace;font-size:17px;line-height:1.7;letter-spacing:-.025em;color:white;text-shadow:0 1px 2px #000}
+.intro-05 .identity .contact-row{font-family:inherit;font-size:13px;letter-spacing:-.02em;text-shadow:inherit}
+.intro-05 .identity .contact-row .links{gap:19px}
+/* Individual printed lines create a photo-editorial collision. */
+.intro-06 .about-landscape .identity{top:61%;width:43%;font-family:"Helvetica Neue",Arial,sans-serif;font-size:23px;line-height:1.65;letter-spacing:-.025em;color:#000;text-shadow:none}
+.intro-06 .identity .intro-first,.intro-06 .identity .intro-second{background:#fff;box-shadow:7px 0 #fff,-7px 0 #fff;box-decoration-break:clone;-webkit-box-decoration-break:clone;padding:2px 0}
+.intro-06 .identity p strong{font-weight:500}
+.intro-06 .identity p a{text-decoration:none}
+.intro-06 .identity .contact-row{margin-top:17px;color:white;text-shadow:0 1px 2px #000,0 2px 5px #000;font-size:15px;font-weight:500}
+@media(min-width:1800px){.intro-study .identity .contact-row{font-size:18px}.intro-01 .identity{font-size:29px}.intro-02 .about-landscape .identity{font-size:25px}.intro-03 .about-landscape .identity{font-size:27px}.intro-04 .about-landscape .identity{font-size:24px}.intro-04 .intro-first{font-size:29px}.intro-05 .about-landscape .identity{font-size:22px}.intro-06 .about-landscape .identity{font-size:29px}}
+@media(max-width:1100px){.intro-study .about-landscape{padding:28px 6% 34px;background:white}.intro-study .about-landscape .identity{position:relative;inset:auto;width:100%;max-width:none;transform:none}.intro-study .identity .contact-row{font-size:15px}.intro-01 .identity{font-size:23px;line-height:1.5;color:#000;text-shadow:none}.intro-01 .identity p a{text-decoration-color:#0006}.intro-01 .identity .contact-row{color:#000;text-shadow:none}.intro-02 .about-landscape{background:#1c2a32}.intro-02 .about-landscape .identity{padding:0;border:0;background:none;box-shadow:none;backdrop-filter:none;font-size:19px}.intro-03 .about-landscape{background:#f0f0ed}.intro-03 .about-landscape .identity{padding:24px;font-size:21px}.intro-04 .about-landscape .identity{font-size:17px;color:#000;text-shadow:none}.intro-04 .intro-first{font-size:22px}.intro-04 .intro-second{border-color:#0006}.intro-04 .identity p a{text-decoration-color:#0006}.intro-04 .identity .contact-row{color:#000;text-shadow:none}.intro-05 .about-landscape{background:#182630}.intro-05 .about-landscape .identity{font-size:16px;background:none}.intro-06 .about-landscape{background:#384751}.intro-06 .about-landscape .identity{font-size:21px}.intro-06 .identity .contact-row{color:white}}
+@media(max-width:600px){.intro-study .identity .contact-row .links{gap:21px}.intro-04 .identity p{display:block}.intro-04 .intro-first,.intro-04 .intro-second{display:block}.intro-04 .intro-second{padding:0;margin-top:16px;border:0}.intro-04 .identity .contact-row{flex-direction:column;gap:2px}.intro-03 .about-landscape .identity{padding:21px}.intro-05 .identity .contact-row{font-size:12px}.intro-06 .about-landscape .identity{font-size:20px}}
+/* Keep the introduction entirely to the left of the person. */
+@media(min-width:1101px){.intro-study .about-landscape .identity{width:36%;max-width:620px}.intro-01 .identity{font-size:22px;line-height:1.45;text-shadow:0 1px 2px #000,0 3px 6px #000b}.intro-03 .about-landscape .identity{font-size:20px}.intro-04 .identity p{grid-template-columns:1.2fr 1fr;gap:20px}.intro-04 .intro-first{font-size:21px}.intro-04 .intro-second{padding-left:17px;font-size:18px}.intro-04 .identity .contact-row{font-size:14px;gap:6px 20px}.intro-05 .about-landscape .identity{font-size:16px}.intro-06 .about-landscape .identity{font-size:22px}}
+.intro-study .identity .contact-row{justify-content:flex-start}
+.intro-02 .identity .contact-row,.intro-05 .identity .contact-row{color:white}

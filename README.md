@@ -1,18 +1,17 @@
 # mayu.my 视觉设计
 
-当前确认基线为 **第十二轮**。正式开发副本位于 `site/`，其源码、照片和构建结果与第十二轮一致。
+当前确认版为左侧逐行白底介绍：介绍与联系方式整体下移，邮箱及个人链接采用白字与黑色阴影。山景、纯白英文姓名与第十二轮地形阴影延续；K 线支持即时鼠标高亮和静止 1.5 秒后的上、中、下层轮流扫亮。照片与白色正文采用硬边界，照片底部中央的白色箭头可点击进入 About。
 
-[打开当前主页](/Users/ma/Documents/projects/mayu-homepage-design/index.html)。首页入口会转到 `site/index.html`。
+- [打开当前主页](/Users/ma/Documents/projects/mayu-homepage-design/index.html)
+- [打开确认版源页面](/Users/ma/Documents/projects/mayu-homepage-design/site/printed-left.html)
+- [四个位置方案](/Users/ma/Documents/projects/mayu-homepage-design/site/printed-compare.html)
+- [六种介绍视觉方案](/Users/ma/Documents/projects/mayu-homepage-design/site/intro-six.html)
 
-## 目录
+## 源码与内容
 
-- `site/`：确认版的源码、原照、四套自动检查与单文件构建脚本。
-- `qa/`：确认版的测试日志、源码校验清单、整体画面与阴影局部图。
-- `progress.md`：本阶段确认记录。
-- `PLAN_NEXT.md`：其余页面视觉及首页融合的讨论交接。
-- 日期轮次目录：本地历轮预览，保留原文件，作为设计过程参考。
+固定开发位置为 `site/`。当前入口源码是 `printed-left.html`，介绍样式在 `printed-variants.css`，页面容器样式在 `printed-shell.css`。`study-j.js` 和 `idle-market-sweep.js` 负责鼠标与自动扫亮；`academic-navigation.js` 负责正文目录跳转与键盘焦点。
 
-Git 跟踪确认版源码、原照、关键核验材料和交接文档。日期轮次预览及生成的两份单文件 HTML 由 `.gitignore` 管理。
+About 起的正文格式直接复用现有学术主页 `mayu.my`。原样样式快照为 `mayu-current.css`，隔离后的样式为 `mayu-body-style.css`，各源页面中嵌入开放 Shadow DOM。2026-10-18 的线上样式与 `/Users/ma/Documents/projects/mayu-homepage/style.css` 一致；研究、论文与 Funding 采用现有源码。首页包含身份、研究方向和个人链接，白底 About 保留原文剩余内容。
 
 ## 构建与检查
 
@@ -20,9 +19,11 @@ Git 跟踪确认版源码、原照、关键核验材料和交接文档。日期�
 
 ```sh
 node site/build-single.mjs 2>&1 | tee /private/tmp/mayu-design-build.txt
-node --test site/test-market-candles.js site/test-network.js site/test-scene-core.js site/test-scene-data.js 2>&1 | tee /private/tmp/mayu-design-tests.txt
+node --test site/test-idle-market-sweep.js site/test-market-candles.js site/test-network.js site/test-scene-core.js site/test-scene-data.js 2>&1 | tee /private/tmp/mayu-design-tests.txt
 ```
 
-构建生成相同内容的 `site/index.html`、`site/interactive.html`，可直接本地打开。照片、样式和脚本内嵌在单文件中。当前检查为 50 项通过，详见 `qa/approved-tests.txt`。
+构建生成相同内容的 `site/index.html` 和 `site/interactive.html`，图片、样式与脚本全部内嵌，可直接本地打开。根目录 `index.html` 转到此构建入口。当前 54 项自动测试通过，记录在 `qa/final-approved/tests.txt`。
 
-日期轮次原稿与 `site/` 独立；后续工作以 `site/` 为开发位置。
+最终画面及构建一致性检查在 `qa/final-approved/`。正文与原主页样式逐项比对在 `qa/printed-variants/`，交互检查在 `qa/interaction-j/`。各阶段及 A 至 J 版、六种视觉方案、四个位置方案继续保留，便于回看。日期轮次目录和生成的两份单文件 HTML 由 `.gitignore` 管理。
+
+本仓库保存本地设计、源码、核验材料和确认记录。当前进度见 `progress.md`，后续交接见 `PLAN_NEXT.md`。

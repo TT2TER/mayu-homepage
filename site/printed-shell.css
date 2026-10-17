@@ -1,0 +1,10 @@
+.printed-study .hero{padding-bottom:0;background:#fff}.printed-study .scene-fade,.printed-study .scroll-cue{display:none}.printed-study>main{padding:0}.printed-study #academic-content{display:block;background:#fff;scroll-margin-top:0}.printed-study .hero{border-radius:0;border:0;box-shadow:none}
+
+@media print{.printed-study .hero,.printed-study>.skip{display:none}}
+
+/* White downward cue on the selected homepage photograph. */
+.printed-study.pv-left .page-down{position:absolute;left:50%;bottom:14px;transform:translateX(-50%);z-index:5;display:flex;align-items:center;justify-content:center;width:44px;height:44px;color:#fff;text-decoration:none;filter:drop-shadow(0 1px 2px #0009)}
+.page-down svg{width:27px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.page-down:hover{filter:drop-shadow(0 1px 3px #000c)}
+.page-down:focus-visible{outline:2px solid white;outline-offset:2px}
+@media(max-width:1100px){.printed-study.pv-left .page-down{bottom:auto;top:calc(100vw * 20.1 / 37 - 49px)}}

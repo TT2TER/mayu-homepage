@@ -81,8 +81,8 @@
     if(changing||active)raf=requestAnimationFrame(tick);else{lastFrame=0;if(live){const delay=network.nextWake(now-start);if(Number.isFinite(delay))wake=setTimeout(schedule,Math.max(1,delay));}}
   }
   function schedule(){clearTimeout(wake);wake=0;if(ready&&!document.hidden&&heroVisible&&!raf)raf=requestAnimationFrame(tick);}
-  function move(e){const b=canvas.getBoundingClientRect();target={x:C.x+(e.clientX-b.left)/b.width*C.width,y:C.y+(e.clientY-b.top)/b.height*C.height};schedule();}
-  canvas.addEventListener('pointermove',move);canvas.addEventListener('pointerdown',move);canvas.addEventListener('pointerleave',()=>{if(!review){target=null;schedule();}});
+  function move(e){const b=canvas.getBoundingClientRect();if(e.clientY<b.top||e.clientY>b.bottom)return;target={x:C.x+(e.clientX-b.left)/b.width*C.width,y:C.y+(e.clientY-b.top)/b.height*C.height};canvas.dataset.pointerX=target.x.toFixed(2);canvas.dataset.pointerY=target.y.toFixed(2);schedule();}
+  hero.addEventListener('pointermove',move);hero.addEventListener('pointerdown',move);hero.addEventListener('pointerleave',()=>{if(!review){target=null;schedule();}});
   canvas.addEventListener('keydown',e=>{if(!['ArrowLeft','ArrowRight','ArrowUp','ArrowDown','Escape'].includes(e.key))return;e.preventDefault();if(e.key==='Escape')target=null;else{const p=target||{x:2200,y:2400};target={x:clamp(p.x+({ArrowLeft:-120,ArrowRight:120}[e.key]||0),0,W),y:clamp(p.y+({ArrowUp:-100,ArrowDown:100}[e.key]||0),C.y,C.y+C.height)};}schedule();});
   function stop(){clearTimeout(wake);cancelAnimationFrame(raf);wake=raf=0;lastFrame=0;}
   document.addEventListener('visibilitychange',()=>document.hidden?stop():schedule());new IntersectionObserver(es=>{heroVisible=es[0].isIntersecting;if(heroVisible)schedule();else stop();}).observe(hero);reduced.addEventListener('change',schedule);

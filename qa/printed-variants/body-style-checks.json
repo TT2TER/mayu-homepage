@@ -1,0 +1,255 @@
+{
+  "reference": "https://mayu.my/",
+  "referenceComputedStyles": {
+    ".page": {
+      "fontFamily": "-apple-system, \"system-ui\", \"Segoe UI\", Roboto, Helvetica, Arial, \"Noto Sans\", sans-serif",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "25.92px",
+      "letterSpacing": "normal",
+      "color": "rgb(17, 17, 17)",
+      "marginTop": "0px",
+      "marginBottom": "0px",
+      "paddingTop": "60px",
+      "paddingBottom": "70px",
+      "borderBottomWidth": "0px",
+      "width": "900px"
+    },
+    "#about h2": {
+      "fontFamily": "Georgia, \"Times New Roman\", Times, serif",
+      "fontSize": "25px",
+      "fontWeight": "700",
+      "lineHeight": "40.5px",
+      "letterSpacing": "-0.5px",
+      "color": "rgb(17, 17, 17)",
+      "marginTop": "0px",
+      "marginBottom": "15px",
+      "paddingTop": "0px",
+      "paddingBottom": "0px",
+      "borderBottomWidth": "0px",
+      "width": "844px"
+    },
+    "#research p": {
+      "fontFamily": "-apple-system, \"system-ui\", \"Segoe UI\", Roboto, Helvetica, Arial, \"Noto Sans\", sans-serif",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "25.92px",
+      "letterSpacing": "normal",
+      "color": "rgb(17, 17, 17)",
+      "marginTop": "0px",
+      "marginBottom": "15.2px",
+      "paddingTop": "0px",
+      "paddingBottom": "0px",
+      "borderBottomWidth": "0px",
+      "width": "844px"
+    },
+    "#research h3": {
+      "fontFamily": "-apple-system, \"system-ui\", \"Segoe UI\", Roboto, Helvetica, Arial, \"Noto Sans\", sans-serif",
+      "fontSize": "18px",
+      "fontWeight": "700",
+      "lineHeight": "29.16px",
+      "letterSpacing": "normal",
+      "color": "rgb(17, 17, 17)",
+      "marginTop": "0px",
+      "marginBottom": "7px",
+      "paddingTop": "0px",
+      "paddingBottom": "0px",
+      "borderBottomWidth": "0px",
+      "width": "844px"
+    },
+    ".topic-list": {
+      "fontFamily": "-apple-system, \"system-ui\", \"Segoe UI\", Roboto, Helvetica, Arial, \"Noto Sans\", sans-serif",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "25.92px",
+      "letterSpacing": "normal",
+      "color": "rgb(17, 17, 17)",
+      "marginTop": "5.6px",
+      "marginBottom": "0px",
+      "paddingTop": "0px",
+      "paddingBottom": "0px",
+      "borderBottomWidth": "0px",
+      "width": "844px"
+    },
+    ".topic-list li": {
+      "fontFamily": "-apple-system, \"system-ui\", \"Segoe UI\", Roboto, Helvetica, Arial, \"Noto Sans\", sans-serif",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "25.92px",
+      "letterSpacing": "normal",
+      "color": "rgb(17, 17, 17)",
+      "marginTop": "8px",
+      "marginBottom": "8px",
+      "paddingTop": "0px",
+      "paddingBottom": "0px",
+      "borderBottomWidth": "0px",
+      "width": "844px"
+    },
+    ".publication h3": {
+      "fontFamily": "-apple-system, \"system-ui\", \"Segoe UI\", Roboto, Helvetica, Arial, \"Noto Sans\", sans-serif",
+      "fontSize": "16px",
+      "fontWeight": "700",
+      "lineHeight": "23.2px",
+      "letterSpacing": "normal",
+      "color": "rgb(17, 17, 17)",
+      "marginTop": "0px",
+      "marginBottom": "4px",
+      "paddingTop": "0px",
+      "paddingBottom": "0px",
+      "borderBottomWidth": "0px",
+      "width": "844px"
+    },
+    ".publication h3 a": {
+      "fontFamily": "-apple-system, \"system-ui\", \"Segoe UI\", Roboto, Helvetica, Arial, \"Noto Sans\", sans-serif",
+      "fontSize": "16px",
+      "fontWeight": "700",
+      "lineHeight": "23.2px",
+      "letterSpacing": "normal",
+      "color": "rgb(17, 17, 17)",
+      "marginTop": "0px",
+      "marginBottom": "0px",
+      "paddingTop": "0px",
+      "paddingBottom": "0px",
+      "borderBottomWidth": "0px",
+      "width": "auto"
+    },
+    ".authors": {
+      "fontFamily": "-apple-system, \"system-ui\", \"Segoe UI\", Roboto, Helvetica, Arial, \"Noto Sans\", sans-serif",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "lineHeight": "22.68px",
+      "letterSpacing": "normal",
+      "color": "rgb(85, 85, 85)",
+      "marginTop": "0px",
+      "marginBottom": "3px",
+      "paddingTop": "0px",
+      "paddingBottom": "0px",
+      "borderBottomWidth": "0px",
+      "width": "844px"
+    },
+    ".venue": {
+      "fontFamily": "-apple-system, \"system-ui\", \"Segoe UI\", Roboto, Helvetica, Arial, \"Noto Sans\", sans-serif",
+      "fontSize": "14px",
+      "fontWeight": "600",
+      "lineHeight": "22.68px",
+      "letterSpacing": "normal",
+      "color": "rgb(17, 17, 17)",
+      "marginTop": "0px",
+      "marginBottom": "3px",
+      "paddingTop": "0px",
+      "paddingBottom": "0px",
+      "borderBottomWidth": "0px",
+      "width": "844px"
+    },
+    ".pub-links": {
+      "fontFamily": "-apple-system, \"system-ui\", \"Segoe UI\", Roboto, Helvetica, Arial, \"Noto Sans\", sans-serif",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "lineHeight": "22.68px",
+      "letterSpacing": "normal",
+      "color": "rgb(17, 17, 17)",
+      "marginTop": "5px",
+      "marginBottom": "0px",
+      "paddingTop": "0px",
+      "paddingBottom": "0px",
+      "borderBottomWidth": "0px",
+      "width": "844px"
+    },
+    ".description": {
+      "fontFamily": "-apple-system, \"system-ui\", \"Segoe UI\", Roboto, Helvetica, Arial, \"Noto Sans\", sans-serif",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "lineHeight": "22.68px",
+      "letterSpacing": "normal",
+      "color": "rgb(85, 85, 85)",
+      "marginTop": "0px",
+      "marginBottom": "3px",
+      "paddingTop": "0px",
+      "paddingBottom": "0px",
+      "borderBottomWidth": "0px",
+      "width": "844px"
+    }
+  },
+  "results": [
+    {
+      "variant": "left",
+      "comparedSelectors": 12,
+      "comparedProperties": 12,
+      "mismatches": [],
+      "elements": {
+        "fade": 0,
+        "arrow": 0,
+        "intro": "20px",
+        "mail": "yu.ma@bit.edu.cn"
+      },
+      "navigation": {
+        "hash": "#publications",
+        "top": 43.828125,
+        "focused": "publications"
+      },
+      "skipFocus": "research",
+      "mobileOverflow": false,
+      "errors": []
+    },
+    {
+      "variant": "wide",
+      "comparedSelectors": 12,
+      "comparedProperties": 12,
+      "mismatches": [],
+      "elements": {
+        "fade": 0,
+        "arrow": 0,
+        "intro": "20px",
+        "mail": "yu.ma@bit.edu.cn"
+      },
+      "navigation": {
+        "hash": "#publications",
+        "top": 43.828125,
+        "focused": "publications"
+      },
+      "skipFocus": "research",
+      "mobileOverflow": false,
+      "errors": []
+    },
+    {
+      "variant": "narrow",
+      "comparedSelectors": 12,
+      "comparedProperties": 12,
+      "mismatches": [],
+      "elements": {
+        "fade": 0,
+        "arrow": 0,
+        "intro": "18.5px",
+        "mail": "yu.ma@bit.edu.cn"
+      },
+      "navigation": {
+        "hash": "#publications",
+        "top": 43.828125,
+        "focused": "publications"
+      },
+      "skipFocus": "research",
+      "mobileOverflow": false,
+      "errors": []
+    },
+    {
+      "variant": "split",
+      "comparedSelectors": 12,
+      "comparedProperties": 12,
+      "mismatches": [],
+      "elements": {
+        "fade": 0,
+        "arrow": 0,
+        "intro": "19px",
+        "mail": "yu.ma@bit.edu.cn"
+      },
+      "navigation": {
+        "hash": "#publications",
+        "top": 43.828125,
+        "focused": "publications"
+      },
+      "skipFocus": "research",
+      "mobileOverflow": false,
+      "errors": []
+    }
+  ]
+}
