@@ -1,0 +1,11 @@
+{
+  "approved_round": 12,
+  "built_entries_match_round12": {
+    "index.html": true,
+    "interactive.html": true
+  },
+  "sha256": {
+    "index.html": "99722ebe75b6b386e4e1ce4972f57a376164ed1fb3af53aae9ca3745f13ad9da",
+    "interactive.html": "99722ebe75b6b386e4e1ce4972f57a376164ed1fb3af53aae9ca3745f13ad9da"
+  }
+}

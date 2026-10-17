@@ -1,0 +1,25 @@
+{
+  "approved_round": 12,
+  "source": "2026-10-17-round-12",
+  "canonical": "site",
+  "sha256": {
+    "study.html": "13eec44fb425ebb1be304079df1eb17d58db8f737b7179f408aa54b1a4f521e7",
+    "study.css": "9e56263d87f45f57d2b907daebe13bef5c61f6207ff8c95ff7feb3f1799fbbaf",
+    "study.js": "0aebc5881a9babd1460750cfaf0314157d53718ea4613a7b931498a3accdd6e7",
+    "scene-data.js": "bab7b42063cfc7564a423ba3cef7a438029d038a320a6859c213db07e62edfe7",
+    "foreground-data.js": "60f708c339b8f27e778898a1ccb4b791430921625f5a697ca8084296764661dc",
+    "cairn-mask.js": "d0b1bffda49003db5f8d94ca0fcb43d54d6de5faebf10a92f5adae3169eadaff",
+    "candle-core.js": "500c6b7c907bf6b0d36eafb133916c5138e0e262d90e0b7dbc33defbcc9c8dab",
+    "scene-core.js": "08f96515589cd40ac62e3d654f0ffd9387354bfa564ee6cb6d5d99db7669d059",
+    "market-candles.js": "92a94665254e81a79f47a104ddd373f9b37b0fadcf5b5637475b2446631dae95",
+    "name-studies.js": "f9997430b34db624989e2a319b936de9f06f5a555d482452f972e2e3d5fc61db",
+    "signal-network.js": "7a17590c0da4e1ae6fb4117454d48dae461cfcb0bf2d312fd143b912888eb47b",
+    "scene-depth.js": "ba71e572b3d70767174d58556ce8a70d8bf948120b7770e0ef3054cf74212e36",
+    "build-single.mjs": "53408e252c8f5b068a26d282d559de395e4ed4cfc938297a419c979ddf31cdf0",
+    "test-scene-data.js": "bb46e809e2fbf34996c88cbdb56c55f8a05198671e3cf8654f9b10e90cc4d0f5",
+    "test-scene-core.js": "0c519dadb85752547f625740e90c84bd064fc6330036dfa594b2c8dbe2d798ed",
+    "test-market-candles.js": "191e27c96152828e7ec60d5d9283ae8ef25b4b15bfb26f5217a121d6e30350b7",
+    "test-network.js": "3f9fdb3569e5f4879b137b32090432ec8df4e2f0cd3ce318e6b7ead96822f102",
+    "assets/mountain-original.jpg": "089c79d86c43879eea3606b1dfdc4dafd15eb36b45bd98b5ba0f43e8d8ad5fda"
+  }
+}
