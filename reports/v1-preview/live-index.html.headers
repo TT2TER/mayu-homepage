@@ -5,12 +5,12 @@ Accept-Ranges: bytes
 Age: 0
 Cache-Control: public,max-age=0,must-revalidate
 Cache-Status: "Netlify Edge"; fwd=miss; fwd-status=200; stored
-Content-Length: 194809
+Content-Length: 226710
 Content-Type: text/html; charset=UTF-8
-Date: Sun, 18 Oct 2026 14:45:43 GMT
-Etag: "8dafc75b2a18ec9db42b4a4ad9b094f0-ssl"
+Date: Sun, 18 Oct 2026 17:06:13 GMT
+Etag: "13d1619f0c5e150adca25558ca0037b4-ssl"
 Server: Netlify
 Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
 Vary: Accept-Encoding
-X-Nf-Request-Id: 01M57QKHX3GJ30PMJCXWJ0MY4V
+X-Nf-Request-Id: 01M57ZMSZ3QRYSM87R3B099KYA
 X-Robots-Tag: noindex, nofollow

@@ -4,12 +4,12 @@ HTTP/1.1 200 OK
 Accept-Ranges: bytes
 Age: 0
 Cache-Control: public,max-age=0,must-revalidate
-Cache-Status: "Netlify Edge"; fwd=miss; fwd-status=200; stored
+Cache-Status: "Netlify Edge"; fwd=stale; fwd-status=304; stored
 Content-Length: 120
 Content-Type: text/plain; charset=UTF-8
-Date: Sun, 18 Oct 2026 14:45:45 GMT
+Date: Sun, 18 Oct 2026 17:06:14 GMT
 Etag: "c85afa2bf6771d63bb1175c1d0c271d0-ssl"
 Server: Netlify
 Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
-X-Nf-Request-Id: 01M57QKKSYMD6GESJV8WAMNEGS
+X-Nf-Request-Id: 01M57ZMVCBY0TKEQHH2YJ3A8XP
 X-Robots-Tag: noindex, nofollow

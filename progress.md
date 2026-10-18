@@ -131,3 +131,10 @@
 - 预览URL：https://mayu-v1-review-20261018--mayu-homepage.netlify.app/ 。Netlify部署：`6ad4db656da09179d0ff8c4b`，已完成线上HTTP及浏览器检查。
 - 17项HTTP检查通过，覆盖公开资源／入口与9种爬虫；桌面和手机线上截图与本地产物逐像素相同，刷新阅读位置保持2061px。生产回执仍为v0.1部署 `6acfcfa419176816085ab3f5`。
 - 本轮完整记录为 `reports/v1-preview/report.md` 与 `report.html`，提交祖先关系及产物散列均已检查。正式生产推送和v1.0标签等待用户最终确认。
+
+## 2026-10-19 — 手机字体兼容
+
+- 正式入口姓名改用内嵌固定字形素材，首帧等待素材解码；介绍重点文字采用本地 Helvetica Neue Medium 与 700 字重回退规则。源代码提交 `c1be8e1` 已并入本地 main。
+- 桌面截图变化像素 0；390/320px、DPR 3 的缺苹果字体模拟通过，姓名与阴影保持一致，重点文字为 700。六档响应式、57项测试、首帧单次绘制及SEO检查通过；独立审查发现的旧原型入口问题已修复复核。
+- 原预览URL已更新至部署 `6ad4fc5de05676031a65833b`；17项HTTP检查和线上桌面/手机截图对比通过。生产部署仍为 `6acfcfa419176816085ab3f5`。详细证据见 `reports/mobile-fonts/report.md`、`report.html`、`checks.json` 与 `reports/v1-preview/deploy-receipt.json`。
+- 实体手机应用内浏览器显示待用户验收；正式上线及 `v1.0` 标签等待最终确认。远端main维持原生产版本。
