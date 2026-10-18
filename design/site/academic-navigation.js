@@ -1,5 +1,27 @@
 (() => {
  const host=document.querySelector('#academic-content'),root=host?.shadowRoot||host;if(!root)return;
+ const positions=new Map();let serial=0,activeEntry,restoring=false;
+ function entry(){
+  const state=history.state&&typeof history.state==='object'?history.state:{};
+  if(state.__mayuEntry)return state.__mayuEntry;
+  const id=String(performance.timeOrigin)+'-'+(++serial);
+  history.replaceState({...state,__mayuEntry:id},'');return id;
+ }
+ function remember(){if(root===host&&!restoring&&history.state?.__mayuEntry===activeEntry)positions.set(activeEntry,[scrollX,scrollY]);}
+ if(root===host){
+  activeEntry=entry();
+  addEventListener('scroll',remember,{passive:true});
+  addEventListener('popstate',()=>{
+   const destination=entry();if(destination===activeEntry)return;
+   activeEntry=destination;restoring=false;const saved=positions.get(destination);if(!saved)return;
+   restoring=true;requestAnimationFrame(()=>{
+    if(activeEntry!==destination)return;
+    scrollTo({left:saved[0],top:saved[1],behavior:'instant'});
+    requestAnimationFrame(()=>{if(activeEntry===destination){restoring=false;remember();}});
+   });
+  });
+  addEventListener('hashchange',()=>{activeEntry=entry();});
+ }
  function go(hash,behavior,moveFocus=false){
   let id;try{id=decodeURIComponent(hash.slice(1))}catch{return false}
   const section=root.querySelector('#'+CSS.escape(id));if(!section)return false;
@@ -19,8 +41,11 @@
   if(!anchor||!anchor.getAttribute('href')?.startsWith('#')||e.defaultPrevented||e.button!==0||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;
   const hash=anchor.getAttribute('href');
   const keyboard=e.detail===0;
-  if(go(hash,matchMedia('(prefers-reduced-motion:reduce)').matches?'instant':'smooth',keyboard)){
-   e.preventDefault();history.pushState(null,'',hash);
+  let id;try{id=decodeURIComponent(hash.slice(1))}catch{return}
+  if(root.querySelector('#'+CSS.escape(id))){
+   e.preventDefault();remember();
+   history.pushState(null,'',hash);if(root===host)activeEntry=entry();
+   go(hash,matchMedia('(prefers-reduced-motion:reduce)').matches?'instant':'smooth',keyboard);
   }
  });
  // Light-DOM fragments and history positions are restored by the browser.
