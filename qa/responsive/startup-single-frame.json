@@ -1,0 +1,35 @@
+{
+  "samples": [
+    {
+      "width": 1440,
+      "iteration": 0,
+      "draws": 1
+    },
+    {
+      "width": 1440,
+      "iteration": 1,
+      "draws": 1
+    },
+    {
+      "width": 1440,
+      "iteration": 2,
+      "draws": 1
+    },
+    {
+      "width": 390,
+      "iteration": 0,
+      "draws": 1
+    },
+    {
+      "width": 390,
+      "iteration": 1,
+      "draws": 1
+    },
+    {
+      "width": 390,
+      "iteration": 2,
+      "draws": 1
+    }
+  ],
+  "passed": true
+}

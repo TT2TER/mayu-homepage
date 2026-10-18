@@ -1,11 +1,13 @@
 # mayu.my 视觉设计
 
+当前响应式 Worktree：`/Users/ma/Documents/projects/mayu-homepage-responsive`，分支：`responsive-hero`。窄屏保留照片上的姓名、介绍与联系方式：先固定左侧连续裁切，750px 以下按固定构图整体缩小。介绍文字采用更缓的缩小速度。核验记录见 `qa/responsive/report.md` 与 `report.html`，首次加载检查见 `qa/responsive/startup-notes.md`。触屏交互规则等待后续补充，当前保持已有交互。
+
 当前确认版为左侧逐行白底介绍：介绍与联系方式整体下移，邮箱及个人链接采用白字与黑色阴影。山景、纯白英文姓名与第十二轮地形阴影延续；K 线支持即时鼠标高亮和静止 1.5 秒后的上、中、下层轮流扫亮。照片与白色正文采用硬边界，照片底部中央的白色箭头可点击进入 About。
 
-- [打开当前主页](/Users/ma/Documents/projects/mayu-homepage-design/index.html)
-- [打开确认版源页面](/Users/ma/Documents/projects/mayu-homepage-design/site/printed-left.html)
-- [四个位置方案](/Users/ma/Documents/projects/mayu-homepage-design/site/printed-compare.html)
-- [六种介绍视觉方案](/Users/ma/Documents/projects/mayu-homepage-design/site/intro-six.html)
+- [打开当前主页](/Users/ma/Documents/projects/mayu-homepage-responsive/index.html)
+- [打开确认版源页面](/Users/ma/Documents/projects/mayu-homepage-responsive/site/printed-left.html)
+- [四个位置方案](/Users/ma/Documents/projects/mayu-homepage-responsive/site/printed-compare.html)
+- [六种介绍视觉方案](/Users/ma/Documents/projects/mayu-homepage-responsive/site/intro-six.html)
 
 ## 源码与内容
 
