@@ -1,0 +1,65 @@
+[
+  {
+    "width": 390,
+    "shadows": [
+      {
+        "text": "About",
+        "shadow": "rgb(0, 0, 0) 0px 1px 2px, rgb(0, 0, 0) 0px 2px 5px"
+      },
+      {
+        "text": "Research",
+        "shadow": "rgb(0, 0, 0) 0px 1px 2px, rgb(0, 0, 0) 0px 2px 5px"
+      },
+      {
+        "text": "Publications",
+        "shadow": "rgb(0, 0, 0) 0px 1px 2px, rgb(0, 0, 0) 0px 2px 5px"
+      },
+      {
+        "text": "Funding",
+        "shadow": "rgb(0, 0, 0) 0px 1px 2px, rgb(0, 0, 0) 0px 2px 5px"
+      }
+    ]
+  },
+  {
+    "width": 320,
+    "shadows": [
+      {
+        "text": "About",
+        "shadow": "rgb(0, 0, 0) 0px 1px 2px, rgb(0, 0, 0) 0px 2px 5px"
+      },
+      {
+        "text": "Research",
+        "shadow": "rgb(0, 0, 0) 0px 1px 2px, rgb(0, 0, 0) 0px 2px 5px"
+      },
+      {
+        "text": "Publications",
+        "shadow": "rgb(0, 0, 0) 0px 1px 2px, rgb(0, 0, 0) 0px 2px 5px"
+      },
+      {
+        "text": "Funding",
+        "shadow": "rgb(0, 0, 0) 0px 1px 2px, rgb(0, 0, 0) 0px 2px 5px"
+      }
+    ]
+  },
+  {
+    "width": 1440,
+    "shadows": [
+      {
+        "text": "About",
+        "shadow": "rgba(11, 25, 47, 0.6) 0px 1px 7px"
+      },
+      {
+        "text": "Research",
+        "shadow": "rgba(11, 25, 47, 0.6) 0px 1px 7px"
+      },
+      {
+        "text": "Publications",
+        "shadow": "rgba(11, 25, 47, 0.6) 0px 1px 7px"
+      },
+      {
+        "text": "Funding",
+        "shadow": "rgba(11, 25, 47, 0.6) 0px 1px 7px"
+      }
+    ]
+  }
+]
