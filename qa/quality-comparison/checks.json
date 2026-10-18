@@ -1,0 +1,104 @@
+{
+  "sliderButtons": true,
+  "dragDivider": true,
+  "detailSamples": [
+    {
+      "region": "mountain",
+      "zoom": "1",
+      "sameSize": true,
+      "width": 480,
+      "height": 320,
+      "differentPixels": true
+    },
+    {
+      "region": "mountain",
+      "zoom": "2",
+      "sameSize": true,
+      "width": 960,
+      "height": 640,
+      "differentPixels": true
+    },
+    {
+      "region": "mountain",
+      "zoom": "4",
+      "sameSize": true,
+      "width": 1920,
+      "height": 1280,
+      "differentPixels": true
+    },
+    {
+      "region": "stone",
+      "zoom": "1",
+      "sameSize": true,
+      "width": 480,
+      "height": 320,
+      "differentPixels": true
+    },
+    {
+      "region": "stone",
+      "zoom": "2",
+      "sameSize": true,
+      "width": 960,
+      "height": 640,
+      "differentPixels": true
+    },
+    {
+      "region": "stone",
+      "zoom": "4",
+      "sameSize": true,
+      "width": 1920,
+      "height": 1280,
+      "differentPixels": true
+    },
+    {
+      "region": "clothes",
+      "zoom": "1",
+      "sameSize": true,
+      "width": 480,
+      "height": 320,
+      "differentPixels": true
+    },
+    {
+      "region": "clothes",
+      "zoom": "2",
+      "sameSize": true,
+      "width": 960,
+      "height": 640,
+      "differentPixels": true
+    },
+    {
+      "region": "clothes",
+      "zoom": "4",
+      "sameSize": true,
+      "width": 1920,
+      "height": 1280,
+      "differentPixels": true
+    },
+    {
+      "region": "orange",
+      "zoom": "1",
+      "sameSize": true,
+      "width": 480,
+      "height": 320,
+      "differentPixels": true
+    },
+    {
+      "region": "orange",
+      "zoom": "2",
+      "sameSize": true,
+      "width": 960,
+      "height": 640,
+      "differentPixels": true
+    },
+    {
+      "region": "orange",
+      "zoom": "4",
+      "sameSize": true,
+      "width": 1920,
+      "height": 1280,
+      "differentPixels": true
+    }
+  ],
+  "mobileOverflow": false,
+  "errors": []
+}

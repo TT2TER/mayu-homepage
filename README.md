@@ -22,8 +22,10 @@ node site/build-single.mjs 2>&1 | tee /private/tmp/mayu-design-build.txt
 node --test site/test-idle-market-sweep.js site/test-market-candles.js site/test-network.js site/test-scene-core.js site/test-scene-data.js 2>&1 | tee /private/tmp/mayu-design-tests.txt
 ```
 
-构建生成相同内容的 `site/index.html` 和 `site/interactive.html`，图片、样式与脚本全部内嵌，可直接本地打开。根目录 `index.html` 转到此构建入口。当前 54 项自动测试通过，记录在 `qa/final-approved/tests.txt`。
+构建生成相同内容的 `site/index.html` 和 `site/interactive.html`，样式与脚本内嵌，照片与地形阴影保存在 `site/assets/`，可直接本地打开，移动页面时需保留资源目录。根目录 `index.html` 转到此构建入口。当前 54 项自动测试通过，最近记录在 `qa/startup/tests.txt`。
 
 最终画面及构建一致性检查在 `qa/final-approved/`。正文与原主页样式逐项比对在 `qa/printed-variants/`，交互检查在 `qa/interaction-j/`。各阶段及 A 至 J 版、六种视觉方案、四个位置方案继续保留，便于回看。日期轮次目录和生成的两份单文件 HTML 由 `.gitignore` 管理。
 
 本仓库保存本地设计、源码、核验材料和确认记录。当前进度见 `progress.md`，后续交接见 `PLAN_NEXT.md`。
+
+启动性能核验见 [报告](qa/startup/report.md) 与 [HTML 版](qa/startup/report.html)。展示照片为保留原图 Display P3 色彩配置的 2880×2160 JPEG，地形阴影使用预生成纹理。修改原照或地形后运行 `python3 site/prepare-startup-assets.py`，再执行常规构建。

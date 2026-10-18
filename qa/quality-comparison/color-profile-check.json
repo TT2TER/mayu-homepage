@@ -1,0 +1,11 @@
+{
+  "originalProfile": "Display P3",
+  "profileBytes": 536,
+  "optimizedProfileMatchesOriginal": true,
+  "orangePixels": 21189,
+  "comparisonSpace": "sRGB, original resized to optimized dimensions; orange clothing mask selected from reference",
+  "meanAbsoluteRgbErrorBefore": 12.566473170041059,
+  "meanAbsoluteRgbErrorAfter": 2.764453254046911,
+  "originalBytes": 7719244,
+  "optimizedBytes": 2650198
+}

@@ -1,0 +1,9 @@
+{
+  "idleSweep": true,
+  "pointerInterrupt": true,
+  "arrowNavigation": true,
+  "offscreenStops": true,
+  "reducedMotion": true,
+  "preparedDepthMatchesRuntime": true,
+  "errors": []
+}

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>原图与优化图 · 画质对比</title>
+<style>
+:root{color-scheme:light;--ink:#193043;--muted:#607484;--line:#dce4e8;--paper:#f4f7f8;--accent:#1d6471}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1504px;margin:auto;padding:38px 32px 64px}h1{font-size:30px;letter-spacing:-.04em;margin:0 0 8px}h2{font-size:23px;margin:0}p{margin:8px 0 20px;color:var(--muted)}a{color:var(--accent)}nav{display:flex;gap:12px;flex-wrap:wrap;margin:22px 0 40px}nav a,button,select{font:inherit;line-height:1.3;padding:10px 16px;background:white;border:1px solid var(--line);border-radius:6px;color:var(--ink)}nav a{text-decoration:none}button{cursor:pointer}button:hover,nav a:hover{border-color:var(--accent)}button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid #2194ac;outline-offset:3px}.toolbar{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin:16px 0}.toolbar label{display:flex;gap:10px;align-items:center}.stage{touch-action:pan-y;cursor:col-resize;position:relative;overflow:hidden;background:#dee5e9;aspect-ratio:1440/782}.stage>img{display:block;width:100%;height:100%;object-fit:cover}.overlay{position:absolute;inset:0;clip-path:inset(0 50% 0 0)}.overlay img{width:100%;height:100%;object-fit:cover;display:block}.handle{position:absolute;left:50%;top:0;bottom:0;border-left:2px solid white;filter:drop-shadow(0 0 2px #0008);pointer-events:none}.handle span{position:absolute;left:-22px;top:46%;width:44px;height:44px;border:2px solid white;border-radius:50%;color:white;background:#193043bd;display:grid;place-items:center;font-weight:bold}.badge{position:absolute;top:16px;background:#fffefa;color:#193043;padding:6px 12px;border-radius:4px;font-size:14px;box-shadow:0 1px 6px #0002}.badge.left{left:16px}.badge.right{right:16px}input[type=range]{width:min(560px,100%);accent-color:var(--accent)}.range-label{min-width:110px;font-variant-numeric:tabular-nums}.detail-section{margin-top:58px}.pair{display:grid;grid-template-columns:1fr 1fr;gap:20px}.photo-panel{min-width:0}h3{font-size:16px;margin:0 0 10px}.viewport{height:410px;overflow:auto;background:#e8eef1;border:1px solid var(--line)}canvas{display:block;margin:auto;max-width:none}.status{font-size:14px;color:var(--muted)}.links{margin-top:32px;display:flex;gap:24px;flex-wrap:wrap}.legend{font-size:14px;color:var(--muted)}@media(max-width:700px){main{padding:24px 16px}h1{font-size:25px}.pair{grid-template-columns:1fr}.viewport{height:340px}.badge{top:8px;padding:3px 7px;font-size:11px}.badge.left{left:8px}.badge.right{right:8px}.handle span{width:30px;height:30px;left:-16px}.toolbar{gap:10px}.detail-section{margin-top:38px}}
+</style>
+</head>
+<body><main>
+<h1>原图与优化图，放在一起看</h1>
+<p>原图：4032 × 3024 · 7.72 MB　／　优化图：2880 × 2160 · 2.65 MB · JPEG 质量参数 90</p>
+<p>两版均保留原图的 Display P3 色彩配置。</p>
+<nav aria-label="对比方式"><a href="#whole">① 首页整体</a><a href="#details">② 放大细节</a></nav>
+<section id="whole" aria-labelledby="whole-title"><h2 id="whole-title">① 首页整体对比</h2>
+<p>拖动分界线查看同一位置；两版采用相同排版、固定动画时间和浏览器截图尺寸。</p>
+<div class="stage" aria-label="左侧优化版，右侧原图版的首页对比">
+<img src="original-hero.png" alt="使用原始照片的首页" width="2880" height="1564">
+<div class="overlay" id="overlay"><img src="optimized-hero.png?color=display-p3" alt="使用优化照片的首页" width="2880" height="1564"></div>
+<div class="handle" id="handle"><span>↔</span></div>
+<span class="badge left">优化图</span><span class="badge right">原图</span>
+</div>
+<div class="toolbar"><label class="range-label" for="split">优化图 <output id="split-value">50%</output></label><input id="split" type="range" min="0" max="100" value="50" aria-label="调整优化图所占比例"><button id="show-original" type="button">全部看原图</button><button id="show-optimized" type="button">全部看优化图</button><button id="show-both" type="button">各看一半</button></div>
+</section>
+<section class="detail-section" id="details" aria-labelledby="detail-title"><h2 id="detail-title">② 同一区域的放大细节</h2>
+<p>左右显示同一块照片区域，便于比较纹理和边缘。选择 100%、200% 或 400% 查看；放大后可在图片内滚动。</p>
+<div class="toolbar"><label for="region">对比区域 <select id="region"><option value="mountain">雪山与冰川</option><option value="stone">石堆与岩面</option><option value="clothes">衣服纹理</option><option value="orange" selected>橙色衣物</option></select></label><label for="zoom">显示倍率 <select id="zoom"><option value="1">100%</option><option value="2" selected>200%</option><option value="4">400%</option></select></label><span class="status" id="status" role="status">正在载入照片…</span></div>
+<div class="pair"><div class="photo-panel"><h3>原图 · 4032 × 3024</h3><div class="viewport" id="original-scroll"><canvas id="original-detail" role="img" aria-label="原始照片的局部放大"></canvas></div></div><div class="photo-panel"><h3>优化图 · 2880 × 2160</h3><div class="viewport" id="optimized-scroll"><canvas id="optimized-detail" role="img" aria-label="优化照片同一区域的局部放大"></canvas></div></div></div>
+<p class="legend">100% 表示原图中的 1 像素对应 1 个 CSS 像素。两张图按相同视野绘制；优化图会按其实际分辨率缩放。</p>
+</section>
+<div class="links"><a href="original.html?review=still&amp;at=5000" target="_blank">单独打开原图版网页</a><a href="optimized.html?review=still&amp;at=5000" target="_blank">单独打开优化版网页</a></div>
+</main>
+<script>
+const split=document.getElementById('split'),overlay=document.getElementById('overlay'),handle=document.getElementById('handle');
+function setSplit(value){split.value=value;overlay.style.clipPath=`inset(0 ${100-value}% 0 0)`;handle.style.left=value+'%';document.getElementById('split-value').value=value+'%'}
+split.addEventListener('input',()=>setSplit(+split.value));document.getElementById('show-original').onclick=()=>setSplit(0);document.getElementById('show-optimized').onclick=()=>setSplit(100);document.getElementById('show-both').onclick=()=>setSplit(50);
+const stage=document.querySelector('.stage');let dragging=false;
+function dragSplit(e){const box=stage.getBoundingClientRect();setSplit(Math.round(Math.max(0,Math.min(100,(e.clientX-box.left)/box.width*100))))}
+stage.addEventListener('pointerdown',e=>{if(e.button!==0)return;dragging=true;stage.setPointerCapture(e.pointerId);dragSplit(e)});
+stage.addEventListener('pointermove',e=>{if(dragging)dragSplit(e)});stage.addEventListener('pointerup',()=>dragging=false);stage.addEventListener('pointercancel',()=>dragging=false);
+const paths=['../../site/assets/mountain-original.jpg','../../site/assets/mountain-display.jpg?color=display-p3'],images=paths.map(path=>{const im=new Image();im.src=path;return im});
+const regions={mountain:[800,380,480,320],stone:[1200,1000,480,320],clothes:[2000,1750,480,320],orange:[1700,1550,480,320]};
+let ready=false;
+function draw(){if(!ready)return;const box=regions[document.getElementById('region').value],zoom=+document.getElementById('zoom').value,dpr=devicePixelRatio||1;['original','optimized'].forEach((name,i)=>{const canvas=document.getElementById(name+'-detail'),scale=images[i].naturalWidth/4032,width=box[2]*zoom,height=box[3]*zoom;canvas.width=Math.round(width*dpr);canvas.height=Math.round(height*dpr);canvas.style.width=width+'px';canvas.style.height=height+'px';const ctx=canvas.getContext('2d');ctx.imageSmoothingEnabled=true;ctx.imageSmoothingQuality='high';ctx.drawImage(images[i],box[0]*scale,box[1]*scale,box[2]*scale,box[3]*scale,0,0,canvas.width,canvas.height)});for(const name of ['original','optimized'])document.getElementById(name+'-scroll').scrollTo(0,0);document.getElementById('status').textContent='同一区域 · '+zoom*100+'%';document.body.dataset.ready='true'}
+Promise.all(images.map(im=>im.decode())).then(()=>{ready=true;draw()}).catch(()=>{document.getElementById('status').textContent='图片读取失败，请保留项目的 site/assets 目录。'});
+addEventListener('resize',()=>requestAnimationFrame(draw));document.getElementById('region').onchange=draw;document.getElementById('zoom').onchange=draw;
+let syncing=false;for(const [a,b]of [['original','optimized'],['optimized','original']])document.getElementById(a+'-scroll').addEventListener('scroll',e=>{if(syncing)return;syncing=true;const target=document.getElementById(b+'-scroll');target.scrollLeft=e.target.scrollLeft;target.scrollTop=e.target.scrollTop;requestAnimationFrame(()=>syncing=false)});
+</script></body></html>

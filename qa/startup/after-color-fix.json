@@ -1,0 +1,102 @@
+[
+  {
+    "firstScene": 147.89999999850988,
+    "dom": 61.099999994039536,
+    "paint": [
+      {
+        "name": "first-paint",
+        "time": 96
+      },
+      {
+        "name": "first-contentful-paint",
+        "time": 96
+      }
+    ],
+    "longTasks": [
+      {
+        "start": 94.79999999701977,
+        "duration": 53
+      }
+    ]
+  },
+  {
+    "firstScene": 134.29999999701977,
+    "dom": 52.19999999552965,
+    "paint": [
+      {
+        "name": "first-paint",
+        "time": 68
+      },
+      {
+        "name": "first-contentful-paint",
+        "time": 68
+      }
+    ],
+    "longTasks": [
+      {
+        "start": 83.10000000149012,
+        "duration": 51
+      }
+    ]
+  },
+  {
+    "firstScene": 139.29999999701977,
+    "dom": 50.19999999552965,
+    "paint": [
+      {
+        "name": "first-paint",
+        "time": 64
+      },
+      {
+        "name": "first-contentful-paint",
+        "time": 64
+      }
+    ],
+    "longTasks": [
+      {
+        "start": 88.79999999701977,
+        "duration": 50
+      }
+    ]
+  },
+  {
+    "firstScene": 141.89999999850988,
+    "dom": 49.600000001490116,
+    "paint": [
+      {
+        "name": "first-paint",
+        "time": 76
+      },
+      {
+        "name": "first-contentful-paint",
+        "time": 76
+      }
+    ],
+    "longTasks": [
+      {
+        "start": 91.10000000149012,
+        "duration": 51
+      }
+    ]
+  },
+  {
+    "firstScene": 132.89999999850988,
+    "dom": 51.100000001490116,
+    "paint": [
+      {
+        "name": "first-paint",
+        "time": 68
+      },
+      {
+        "name": "first-contentful-paint",
+        "time": 68
+      }
+    ],
+    "longTasks": [
+      {
+        "start": 82.79999999701977,
+        "duration": 50
+      }
+    ]
+  }
+]

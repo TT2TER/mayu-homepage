@@ -1,0 +1,1 @@
+Comparison controls, 12 region/zoom combinations, mobile layout: passed.

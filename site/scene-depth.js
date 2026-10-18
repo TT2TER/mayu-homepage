@@ -117,6 +117,10 @@
     const mode=options.mode||'none';if(!ctx||mode==='none')return false;
     if(!['background','both'].includes(mode))return false;
     const input=resolve(options),p=input.params;
+    if(options.texture){
+      ctx.save();ctx.globalCompositeOperation='source-over';ctx.globalAlpha=1;ctx.imageSmoothingEnabled=true;
+      ctx.drawImage(options.texture,0,0,p.width,p.height);ctx.restore();return true;
+    }
     const key=[mode,p.width,p.height,p.resolution,p.backgroundHeight,p.backgroundStrength,p.boundaryBlend,p.foregroundHeight,p.foregroundStrength,p.cairnRadius,p.cairnStrength,p.color.join(',')].join(':');
     let entry=cache.find(e=>e.key===key&&e.data===input.data&&e.cairn===input.cairn&&e.terrain===input.terrain&&e.person===input.person);
     if(!entry){const texture=makeTexture({...options,mode});if(!texture)return false;entry={...input,key,texture};cache.push(entry);if(cache.length>6)cache.shift();}

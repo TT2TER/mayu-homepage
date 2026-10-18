@@ -8,7 +8,10 @@
   const fixedPointer=review&&params.has('x')&&params.has('y')?{x:Number(params.get('x')),y:Number(params.get('y'))}:null;
   let target=fixedPointer||(review==='hover'?{x:3000,y:770}:review==='foreground'?{x:2200,y:2400}:null),focus=target?{...target}:null,intensity=target?1:0;
   let ready=false,raf=0,wake=0,lastFrame=0,start=performance.now(),heroVisible=true;
-  const photo=new Image();photo.src='assets/mountain-original.jpg';
+  const photo=new Image();photo.fetchPriority='high';photo.src=canvas.dataset.photo||'assets/mountain-original.jpg';
+  const depth=canvas.dataset.depth?new Image():null;
+  if(depth)depth.src=canvas.dataset.depth;
+  const depthReady=depth?depth.decode().catch(()=>null):Promise.resolve();
   const cairnShape=new Path2D();cairnShape.moveTo(...CairnMask.points[0]);for(const p of CairnMask.points.slice(1))cairnShape.lineTo(...p);cairnShape.closePath();
   const network=SignalNetwork.create({nodes:SceneData.nodes,seed:'mayu-r10'});
   const markets=SceneData.ridges.map(r=>{const candles=MarketCandles.create(r,{variant:'expressive'});return{...r,profile:RidgeCandles.contour(r.points),candles,pricePath:MarketCandles.pricePath(r,candles)};});
@@ -68,7 +71,7 @@
   function render(now){
     const b=canvas.getBoundingClientRect(),w=b.width,h=b.height,dpr=canvas.width/w;
     ctx.setTransform(dpr,0,0,dpr,0,0);ctx.clearRect(0,0,w,h);ctx.save();ctx.scale(w/C.width,h/C.height);ctx.translate(-C.x,-C.y);
-    ctx.drawImage(photo,0,0,W,H);SceneDepth.draw(ctx,{mode:'background',data:SceneData,cairn:CairnMask});NameStudies.drawGroundShadow(ctx,{variant:'solid-flat',photo});
+    ctx.drawImage(photo,0,0,W,H);SceneDepth.draw(ctx,{mode:'background',data:SceneData,cairn:CairnMask,texture:depth?.naturalWidth?depth:null});NameStudies.drawGroundShadow(ctx,{variant:'solid-flat',photo});
     // Back to front: photo/depth, shadow, signals, chart lines, candle bodies,
     // opaque flat name, original foreground cairn, then letter shadows on its rock faces.
     network.render(ctx,{now:held??now,reducedMotion:reduced.matches});
@@ -95,5 +98,5 @@
   document.addEventListener('visibilitychange',()=>document.hidden?stop():(activity(),schedule()));new IntersectionObserver(es=>{heroVisible=es[0].isIntersecting;if(heroVisible){activity();schedule();}else stop();}).observe(hero);reduced.addEventListener('change',schedule);
   function resize(){const b=canvas.getBoundingClientRect(),dpr=Math.min(2,devicePixelRatio||1),w=Math.round(b.width*dpr),h=Math.round(b.height*dpr);if(canvas.width!==w||canvas.height!==h){canvas.width=w;canvas.height=h;}schedule();}
   new ResizeObserver(resize).observe(canvas);canvas.addEventListener('contextlost',()=>{canvas.dataset.context='lost';});canvas.addEventListener('contextrestored',resize);window.addEventListener('error',e=>{canvas.dataset.renderError=e.message;});
-  Promise.all([photo.decode(),document.fonts.ready]).then(()=>{ready=true;resize();}).catch(e=>console.error(e));
+  Promise.all([photo.decode(),depthReady,document.fonts.ready]).then(()=>{ready=true;resize();}).catch(e=>console.error(e));
 })();
