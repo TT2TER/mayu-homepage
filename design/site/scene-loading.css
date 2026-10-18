@@ -1,0 +1,13 @@
+/* The parser paints a small static frame while the full scene is decoding. */
+.printed-study.pv-left .hero .scene-preview {
+ position:absolute;left:0;top:0;display:block;pointer-events:none;
+ width:100%;height:calc(100vw * 25 / 37);object-fit:fill;
+}
+.printed-study.pv-left .hero #scene {opacity:0}
+.printed-study.pv-left .hero[data-scene-state="ready"] #scene {opacity:1}
+.printed-study.pv-left .hero[data-scene-state="ready"] .scene-preview {visibility:hidden}
+@media screen and (max-width:1439.98px) {
+ .printed-study.pv-left .hero .scene-preview {
+  width:var(--scene-width);height:calc(var(--scene-width) * 25 / 37);
+ }
+}

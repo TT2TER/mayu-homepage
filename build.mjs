@@ -2,6 +2,7 @@ import {mkdir,readFile,writeFile,copyFile,rm} from 'node:fs/promises';
 import {execFileSync} from 'node:child_process';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
+import {createHash} from 'node:crypto';
 const root=path.dirname(fileURLToPath(import.meta.url));
 execFileSync(process.execPath,[path.join(root,'design/site/build-single.mjs')],{stdio:'inherit'});
 let html=await readFile(path.join(root,'design/site/index.html'),'utf8');
@@ -35,13 +36,28 @@ html=html.replace('<canvas data-photo=',()=>'<h1 class="accessible-name">Yu Ma <
 html=html.replace('</head>','<style>.accessible-name{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style></head>');
 if(html.includes('shadowrootmode'))throw Error('Shadow content remained in production HTML');
 const dist=path.join(root,'dist');await rm(dist,{recursive:true,force:true});await mkdir(path.join(dist,'assets'),{recursive:true});
+const assets={};
+for(const name of ['mountain-display.avif','mountain-progressive.jpg','scene-depth.png','hero-preview.webp']){
+ const bytes=await readFile(path.join(root,'design/site/assets',name));
+ const ext=path.extname(name),stem=path.basename(name,ext),hash=createHash('sha256').update(bytes).digest('hex').slice(0,12);
+ const target=`assets/${stem}.${hash}${ext}`;
+ assets[name]={url:target,bytes:bytes.length,sha256:createHash('sha256').update(bytes).digest('hex')};
+ await writeFile(path.join(dist,target),bytes);
+ html=html.replaceAll('assets/'+name,target);
+}
 await writeFile(path.join(root,'index.html'),html);await writeFile(path.join(dist,'index.html'),html);
 for(const name of ['style.css','robots.txt','sitemap.xml','sitemap-baidu.xml','_redirects'])await copyFile(path.join(root,name),path.join(dist,name));
-for(const name of ['mountain-display.jpg','scene-depth.png'])await copyFile(path.join(root,'design/site/assets',name),path.join(dist,'assets',name));
+// Keep the published JPEG URL available for external references and old documents.
+await copyFile(path.join(root,'design/site/assets/mountain-display.jpg'),path.join(dist,'assets/mountain-display.jpg'));
+await copyFile(path.join(root,'design/site/assets/scene-depth.png'),path.join(dist,'assets/scene-depth.png'));
+await writeFile(path.join(dist,'asset-manifest.json'),JSON.stringify(assets,null,2));
 const preview=process.env.DEPLOY_TARGET==='preview';
+let headers=Object.values(assets).map(a=>`/${a.url}\n  Cache-Control: public, max-age=31536000, immutable\n`).join('\n');
+headers+='\n/assets/mountain-display.jpg\n  Cache-Control: public, max-age=14400, must-revalidate\n\n/assets/scene-depth.png\n  Cache-Control: public, max-age=14400, must-revalidate\n\n/\n  Cache-Control: public, max-age=0, must-revalidate\n\n/index.html\n  Cache-Control: public, max-age=0, must-revalidate\n';
 if(preview){
- await writeFile(path.join(dist,'_headers'),'/*\n  X-Robots-Tag: noindex, nofollow\n');
+ headers+='\n/*\n  X-Robots-Tag: noindex, nofollow\n';
  const redirects=await readFile(path.join(dist,'_redirects'),'utf8');
  await writeFile(path.join(dist,'_redirects'),redirects.replace('/index.html https://mayu.my/','/index.html /'));
 }
+await writeFile(path.join(dist,'_headers'),headers);
 console.log(JSON.stringify({built:'dist',preview,academicContent:'light DOM',canonical:'https://mayu.my/'}));

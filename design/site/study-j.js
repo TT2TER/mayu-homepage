@@ -1,6 +1,7 @@
 'use strict';
 (() => {
   const canvas=document.querySelector('#scene'),hero=document.querySelector('.hero'),ctx=canvas.getContext('2d');
+  if(!ctx){hero.dataset.sceneState='fallback';canvas.tabIndex=-1;return;}
   const W=4032,H=3024,C=SceneCore.camera,reduced=matchMedia('(prefers-reduced-motion:reduce)');
   const clamp=(v,a=0,b=1)=>Math.max(a,Math.min(b,v));
   const params=new URLSearchParams(location.search),review=params.get('review');
@@ -8,7 +9,17 @@
   const fixedPointer=review&&params.has('x')&&params.has('y')?{x:Number(params.get('x')),y:Number(params.get('y'))}:null;
   let target=fixedPointer||(review==='hover'?{x:3000,y:770}:review==='foreground'?{x:2200,y:2400}:null),focus=target?{...target}:null,intensity=target?1:0;
   let ready=false,raf=0,wake=0,lastFrame=0,start=performance.now(),heroVisible=true;
-  const photo=new Image();photo.fetchPriority='high';photo.src=canvas.dataset.photo||'assets/mountain-original.jpg';
+  const photo=document.querySelector('.scene-photo')||new Image();photo.fetchPriority='high';
+  if(!photo.getAttribute('src'))photo.src=canvas.dataset.photoAvif||canvas.dataset.photo||'assets/mountain-original.jpg';
+  async function decodePhoto(){
+    try{await photo.decode();}catch(error){
+      if(!canvas.dataset.photoAvif||(photo.currentSrc||photo.src)===new URL(canvas.dataset.photo,location.href).href)throw error;
+      photo.closest('picture')?.querySelectorAll('source').forEach(source=>source.remove());
+      photo.src=canvas.dataset.photo;
+      await photo.decode();
+    }
+    canvas.dataset.photoSelected=photo.currentSrc||photo.src;
+  }
   const depth=canvas.dataset.depth?new Image():null;
   if(depth)depth.src=canvas.dataset.depth;
   const depthReady=depth?depth.decode().catch(()=>null):Promise.resolve();
@@ -93,6 +104,7 @@
     if(!(review&&params.get('stone')==='off'))NameStudies.drawGroundShadow(ctx,{variant:'solid-flat',photo});
     ctx.restore();ctx.restore();
     canvas.dataset.rendered='true';canvas.dataset.preset=review||'final';canvas.dataset.context=ctx.isContextLost?.()?'lost':'ready';
+    hero.dataset.sceneState=canvas.dataset.context==='lost'?'fallback':'ready';
   }
   function tick(now){
     raf=0;if(!ready||document.hidden||!heroVisible)return;
@@ -122,6 +134,9 @@
     }
     schedule();
   }
-  new ResizeObserver(resize).observe(canvas);canvas.addEventListener('contextlost',()=>{canvas.dataset.context='lost';});canvas.addEventListener('contextrestored',resize);window.addEventListener('error',e=>{canvas.dataset.renderError=e.message;});
-  Promise.all([photo.decode(),depthReady,document.fonts.ready,NameStudies.ready]).then(()=>{ready=true;resize();}).catch(e=>console.error(e));
+  new ResizeObserver(resize).observe(canvas);canvas.addEventListener('contextlost',()=>{canvas.dataset.context='lost';hero.dataset.sceneState='fallback';});canvas.addEventListener('contextrestored',resize);window.addEventListener('error',e=>{canvas.dataset.renderError=e.message;});
+  Promise.all([decodePhoto(),depthReady,NameStudies.ready]).then(()=>{ready=true;resize();}).catch(e=>{
+    hero.dataset.sceneState='fallback';canvas.tabIndex=-1;
+    canvas.dataset.renderError=e.message;
+  });
 })();

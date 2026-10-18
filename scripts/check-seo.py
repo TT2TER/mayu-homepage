@@ -38,9 +38,9 @@ assert 'Grant Recipient' in current
 assert 'src="/cdn-cgi/' not in current
 preview='--production' not in sys.argv
 if preview:
- assert (root/'dist/_headers').read_text().strip()=='/*\n  X-Robots-Tag: noindex, nofollow'
+ assert '\n/*\n  X-Robots-Tag: noindex, nofollow' in (root/'dist/_headers').read_text()
 else:
- assert not (root/'dist/_headers').exists()
+ assert 'X-Robots-Tag' not in (root/'dist/_headers').read_text()
  assert (root/'dist/_redirects').read_bytes()==(root/'_redirects').read_bytes()
 result={'metadataMatchesV01':True,'verificationTagsPreserved':True,'canonical':'https://mayu.my/','structuredEntities':len(new.ld[0]['@graph']),'paperAnchors':new.papers,'lightDomContent':True,'duplicateIds':False,'robotsAndSitemapsMatchV01':True,'draftNoindexHeader':preview,'productionIndexable':not preview}
 (root/('reports/v1-preview/seo-checks.json' if preview else 'reports/v1-preview/seo-production-checks.json')).write_text(json.dumps(result,indent=2));print(json.dumps(result))

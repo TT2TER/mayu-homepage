@@ -16,8 +16,8 @@
 - `seo-head.html` 保存生产验证标签、canonical、分享元数据及8个JSON-LD实体。
 - `build.mjs` 构建设计入口，将学术正文转换为普通HTML并为其CSS添加作用范围，生成根目录 `index.html` 和 `dist/index.html`。根目录入口为可直接预览的构建结果。
 - 6篇论文使用既有锚点，关闭JavaScript时仍能读取正文；Google/百度验证标签、robots与两份sitemap保留。
-- `style.css` 保留原公开资源路径。部署图片仅包含展示照片与地形纹理，原照、测试和历史截图保存在源码中。
-- 正式构建保留索引策略及原301规则；预览构建增加 `X-Robots-Tag: noindex, nofollow`，并将预览的 `/index.html` 跳回当前预览根路径。
+- `style.css` 保留原公开资源路径。部署资源包含保留Display P3的全尺寸AVIF、渐进JPEG回退、静态首屏与地形纹理。构建时按内容散列命名；浏览器原生picture选择格式，失败时回退。
+- 正式构建保留索引策略及原301规则；散列资源缓存一年，HTML每次重新校验。预览构建增加 `X-Robots-Tag: noindex, nofollow`，并将预览的 `/index.html` 跳回当前预览根路径。
 
 ```sh
 node build.mjs 2>&1 | tee /private/tmp/mayu-production-build.txt
@@ -41,3 +41,9 @@ python3 scripts/check-http.py 2>&1 | tee /private/tmp/mayu-preview-http-check.tx
 ## 核验与交接
 
 本轮证据位于 `reports/v1-preview/`。历史检索配置和平台回执保留于 `SEO.md`、`SEO.html`、`progress.md`；设计历史记录位于 `design/`。触屏交互规则等待后续补充。
+
+## 2026-10-19 加载优化
+
+首屏先显示轻量静态画面，完整画布绘制后接管；图片或Canvas失败时保留静态内容。照片保持2880×2160与原Display P3配置；JPEG回退通过无损渐进编码生成。浏览器正常路径只下载一张完整照片。
+
+验证入口为 `node scripts/check-loading-build.cjs` 和 `node scripts/check-loading.cjs`。后者使用 `scripts/serve-performance.cjs` 提供的本地gzip HTTP对照服务，原版快照与测试结果位于 `reports/performance-20261019/`。浏览器启动沿用本机沙箱提权规则。CLI审查的默认模型被账号拒绝后，已通过会话内独立只读审查。Cloudflare HTML缓存沿用现有配置。详细结果与公网部署验收见该目录的report.md / report.html。
