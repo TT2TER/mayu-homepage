@@ -1,7 +1,7 @@
 {
-  "deploy_id": "6ad4fc5de05676031a65833b",
+  "deploy_id": "6ad506bd71a92b4f54268b8f",
   "site_id": "4c8c43b4-cb8d-4fb8-8a46-06fde81dc2bd",
   "deploy_url": "https://mayu-v1-review-20261018--mayu-homepage.netlify.app",
-  "logs": "https://app.netlify.com/projects/mayu-homepage/deploys/6ad4fc5de05676031a65833b",
-  "sourceCommit": "c1be8e16a31d77f5e2bc0c28fa37edc565151665"
+  "logs": "https://app.netlify.com/projects/mayu-homepage/deploys/6ad506bd71a92b4f54268b8f",
+  "sourceCommit": "aa9142456ebacc14b51000a7d46c35b18cff9570"
 }

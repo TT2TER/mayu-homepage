@@ -138,3 +138,9 @@
 - 桌面截图变化像素 0；390/320px、DPR 3 的缺苹果字体模拟通过，姓名与阴影保持一致，重点文字为 700。六档响应式、57项测试、首帧单次绘制及SEO检查通过；独立审查发现的旧原型入口问题已修复复核。
 - 原预览URL已更新至部署 `6ad4fc5de05676031a65833b`；17项HTTP检查和线上桌面/手机截图对比通过。生产部署仍为 `6acfcfa419176816085ab3f5`。详细证据见 `reports/mobile-fonts/report.md`、`report.html`、`checks.json` 与 `reports/v1-preview/deploy-receipt.json`。
 - 实体手机应用内浏览器显示待用户验收；正式上线及 `v1.0` 标签等待最终确认。远端main维持原生产版本。
+
+### 手机导航阴影补充
+
+- 小于 750px 时，About / Research / Publications / Funding 链接直接采用 `0 1px 2px #000, 0 2px 5px #000` 黑色双层文字阴影。
+- 320/390px、DPR 3 已截图检查；六档响应式与SEO检查通过，1440px桌面截图与修改前逐像素一致。证据：`reports/mobile-fonts/nav-shadows.json` 和 `nav-*.png`。
+- 预览更新至部署 `6ad506bd71a92b4f54268b8f`，源代码提交 `aa91424`。正式上线及v1.0标签仍等待用户确认。

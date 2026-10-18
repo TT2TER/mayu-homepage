@@ -2,14 +2,14 @@ HTTP/1.1 200 Connection established
 
 HTTP/1.1 200 OK
 Accept-Ranges: bytes
-Age: 1
+Age: 0
 Cache-Control: public,max-age=0,must-revalidate
-Cache-Status: "Netlify Edge"; hit; ttl=31535999
+Cache-Status: "Netlify Edge"; fwd=miss; fwd-status=200; stored
 Content-Length: 2650198
 Content-Type: image/jpeg
-Date: Sun, 18 Oct 2026 17:06:18 GMT
+Date: Sun, 18 Oct 2026 17:50:25 GMT
 Etag: "e418707721b09e1d8caf39ba22d638ce-ssl"
 Server: Netlify
 Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
-X-Nf-Request-Id: 01M57ZMZJ5H8VXX9HPVMDQGMPE
+X-Nf-Request-Id: 01M5825R7FCWHYEH6V6GKBCDPB
 X-Robots-Tag: noindex, nofollow

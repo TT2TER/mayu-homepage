@@ -7,9 +7,9 @@ Cache-Control: public,max-age=0,must-revalidate
 Cache-Status: "Netlify Edge"; fwd=miss; fwd-status=200; stored
 Content-Length: 151
 Content-Type: application/xml
-Date: Sun, 18 Oct 2026 17:06:15 GMT
+Date: Sun, 18 Oct 2026 17:50:22 GMT
 Etag: "3030c261c6c2f87b5a1a1fb101c5ac62-ssl"
 Server: Netlify
 Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
-X-Nf-Request-Id: 01M57ZMW97HWTHY9TKFEQBBGRV
+X-Nf-Request-Id: 01M5825MSJRNDW4S6DT0C7VNM1
 X-Robots-Tag: noindex, nofollow
