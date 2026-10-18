@@ -75,6 +75,23 @@
     const xs=new Set(points.map(p=>p[0]));for(const b of bars)if(Number.isFinite(b.x)&&b.x>=points[0][0]&&b.x<=points.at(-1)[0])xs.add(b.x);
     return [...xs].sort((a,b)=>a-b).map(x=>[x,at(points,x)]);
   }
+  function movingAveragePath(ridge,bars=[]){
+    const points=pointsOf(ridge);if(points.length<2||!bars.length)return[];
+    // Illustrative prehistory holds the boundary price for four prior periods.
+    const first=points[0],last=points.at(-1),window=Array(4).fill(first[1]);
+    const path=[[first[0],first[1]]];
+    for(const b of bars){
+      window.push(b.closeY);if(window.length>5)window.shift();
+      const y=window.reduce((sum,value)=>sum+value,0)/5;
+      if(b.x===path.at(-1)[0])path[path.length-1]=[b.x,y];else path.push([b.x,y]);
+    }
+    if(path.at(-1)[0]<last[0]){
+      // One simulated boundary close completes the visible end of the route.
+      window.push(last[1]);window.shift();
+      path.push([last[0],window.reduce((sum,value)=>sum+value,0)/5]);
+    }
+    return path;
+  }
   function create(ridge,{variant='corrected'}={}){
     if(variant!=='corrected'&&variant!=='expressive')throw new RangeError('Unknown market-candle variant');
     const points=pointsOf(ridge);if(points.length<2)return[];
@@ -109,5 +126,5 @@
         contourAnchor:anchors.get(i)?.kind||null,impulse:impulseIndices.has(i),variant,synthetic:true,volumeSynthetic:true,doji:Math.abs(closeY-openY)/(lowY-highY)<=.1};
     });
   }
-  return Object.freeze({create,pricePath,interpolate,PRICE_ORIGIN,PRICE_PER_PIXEL,BODY_WIDTH_SCALE});
+  return Object.freeze({create,pricePath,movingAveragePath,interpolate,PRICE_ORIGIN,PRICE_PER_PIXEL,BODY_WIDTH_SCALE});
 });

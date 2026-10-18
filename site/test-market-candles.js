@@ -56,3 +56,9 @@ test('variants are deterministic, do not mutate geometry and load through the br
   const before=JSON.stringify(Data);for(const r of Data.ridges){const a=Market.create(r);Market.create(r,{variant:'expressive'});assert.deepEqual(Market.create(r),a);}assert.equal(JSON.stringify(Data),before);assert.throws(()=>Market.create(Data.ridges[0],{variant:'unknown'}),RangeError);assert.throws(()=>Market.create(null),TypeError);
   const context={SceneCore:Core,RidgeCandles:Ridge};vm.runInNewContext(fs.readFileSync(require.resolve('./market-candles.js'),'utf8'),context);assert.equal(typeof context.MarketCandles.create,'function');assert.equal(typeof context.MarketCandles.pricePath,'function');assert.equal(context.MarketCandles.create(Data.ridges[0]).length,90);
 });
+
+ test('display MA5 uses explicit prehistory and reaches both route boundaries',()=>{
+  const ridge={points:[[0,10],[100,70]]},bars=[{x:10,closeY:20},{x:30,closeY:30},{x:50,closeY:40},{x:70,closeY:50},{x:90,closeY:60}];
+  assert.deepEqual(Market.movingAveragePath(ridge,bars),[[0,10],[10,12],[30,16],[50,22],[70,30],[90,40],[100,50]]);
+  for(const r of Data.ridges){const bs=Market.create(r,{variant:'expressive'}),before=JSON.stringify(bs),path=Market.movingAveragePath(r,bs),lookup=new Map(path);assert.equal(path[0][0],r.points[0][0]);assert.equal(path.at(-1)[0],r.points.at(-1)[0]);for(let i=4;i<bs.length;i++)assert.equal(lookup.get(bs[i].x),bs[i].ma5Y);assert.equal(JSON.stringify(bs),before);for(let i=1;i<path.length;i++)assert.ok(path[i][0]>path[i-1][0]);assert.ok(path.every(p=>p.every(Number.isFinite)));}
+ });

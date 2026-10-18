@@ -1,0 +1,9 @@
+{
+  "browser": "Safari",
+  "entry": "site/index.html",
+  "mouseResearchSectionOutlineAbsent": true,
+  "reloadReadingPositionBefore": 0.8527552,
+  "reloadReadingPositionAfter": 0.8527552,
+  "positionMetric": "native accessibility scrollbar value",
+  "beforeAfterScreenshotsInspected": true
+}

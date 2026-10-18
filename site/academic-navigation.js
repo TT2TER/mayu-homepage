@@ -1,5 +1,5 @@
 (() => {
- const root=document.querySelector('#academic-content')?.shadowRoot;if(!root)return;
+ const host=document.querySelector('#academic-content'),root=host?.shadowRoot||host;if(!root)return;
  function go(hash,behavior,moveFocus=false){
   let id;try{id=decodeURIComponent(hash.slice(1))}catch{return false}
   const section=root.getElementById(id);if(!section)return false;
@@ -24,5 +24,7 @@
   }
  });
  addEventListener('hashchange',()=>go(location.hash,'instant'));
- if(location.hash)requestAnimationFrame(()=>go(location.hash,'instant'));
+ const navigation=performance.getEntriesByType('navigation')[0];
+ // Browser restoration owns reload and history positions; only new links need a hash jump.
+ if(location.hash&&navigation?.type==='navigate')requestAnimationFrame(()=>go(location.hash,'instant'));
 })();
