@@ -1,0 +1,44 @@
+[
+  {
+    "repository": "design",
+    "branch": "main",
+    "commit": "e32c0311781861876d4a5b2c37fa98e292d3cbbe",
+    "included": true
+  },
+  {
+    "repository": "design",
+    "branch": "responsive-hero",
+    "commit": "fcee9e97b09d3029df36b8a7d58fb9d98047dcbc",
+    "included": true
+  },
+  {
+    "repository": "design",
+    "branch": "orange-cream-preview",
+    "commit": "ec0980d7828d22a7a4a0d24ecf73966bdb416bdd",
+    "included": true
+  },
+  {
+    "repository": "design",
+    "branch": "integrate-v1",
+    "commit": "12487b03ab3ab1cb64d38272eecf391628f896d3",
+    "included": true
+  },
+  {
+    "repository": "deployment",
+    "branch": "main",
+    "commit": "2ecb9f98c2b5bc242d661363e415baaa1bcd9bf5",
+    "included": true
+  },
+  {
+    "repository": "deployment",
+    "branch": "origin/main",
+    "commit": "156a92f3ecb57f4039ad66a10dce6f1cd25f553c",
+    "included": true
+  },
+  {
+    "repository": "deployment",
+    "branch": "v0.1^{}",
+    "commit": "156a92f3ecb57f4039ad66a10dce6f1cd25f553c",
+    "included": true
+  }
+]

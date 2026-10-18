@@ -8,9 +8,9 @@ not ok 1 - reading offsets survive history restoration interrupted by menu
   failureType: 'testCodeFailure'
   error: |-
     Expected values to be strictly equal:
-    
+
     2300 !== 1400
-    
+
   code: 'ERR_ASSERTION'
   name: 'AssertionError'
   expected: 1400
@@ -32,9 +32,9 @@ not ok 2 - reading offsets survive history restoration interrupted by hash
   failureType: 'testCodeFailure'
   error: |-
     Expected values to be strictly equal:
-    
+
     2300 !== 1400
-    
+
   code: 'ERR_ASSERTION'
   name: 'AssertionError'
   expected: 1400

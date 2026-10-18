@@ -19,3 +19,9 @@
 6. 触屏规则等待后续补充，当前交互保持既有实现。
 
 证据与预览回执：`reports/v1-preview/`。详细来源见 `README.md`、`progress.md` 与 `design/progress.md`。
+
+## 已上传预览
+
+https://mayu-v1-review-20261018--mayu-homepage.netlify.app/
+
+最终部署回执见 `reports/v1-preview/deploy-receipt.json`，Netlify状态、线上HTTP与截图检查均已保存。下一步等待用户最终上线确认。

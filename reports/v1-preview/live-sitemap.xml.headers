@@ -1,16 +1,15 @@
 HTTP/1.1 200 Connection established
 
-HTTP/2 200 
-accept-ranges: bytes
-age: 2
-cache-control: public,max-age=0,must-revalidate
-cache-status: "Netlify Edge"; fwd=miss; fwd-status=200; stored
-content-type: application/xml
-date: Sun, 18 Oct 2026 10:51:34 GMT
-etag: "3030c261c6c2f87b5a1a1fb101c5ac62-ssl"
-server: Netlify
-strict-transport-security: max-age=31536000; includeSubDomains; preload
-x-nf-request-id: 01M57A6SGZHTABDYP5XY4D39FX
-x-robots-tag: noindex, nofollow
-content-length: 151
-
+HTTP/1.1 200 OK
+Accept-Ranges: bytes
+Age: 2
+Cache-Control: public,max-age=0,must-revalidate
+Cache-Status: "Netlify Edge"; fwd=miss; fwd-status=200; stored
+Content-Length: 151
+Content-Type: application/xml
+Date: Sun, 18 Oct 2026 14:45:47 GMT
+Etag: "3030c261c6c2f87b5a1a1fb101c5ac62-ssl"
+Server: Netlify
+Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+X-Nf-Request-Id: 01M57QKN2XZ3E6B79EXT4HEDFV
+X-Robots-Tag: noindex, nofollow

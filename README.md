@@ -4,7 +4,7 @@
 
 ## 源码与版本
 
-- 当前发布工作区：`/Users/ma/Documents/projects/mayu-homepage-release`。
+- 主工作区：`/Users/ma/Documents/projects/mayu-homepage`；预览Worktree：`/Users/ma/Documents/projects/mayu-homepage-release`。
 - 部署仓库：`TT2TER/mayu-homepage`；GitHub的 `main` 会触发 Netlify 正式部署。
 - `v0.1` 对应已核验的生产源码提交 `156a92f3ecb57f4039ad66a10dce6f1cd25f553c`，已推送标签。
 - `design/` 通过Git subtree保留设计仓库的完整历史；包含 `responsive-hero`、`orange-cream-preview` 和原Safari修复。

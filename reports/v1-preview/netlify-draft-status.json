@@ -1,0 +1,9 @@
+{
+  "id": "6ad4db656da09179d0ff8c4b",
+  "state": "ready",
+  "context": "branch-deploy",
+  "branch": "mayu-v1-review-20261018",
+  "commit_ref": null,
+  "published_at": null,
+  "deploy_ssl_url": "https://mayu-v1-review-20261018--mayu-homepage.netlify.app"
+}

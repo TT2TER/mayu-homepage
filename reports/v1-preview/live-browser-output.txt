@@ -1,10 +1,1 @@
-page.goto: Timeout 30000ms exceeded.
-Call log:
-[2m  - navigating to "https://mayu-v1-review-20261018--mayu-homepage.netlify.app/?review=still&at=5000", waiting until "load"[22m
-
-    at /Users/ma/Documents/projects/mayu-homepage-release/scripts/check-live.cjs:7:11 {
-  log: [
-    '  - navigating to "https://mayu-v1-review-20261018--mayu-homepage.netlify.app/?review=still&at=5000", waiting until "load"'
-  ],
-  name: 'TimeoutError'
-}
+{"results":[{"width":1440,"pixelsMatch":true},{"width":390,"pixelsMatch":true,"mouseNavigation":true,"reloadPosition":{"before":2061,"after":2061}}],"errors":[]}

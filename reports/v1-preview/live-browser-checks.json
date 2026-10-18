@@ -1,0 +1,19 @@
+{
+  "url": "https://mayu-v1-review-20261018--mayu-homepage.netlify.app",
+  "results": [
+    {
+      "width": 1440,
+      "pixelsMatch": true
+    },
+    {
+      "width": 390,
+      "pixelsMatch": true,
+      "mouseNavigation": true,
+      "reloadPosition": {
+        "before": 2061,
+        "after": 2061
+      }
+    }
+  ],
+  "errors": []
+}

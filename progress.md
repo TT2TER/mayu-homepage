@@ -124,3 +124,10 @@
 
 - 普通HTML页面按历史条目保存内存阅读位置；过期恢复回调通过令牌取消。浏览器前进、后退、刷新、跨页面返回及直接论文锚点通过。
 - 新增菜单与hash打断恢复的两项源码回归，57项测试通过。独立只读审查完成限定复核，未发现新的必须修复问题；实际复现与修复证据位于 `reports/v1-preview/history-*.json` 和 `navigation-races-before.txt`。
+
+
+### 最终草稿与上线确认门槛
+
+- 预览URL：https://mayu-v1-review-20261018--mayu-homepage.netlify.app/ 。Netlify部署：`6ad4db656da09179d0ff8c4b`，已完成线上HTTP及浏览器检查。
+- 17项HTTP检查通过，覆盖公开资源／入口与9种爬虫；桌面和手机线上截图与本地产物逐像素相同，刷新阅读位置保持2061px。生产回执仍为v0.1部署 `6acfcfa419176816085ab3f5`。
+- 本轮完整记录为 `reports/v1-preview/report.md` 与 `report.html`，提交祖先关系及产物散列均已检查。正式生产推送和v1.0标签等待用户最终确认。

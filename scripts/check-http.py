@@ -5,8 +5,8 @@ d=json.loads((p/'deploy-receipt.json').read_text());url=d['deploy_url'];checks=[
 def curl(args):
  return subprocess.run(['curl','-q','--http1.1','--silent','--show-error','--retry','3','--retry-all-errors','--retry-delay','1','--max-time','40']+args,capture_output=True,check=True)
 for name in ['','robots.txt','sitemap.xml','sitemap-baidu.xml','style.css','assets/mountain-display.jpg','assets/scene-depth.png','index.html']:
- file=name or 'index.html';headers=p/('live-'+file.replace('/','-')+'.headers');body=p/('live-'+file.replace('/','-'))
- r=curl(['--max-redirs','0','-D',str(headers),'-o',str(body),'-w','%{http_code}',url+'/'+name]);code=int(r.stdout);h=headers.read_text().lower()
+ file=name or 'index.html';capture='index-redirect.html' if name=='index.html' else file;headers=p/('live-'+capture.replace('/','-')+'.headers');body=p/('live-'+capture.replace('/','-'))
+ r=curl(['--max-redirs','0','-D',str(headers),'-o',str(body),'-w','%{http_code}',url+'/'+name]);code=int(r.stdout);text=headers.read_text().strip()+'\n';headers.write_text(text);h=text.lower()
  if name=='index.html':assert code==301 and ('location: /\n' in h or 'location: '+url.lower()+'/' in h)
  else:
   assert code==200,(name,code)

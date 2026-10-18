@@ -1,0 +1,96 @@
+{
+  "url": "https://mayu-v1-review-20261018--mayu-homepage.netlify.app",
+  "transport": "HTTP/1.1 after HTTP/2 protocol error",
+  "checks": [
+    {
+      "path": "/",
+      "status": 200,
+      "matchesBuild": true,
+      "noindex": true
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "matchesBuild": true,
+      "noindex": true
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 200,
+      "matchesBuild": true,
+      "noindex": true
+    },
+    {
+      "path": "/sitemap-baidu.xml",
+      "status": 200,
+      "matchesBuild": true,
+      "noindex": true
+    },
+    {
+      "path": "/style.css",
+      "status": 200,
+      "matchesBuild": true,
+      "noindex": true
+    },
+    {
+      "path": "/assets/mountain-display.jpg",
+      "status": 200,
+      "matchesBuild": true,
+      "noindex": true
+    },
+    {
+      "path": "/assets/scene-depth.png",
+      "status": 200,
+      "matchesBuild": true,
+      "noindex": true
+    },
+    {
+      "path": "/index.html",
+      "status": 301,
+      "matchesBuild": false,
+      "noindex": true
+    },
+    {
+      "crawler": "Googlebot",
+      "sameHtml": true
+    },
+    {
+      "crawler": "bingbot",
+      "sameHtml": true
+    },
+    {
+      "crawler": "Baiduspider",
+      "sameHtml": true
+    },
+    {
+      "crawler": "OAI-SearchBot",
+      "sameHtml": true
+    },
+    {
+      "crawler": "ChatGPT-User",
+      "sameHtml": true
+    },
+    {
+      "crawler": "GPTBot",
+      "sameHtml": true
+    },
+    {
+      "crawler": "ClaudeBot",
+      "sameHtml": true
+    },
+    {
+      "crawler": "PerplexityBot",
+      "sameHtml": true
+    },
+    {
+      "crawler": "Applebot",
+      "sameHtml": true
+    }
+  ],
+  "production": {
+    "publishedDeployId": "6acfcfa419176816085ab3f5",
+    "commit": "156a92f3ecb57f4039ad66a10dce6f1cd25f553c",
+    "state": "ready",
+    "productionUnchanged": true
+  }
+}
