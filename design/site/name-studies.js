@@ -4,6 +4,14 @@
 (function (global) {
   'use strict';
   const FONT = '500 740px Impact, "Arial Narrow", sans-serif';
+  const lettering = global.NameLettering;
+  const loadMask = url => {
+    const image = new Image(); image.src = url;
+    return image.decode().then(() => image);
+  };
+  let artwork;
+  const ready = lettering ? Promise.all([loadMask(lettering.mask), loadMask(lettering.last)])
+    .then(images => { artwork = images; }) : Promise.resolve();
   const FRAME = Object.freeze({ x: 60, y: 810, width: 1500, height: 760 });
   const INK = Object.freeze({ left: 118, right: 1318, baseline: 1350, height: 480 });
   const SCALE = 1;
@@ -47,7 +55,8 @@
     if (current) result.push(current);
     return result;
   }
-  function makeMask() {
+  // Archived design studies retain their original system-font rendering.
+  function makeLegacyMask() {
     const width = FRAME.width * SCALE, height = FRAME.height * SCALE;
     const mask = canvas(width, height), c = mask.getContext('2d', { willReadFrequently: true });
     c.font = FONT; c.textBaseline = 'alphabetic';
@@ -63,6 +72,21 @@
     const prefix = metrics.width - lc.measureText('a').width;
     lc.scale(SCALE, SCALE); lc.translate(tx, baseline); lc.scale(xScale, yScale);
     lc.fillStyle = '#fff'; lc.fillText('a', prefix, 0);
+    const pixels = c.getImageData(0, 0, width, height).data;
+    const lastPixels = lc.getImageData(0, 0, width, height).data;
+    return { mask, width, height, pixels, lastPixels, glyphs: components(pixels, width, height),
+      inkBounds: alphaBounds(pixels, width, height), lastGlyphBounds: alphaBounds(lastPixels, width, height),
+      xScale, yScale };
+  }
+  function makeMask() {
+    if (!lettering) return makeLegacyMask();
+    const width = FRAME.width * SCALE, height = FRAME.height * SCALE;
+    const mask = canvas(width, height), c = mask.getContext('2d', { willReadFrequently: true });
+    if (!artwork) throw new Error('Await NameStudies.ready before drawing the name.');
+    c.drawImage(artwork[0], 0, 0);
+    const last = canvas(width, height), lc = last.getContext('2d', { willReadFrequently: true });
+    lc.drawImage(artwork[1], 0, 0);
+    const { xScale, yScale } = lettering;
     const pixels = c.getImageData(0, 0, width, height).data;
     const lastPixels = lc.getImageData(0, 0, width, height).data;
     return { mask, width, height, pixels, lastPixels, glyphs: components(pixels, width, height),
@@ -102,7 +126,7 @@
       shadow: projectedShadow(mask, LIGHT.groundShadowTipOffset.x, LIGHT.groundShadowTipOffset.y, SHADOW.softness),
       contactShadow: projectedShadow(mask, 19, 8, 1) };
     geometry[id] = { inkBounds: mask.inkBounds, alphaBounds: mask.inkBounds, lastGlyphBounds: mask.lastGlyphBounds,
-      xScale: mask.xScale, yScale: mask.yScale, font: FONT, placement: INK,
+      xScale: mask.xScale, yScale: mask.yScale, font: lettering ? 'fixed Yu Ma artwork' : FONT, placement: INK,
       placementChange: { x: 28, y: 110, originalBaseline: 1240 },
       faceColor: '#ffffff', light: LIGHT,
       shadow: { bounds: SHADOW_FRAME, tipOffset: LIGHT.groundShadowTipOffset, color: SHADOW.color,
@@ -137,5 +161,5 @@
     return { finalGlyphInk, hiddenFinalGlyphInk, hiddenFinalGlyphFraction: finalGlyphInk ? hiddenFinalGlyphInk / finalGlyphInk : 0,
       lastGlyphBounds: m.lastGlyphBounds };
   }
-  global.NameStudies = { variants, bounds, geometry, drawMiddle, draw: drawMiddle, drawGroundShadow, auditOcclusion };
+  global.NameStudies = { ready, variants, bounds, geometry, drawMiddle, draw: drawMiddle, drawGroundShadow, auditOcclusion };
 })(typeof window === 'undefined' ? globalThis : window);

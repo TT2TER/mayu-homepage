@@ -1,0 +1,352 @@
+TAP version 13
+# Subtest: waits 1500ms, resets on interaction, and cancels immediately
+ok 1 - waits 1500ms, resets on interaction, and cancels immediately
+  ---
+  duration_ms: 1.066584
+  type: 'test'
+  ...
+# Subtest: sweeps top, middle, bottom in order, never lighting two depth groups
+ok 2 - sweeps top, middle, bottom in order, never lighting two depth groups
+  ---
+  duration_ms: 1.336625
+  type: 'test'
+  ...
+# Subtest: every group advances continuously from left to right and has a dark gap
+ok 3 - every group advances continuously from left to right and has a dark gap
+  ---
+  duration_ms: 1.578166
+  type: 'test'
+  ...
+# Subtest: reduced motion can disable idle animation while retaining pointer response
+ok 4 - reduced motion can disable idle animation while retaining pointer response
+  ---
+  duration_ms: 0.20825
+  type: 'test'
+  ...
+# Subtest: both variants retain counts, common increasing centers and ten-percent narrower K3 bodies
+ok 5 - both variants retain counts, common increasing centers and ten-percent narrower K3 bodies
+  ---
+  duration_ms: 71.585292
+  type: 'test'
+  ...
+# Subtest: every close is the exact original contour interpolation in both variants
+ok 6 - every close is the exact original contour interpolation in both variants
+  ---
+  duration_ms: 13.442834
+  type: 'test'
+  ...
+# Subtest: significant true summits become close anchors without flattening their peaks
+ok 7 - significant true summits become close anchors without flattening their peaks
+  ---
+  duration_ms: 12.343083
+  type: 'test'
+  ...
+# Subtest: illustrative price paths retain every original vertex and never connect distinct ridges
+ok 8 - illustrative price paths retain every original vertex and never connect distinct ridges
+  ---
+  duration_ms: 10.827333
+  type: 'test'
+  ...
+# Subtest: the eastern bridge is one thirty-candle sequence with MA5 continuing across the old join
+ok 9 - the eastern bridge is one thirty-candle sequence with MA5 continuing across the old join
+  ---
+  duration_ms: 0.698459
+  type: 'test'
+  ...
+# Subtest: candle highs and lows also contain every retained intra-interval contour vertex
+ok 10 - candle highs and lows also contain every retained intra-interval contour vertex
+  ---
+  duration_ms: 19.185583
+  type: 'test'
+  ...
+# Subtest: OHLC inequalities and price direction remain correct with explicit simulated opening gaps
+ok 11 - OHLC inequalities and price direction remain correct with explicit simulated opening gaps
+  ---
+  duration_ms: 21.263917
+  type: 'test'
+  ...
+# Subtest: MA5 averages exactly five closes using the same price-coordinate conversion
+ok 12 - MA5 averages exactly five closes using the same price-coordinate conversion
+  ---
+  duration_ms: 13.704
+  type: 'test'
+  ...
+# Subtest: the western long rising body is reconstructed from a real flank and summit
+ok 13 - the western long rising body is reconstructed from a real flank and summit
+  ---
+  duration_ms: 0.911625
+  type: 'test'
+  ...
+# Subtest: expressive keeps stronger OHLC range and varied real bodies while closing prices remain on terrain
+ok 14 - expressive keeps stronger OHLC range and varied real bodies while closing prices remain on terrain
+  ---
+  duration_ms: 29.669417
+  type: 'test'
+  ...
+# Subtest: simulated nonzero volume remains distinct from body length and related to total range
+ok 15 - simulated nonzero volume remains distinct from body length and related to total range
+  ---
+  duration_ms: 9.388792
+  type: 'test'
+  ...
+# Subtest: variants are deterministic, do not mutate geometry and load through the browser-global API
+ok 16 - variants are deterministic, do not mutate geometry and load through the browser-global API
+  ---
+  duration_ms: 27.704125
+  type: 'test'
+  ...
+# Subtest: display MA5 uses explicit prehistory and reaches both route boundaries
+ok 17 - display MA5 uses explicit prehistory and reaches both route boundaries
+  ---
+  duration_ms: 6.25275
+  type: 'test'
+  ...
+# Subtest: events are asynchronous with varied event kinds, train lengths, sources and start gaps
+ok 18 - events are asynchronous with varied event kinds, train lengths, sources and start gaps
+  ---
+  duration_ms: 32.898666
+  type: 'test'
+  ...
+# Subtest: the compatibility period hint has no effect on packet schedules
+ok 19 - the compatibility period hint has no effect on packet schedules
+  ---
+  duration_ms: 10.876292
+  type: 'test'
+  ...
+# Subtest: sampling on five-second offsets does not repeat a short playback pattern
+ok 20 - sampling on five-second offsets does not repeat a short playback pattern
+  ---
+  duration_ms: 20.935041
+  type: 'test'
+  ...
+# Subtest: each downstream packet waits for its explicit parent arrival and relay delay
+ok 21 - each downstream packet waits for its explicit parent arrival and relay delay
+  ---
+  duration_ms: 11.272833
+  type: 'test'
+  ...
+# Subtest: fanout duplicates the same arrived packet to exactly two distinct receivers
+ok 22 - fanout duplicates the same arrived packet to exactly two distinct receivers
+  ---
+  duration_ms: 9.179417
+  type: 'test'
+  ...
+# Subtest: a working event overlaps later starts elsewhere, with multiple simultaneous directions
+ok 23 - a working event overlaps later starts elsewhere, with multiple simultaneous directions
+  ---
+  duration_ms: 12.747875
+  type: 'test'
+  ...
+# Subtest: active link load is bounded without rendering the full candidate pool
+ok 24 - active link load is bounded without rendering the full candidate pool
+  ---
+  duration_ms: 47.733542
+  type: 'test'
+  ...
+# Subtest: every sender has at most two simultaneous receivers across both event streams
+ok 25 - every sender has at most two simultaneous receivers across both event streams
+  ---
+  duration_ms: 79.612584
+  type: 'test'
+  ...
+# Subtest: hop speed is distance-adaptive and slightly slower, with room between train packets
+ok 26 - hop speed is distance-adaptive and slightly slower, with room between train packets
+  ---
+  duration_ms: 6.137667
+  type: 'test'
+  ...
+# Subtest: planning boundaries preserve cross-window packets and never reset all events together
+ok 27 - planning boundaries preserve cross-window packets and never reset all events together
+  ---
+  duration_ms: 23.230583
+  type: 'test'
+  ...
+# Subtest: an idle frame draws nothing and returns the actual next wake delay
+ok 28 - an idle frame draws nothing and returns the actual next wake delay
+  ---
+  duration_ms: 2.457417
+  type: 'test'
+  ...
+# Subtest: head and phone participate naturally in real links without periodic alternation
+ok 29 - head and phone participate naturally in real links without periodic alternation
+  ---
+  duration_ms: 24.816875
+  type: 'test'
+  ...
+# Subtest: active channels use a single cold core and soft light with no dark stroke
+ok 30 - active channels use a single cold core and soft light with no dark stroke
+  ---
+  duration_ms: 3.905333
+  type: 'test'
+  ...
+# Subtest: reduced motion is a fixed sparse topology without packet sweeps or changing timers
+ok 31 - reduced motion is a fixed sparse topology without packet sweeps or changing timers
+  ---
+  duration_ms: 4.196209
+  type: 'test'
+  ...
+# Subtest: clock jumps select current events and do not queue hidden historical emissions
+ok 32 - clock jumps select current events and do not queue hidden historical emissions
+  ---
+  duration_ms: 5.503125
+  type: 'test'
+  ...
+# Subtest: deterministic sampling and old methods do not depend on render history
+ok 33 - deterministic sampling and old methods do not depend on render history
+  ---
+  duration_ms: 8.414166
+  type: 'test'
+  ...
+# Subtest: source geometry remains unchanged and all packet endpoints are actual supplied anchors
+ok 34 - source geometry remains unchanged and all packet endpoints are actual supplied anchors
+  ---
+  duration_ms: 8.804125
+  type: 'test'
+  ...
+# Subtest: invalid and isolated graphs fail clearly or remain quiet
+ok 35 - invalid and isolated graphs fail clearly or remain quiet
+  ---
+  duration_ms: 0.398125
+  type: 'test'
+  ...
+# Subtest: foreground positions and inverse pointer geometry share one affine map
+ok 36 - foreground positions and inverse pointer geometry share one affine map
+  ---
+  duration_ms: 4.351042
+  type: 'test'
+  ...
+# Subtest: K3 spacing remains approximately absolute across the annotated ridges
+ok 37 - K3 spacing remains approximately absolute across the annotated ridges
+  ---
+  duration_ms: 17.077625
+  type: 'test'
+  ...
+# Subtest: the precise front cairn remains an occluder above the general foreground boundary
+ok 38 - the precise front cairn remains an occluder above the general foreground boundary
+  ---
+  duration_ms: 0.171916
+  type: 'test'
+  ...
+# Subtest: foreground discovery begins only below the lowest ridge, preserving inter-ridge interaction
+ok 39 - foreground discovery begins only below the lowest ridge, preserving inter-ridge interaction
+  ---
+  duration_ms: 13.824208
+  type: 'test'
+  ...
+# Subtest: foreground handoff moves a local bright spot continuously between adjacent lower routes
+ok 40 - foreground handoff moves a local bright spot continuously between adjacent lower routes
+  ---
+  duration_ms: 32.314833
+  type: 'test'
+  ...
+# Subtest: short paths have a bounded local heat footprint instead of a whole-path Gaussian
+ok 41 - short paths have a bounded local heat footprint instead of a whole-path Gaussian
+  ---
+  duration_ms: 15.8045
+  type: 'test'
+  ...
+# Subtest: the direct-interaction region stays unprojected through endpoint and depth transitions
+ok 42 - the direct-interaction region stays unprojected through endpoint and depth transitions
+  ---
+  duration_ms: 30.416125
+  type: 'test'
+  ...
+# Subtest: screen-space caps and short-route limits work at different viewport widths
+ok 43 - screen-space caps and short-route limits work at different viewport widths
+  ---
+  duration_ms: 10.868666
+  type: 'test'
+  ...
+# Subtest: adjacent short ownership intervals never produce three simultaneous targets
+ok 44 - adjacent short ownership intervals never produce three simultaneous targets
+  ---
+  duration_ms: 2.826542
+  type: 'test'
+  ...
+# Subtest: a short gap between lower routes blends their endpoints without revealing the skyline
+ok 45 - a short gap between lower routes blends their endpoints without revealing the skyline
+  ---
+  duration_ms: 14.091584
+  type: 'test'
+  ...
+# Subtest: foreground radius stays unchanged near a ridge and grows moderately only in the far foreground
+ok 46 - foreground radius stays unchanged near a ridge and grows moderately only in the far foreground
+  ---
+  duration_ms: 16.129625
+  type: 'test'
+  ...
+# Subtest: foreground depth changes grow the local heat footprint continuously
+ok 47 - foreground depth changes grow the local heat footprint continuously
+  ---
+  duration_ms: 2.256
+  type: 'test'
+  ...
+# Subtest: widening the far foreground leaves handoff shares and participating routes unchanged
+ok 48 - widening the far foreground leaves handoff shares and participating routes unchanged
+  ---
+  duration_ms: 19.046542
+  type: 'test'
+  ...
+# Subtest: all paths and nodes use the original photo coordinate space
+ok 49 - all paths and nodes use the original photo coordinate space
+  ---
+  duration_ms: 4.536542
+  type: 'test'
+  ...
+# Subtest: background candle routes are open chronological profiles, with no near cairn paths
+ok 50 - background candle routes are open chronological profiles, with no near cairn paths
+  ---
+  duration_ms: 14.373541
+  type: 'test'
+  ...
+# Subtest: background route coverage includes western hill and multiple internal mountain crowns
+ok 51 - background route coverage includes western hill and multiple internal mountain crowns
+  ---
+  duration_ms: 0.403041
+  type: 'test'
+  ...
+# Subtest: the red joins remain while the round 9 green loop trims the western crown
+ok 52 - the red joins remain while the round 9 green loop trims the western crown
+  ---
+  duration_ms: 0.26175
+  type: 'test'
+  ...
+# Subtest: round 9 keeps the central red boundary and cuts both green-crossed ends
+ok 53 - round 9 keeps the central red boundary and cuts both green-crossed ends
+  ---
+  duration_ms: 0.258375
+  type: 'test'
+  ...
+# Subtest: annotated and added relay nodes remain distinct, including hood and hand-held phone
+ok 54 - annotated and added relay nodes remain distinct, including hood and hand-held phone
+  ---
+  duration_ms: 0.099208
+  type: 'test'
+  ...
+# Subtest: depth boundaries and closed cairn provide the requested foreground overlap
+ok 55 - depth boundaries and closed cairn provide the requested foreground overlap
+  ---
+  duration_ms: 0.163792
+  type: 'test'
+  ...
+# Subtest: reading offsets survive history restoration interrupted by menu
+ok 56 - reading offsets survive history restoration interrupted by menu
+  ---
+  duration_ms: 1.817709
+  type: 'test'
+  ...
+# Subtest: reading offsets survive history restoration interrupted by hash
+ok 57 - reading offsets survive history restoration interrupted by hash
+  ---
+  duration_ms: 0.517833
+  type: 'test'
+  ...
+1..57
+# tests 57
+# suites 0
+# pass 57
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 431.245542

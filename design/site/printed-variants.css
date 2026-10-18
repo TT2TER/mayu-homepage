@@ -1,10 +1,12 @@
+/* Use the approved medium face when available; fallback families get real bold. */
+@font-face{font-family:"Intro Emphasis";src:local("Helvetica Neue Medium"),local("HelveticaNeue-Medium");font-weight:700;font-style:normal;font-display:swap}
 /* Printed introduction variants: 20px type, individual white lines. */
 .printed-study .scene-fade,.printed-study .scroll-cue{display:none}
 .printed-study .about-landscape .identity{position:absolute;top:61%;left:4%;width:36%;max-width:none;padding:0;background:none;border:0;border-radius:0;box-shadow:none;backdrop-filter:none;transform:none;color:#000;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:20px;line-height:1.65;font-weight:400;letter-spacing:-.02em;text-shadow:none}
 .printed-study .identity:before{display:none}
 .printed-study .identity p{display:block;margin:0;font-size:inherit;line-height:inherit}
 .printed-study .identity .intro-first,.printed-study .identity .intro-second{display:inline;margin:0;padding:2px 0;border:0;background:#fff;box-shadow:6px 0 #fff,-6px 0 #fff;box-decoration-break:clone;-webkit-box-decoration-break:clone;font-family:inherit;font-size:inherit;line-height:inherit}
-.printed-study .about-landscape .identity strong{font-weight:500}
+.printed-study .about-landscape .identity strong{font-family:"Intro Emphasis",Helvetica,Arial,sans-serif;font-weight:700;font-synthesis:weight}
 .printed-study .identity a{color:inherit;text-decoration:none;text-shadow:none}
 .printed-study .identity a:hover{text-decoration:underline;text-decoration-color:currentColor}
 .printed-study .identity .contact-row{display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:4px;margin-top:15px;padding:0;border:0;color:#000;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;line-height:1.6;font-weight:400;letter-spacing:0;text-shadow:none}

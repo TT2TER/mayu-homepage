@@ -123,5 +123,5 @@
     schedule();
   }
   new ResizeObserver(resize).observe(canvas);canvas.addEventListener('contextlost',()=>{canvas.dataset.context='lost';});canvas.addEventListener('contextrestored',resize);window.addEventListener('error',e=>{canvas.dataset.renderError=e.message;});
-  Promise.all([photo.decode(),depthReady,document.fonts.ready]).then(()=>{ready=true;resize();}).catch(e=>console.error(e));
+  Promise.all([photo.decode(),depthReady,document.fonts.ready,NameStudies.ready]).then(()=>{ready=true;resize();}).catch(e=>console.error(e));
 })();
