@@ -1,0 +1,22 @@
+{
+  "index.html": {
+    "same": false,
+    "commitSha256": "b32023a07ffee236d9670c924f33f9583ec7ee5356598edbadd5f78fab1493db",
+    "liveSha256": "17659b0bbc9e57e830f710b5725fab6bcf7392eb4c7db15891b9a3f74386cb20"
+  },
+  "robots.txt": {
+    "same": true,
+    "commitSha256": "507bd07146655d3d40a19d16f127c4f926631a7f56ead82dfb83d02c4fc866c8",
+    "liveSha256": "507bd07146655d3d40a19d16f127c4f926631a7f56ead82dfb83d02c4fc866c8"
+  },
+  "sitemap.xml": {
+    "same": true,
+    "commitSha256": "3126ca56a5ff5fbc272108d806c0da7182e7f52ef56573306fa5db9d083715bb",
+    "liveSha256": "3126ca56a5ff5fbc272108d806c0da7182e7f52ef56573306fa5db9d083715bb"
+  },
+  "sitemap-baidu.xml": {
+    "same": true,
+    "commitSha256": "d5386c913ba3b5cc78488c6fe8f81ff2a8d33deb89eee1a8b3d42eb2a4a5a8cb",
+    "liveSha256": "d5386c913ba3b5cc78488c6fe8f81ff2a8d33deb89eee1a8b3d42eb2a4a5a8cb"
+  }
+}

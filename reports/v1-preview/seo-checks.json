@@ -1,0 +1,18 @@
+{
+  "metadataMatchesV01": true,
+  "verificationTagsPreserved": true,
+  "canonical": "https://mayu.my/",
+  "structuredEntities": 8,
+  "paperAnchors": [
+    "token-communication-survey",
+    "m3-market-microstructure",
+    "lgvsc",
+    "multimodal-video-semantic-communication",
+    "underwater-semantic-transmission",
+    "text-guided-token-communication"
+  ],
+  "lightDomContent": true,
+  "duplicateIds": false,
+  "robotsAndSitemapsMatchV01": true,
+  "draftNoindexHeader": true
+}

@@ -1,0 +1,63 @@
+{
+  "results": [
+    {
+      "width": 1440,
+      "overflow": false,
+      "lightPapers": 6,
+      "canvas": 1440,
+      "contactBottom": 688.59375,
+      "photoBottom": 972.96875,
+      "pixelIdenticalToMergedDesign": true
+    },
+    {
+      "width": 1200,
+      "overflow": false,
+      "lightPapers": 6,
+      "canvas": 1440,
+      "contactBottom": 688.609375,
+      "photoBottom": 972.96875,
+      "pixelIdenticalToMergedDesign": true
+    },
+    {
+      "width": 768,
+      "overflow": false,
+      "lightPapers": 6,
+      "canvas": 1440,
+      "contactBottom": 688.609375,
+      "photoBottom": 972.96875,
+      "pixelIdenticalToMergedDesign": true
+    },
+    {
+      "width": 486,
+      "overflow": false,
+      "lightPapers": 6,
+      "canvas": 933.109375,
+      "contactBottom": 472.875,
+      "photoBottom": 630.484375,
+      "pixelIdenticalToMergedDesign": true
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "lightPapers": 6,
+      "canvas": 748.796875,
+      "contactBottom": 413.390625,
+      "photoBottom": 505.9375,
+      "pixelIdenticalToMergedDesign": true
+    },
+    {
+      "width": 320,
+      "overflow": false,
+      "lightPapers": 6,
+      "canvas": 614.390625,
+      "contactBottom": 360.4375,
+      "photoBottom": 415.125,
+      "pixelIdenticalToMergedDesign": true
+    }
+  ],
+  "keyboardNavigation": true,
+  "touchAndIdle": true,
+  "reducedMotion": true,
+  "noJavaScriptPaperCount": 6,
+  "errors": []
+}

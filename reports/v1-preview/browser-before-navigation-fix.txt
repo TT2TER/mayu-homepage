@@ -1,0 +1,12 @@
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+'BODY' !== 'H2'
+
+    at /Users/ma/Documents/projects/mayu-homepage-release/scripts/check-browser.cjs:15:124 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: 'BODY',
+  expected: 'H2',
+  operator: 'strictEqual',
+  diff: 'simple'
+}

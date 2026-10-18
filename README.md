@@ -1,47 +1,41 @@
 # mayu.my 科研主页
 
-Yu Ma（马煜）的静态科研主页：https://mayu.my/ 。正文为英文，姓名为中英文；包含 About、Research、Publications 和 Funding。
+正式地址为 https://mayu.my/ 。英文正文、论文作者顺序、Funding 与搜索验证配置沿用既有主页；山景首页整合连续裁切、文字缩放、K线与MA5视觉及导航位置恢复。
 
-## 源码与发布
+## 源码与版本
 
-- 本地目录：`/Users/ma/Documents/projects/mayu-homepage`。
-- GitHub：https://github.com/TT2TER/mayu-homepage ，源码分支 `main`。
-- Netlify 监听 GitHub 的 main，推送后自动执行 `node build.mjs`，发布 `dist/`。
-- 主域名 mayu.my；Cloudflare 管理 DNS 和代理，Netlify 托管网站与源站 HTTPS。www、/index.html 和 Netlify 默认生产域名跳转到正式主页。
-- `dist/`、`qa/`、`.netlify/` 为本地构建、证据及工具状态目录，已忽略。
+- 当前发布工作区：`/Users/ma/Documents/projects/mayu-homepage-release`。
+- 部署仓库：`TT2TER/mayu-homepage`；GitHub的 `main` 会触发 Netlify 正式部署。
+- `v0.1` 对应已核验的生产源码提交 `156a92f3ecb57f4039ad66a10dce6f1cd25f553c`，已推送标签。
+- `design/` 通过Git subtree保留设计仓库的完整历史；包含 `responsive-hero`、`orange-cream-preview` 和原Safari修复。
+- 本轮先部署草稿预览；用户最终确认后才推送生产 `main` 并建立 `v1.0` 标签。
 
-## 文件
+## 构建与检索
 
-- `index.html`：可见内容、Google/百度验证标签、分享信息、JSON-LD。
-- `style.css`：主页排版与响应式样式。
-- `robots.txt`：公开抓取规则和标准站点地图地址。
-- `sitemap.xml`：标准站点地图。
-- `sitemap-baidu.xml`：百度自适应页面标记 `pc,mobile`。
-- `_redirects`：重复入口的 301 规则。
-- `build.mjs`：将以上六个网站文件复制到 dist。
-- `netlify.toml`：构建与发布配置。
-- `SEO.md` / `SEO.html`：搜索优化、平台操作和验收记录。
-- `progress.md`：按时间记录部署回执与未完成事项。
-- `PLAN_NEXT.md`：下一轮执行交接。
-
-## 内容维护
-
-论文保留完整作者顺序并加粗 Yu Ma，期刊与会议使用既有正式缩写，综述标记 Survey。Funding 使用用户提供的 Qiyan 项目名称、Grant Recipient 和 2024–2026。研究介绍保持适合公开主页的宽泛表述。
-
-新增论文时同时维护可见列表、唯一锚点和 ScholarlyArticle 数据。ProfilePage 的 mainEntity 指向本人 Person；作品通过 hasPart 引用，其 url 指向论文来源。Google/Bing 验证与收录状态以平台最新结果为准。
-
-## 常用检查
-
-开始编辑前检查工作区和远程分支，保留用户通过 GitHub 网页提交的更改。构建命令：
+- `design/site/printed-left.html`、相关CSS与脚本是视觉源码。
+- `seo-head.html` 保存生产验证标签、canonical、分享元数据及8个JSON-LD实体。
+- `build.mjs` 构建设计入口，将学术正文转换为普通HTML并为其CSS添加作用范围，生成根目录 `index.html` 和 `dist/index.html`。根目录入口为可直接预览的构建结果。
+- 6篇论文使用既有锚点，关闭JavaScript时仍能读取正文；Google/百度验证标签、robots与两份sitemap保留。
+- `style.css` 保留原公开资源路径。部署图片仅包含展示照片与地形纹理，原照、测试和历史截图保存在源码中。
+- 正式构建保留索引策略及原301规则；预览构建增加 `X-Robots-Tag: noindex, nofollow`，并将预览的 `/index.html` 跳回当前预览根路径。
 
 ```sh
-node build.mjs 2>&1 | tee build.log
+node build.mjs 2>&1 | tee /private/tmp/mayu-production-build.txt
+DEPLOY_TARGET=preview node build.mjs 2>&1 | tee /private/tmp/mayu-preview-build.txt
 ```
 
-发布后核验 Netlify 的 ready 状态、commit_ref 和线上实际内容；涉及视觉修改时截图检查。DNS/TLS 检查使用 curl -q，必要时用 --noproxy '*' 对照，保持证书校验。
+## 本地核验
 
-## 关联入口
+```sh
+python3 scripts/check-seo.py 2>&1 | tee /private/tmp/mayu-seo-check.txt
+node --test design/site/test-idle-market-sweep.js design/site/test-market-candles.js design/site/test-network.js design/site/test-scene-core.js design/site/test-scene-data.js 2>&1 | tee /private/tmp/mayu-unit-tests.txt
+node scripts/check-browser.cjs 2>&1 | tee /private/tmp/mayu-browser-check.txt
+node scripts/check-first-frame.cjs 2>&1 | tee /private/tmp/mayu-first-frame-check.txt
+node scripts/check-resize.cjs after 2>&1 | tee /private/tmp/mayu-resize-check.txt
+```
 
-- GitHub 个人 README：https://github.com/TT2TER/TT2TER/blob/main/README.md 。
-- 博客：https://blog.1314171.xyz/ ，源码位于 `/Users/ma/Documents/TT2TER.Github.io`；仓库 TT2TER/TT2TER.Github.io 的 `source` 分支触发独立 Netlify 部署。
-- 博客导航和关于页使用博士帽链接到 mayu.my；维护方法见博客目录的 README.md。
+浏览器检查使用本机已有Playwright与Chrome，启动时遵循本机沙箱提权规则。`check-seo.py` 针对预览构建检查noindex响应头文件。检索平台的抓取、收录、排名状态继续以平台实际结果为准。
+
+## 核验与交接
+
+本轮证据位于 `reports/v1-preview/`。历史检索配置和平台回执保留于 `SEO.md`、`SEO.html`、`progress.md`；设计历史记录位于 `design/`。触屏交互规则等待后续补充。

@@ -1,0 +1,7 @@
+{
+  "id": "6acfcfa419176816085ab3f5",
+  "state": "ready",
+  "commit_ref": "156a92f3ecb57f4039ad66a10dce6f1cd25f553c",
+  "deploy_ssl_url": "https://main--mayu-homepage.netlify.app",
+  "context": "production"
+}

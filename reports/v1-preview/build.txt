@@ -1,0 +1,2 @@
+Built approved printed-left homepage with cacheable image assets and embedded styles, academic body and interaction modules.
+{"built":"dist","preview":true,"academicContent":"light DOM","canonical":"https://mayu.my/"}

@@ -1,0 +1,24 @@
+{
+  "id": "4c8c43b4-cb8d-4fb8-8a46-06fde81dc2bd",
+  "name": "mayu-homepage",
+  "url": "https://mayu.my",
+  "ssl_url": "https://mayu.my",
+  "custom_domain": "mayu.my",
+  "domain_aliases": [],
+  "build": {
+    "repo_url": "https://github.com/TT2TER/mayu-homepage",
+    "repo_branch": "main",
+    "cmd": "node build.mjs",
+    "dir": "dist"
+  },
+  "published_deploy": {
+    "id": "6acfcfa419176816085ab3f5",
+    "state": "ready",
+    "commit_ref": "156a92f3ecb57f4039ad66a10dce6f1cd25f553c",
+    "branch": "main",
+    "context": "production",
+    "published_at": "2026-10-14T18:53:36.420Z",
+    "deploy_ssl_url": "https://main--mayu-homepage.netlify.app",
+    "ssl_url": "https://mayu.my"
+  }
+}

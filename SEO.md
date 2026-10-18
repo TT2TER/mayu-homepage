@@ -180,3 +180,10 @@ Google ProfilePage 参考：https://developers.google.com/search/docs/appearance
 百度验证复查任务 mayu-my 已由 ACTIVE 更新为 PAUSED。DNS / Cloudflare 配置保持原样。下一步查看百度抓取与索引数据，同时保留 Google/Bing 的已提交索引申请，等待平台处理。
 
 安全记录：本次读取博客站点的 API 示例时，一处带空格的推送密钥进入工具记录。已告知用户并建议在平台重置，后续页面输出使用包含空格变体的脱敏规则。本条仅记录事件，凭据内容保留在平台。
+
+
+## 2026-10-18：设计整合预览的检索兼容性
+
+发布构建改为从 `design/site/` 的视觉源码与 `seo-head.html` 生成根入口和 `dist/`。学术正文直接位于普通HTML中，CSS使用限定作用范围以保留已确认排版；关闭JavaScript仍可读取6篇论文。原Google/百度验证、canonical、社交元数据、8个JSON-LD实体、论文锚点、robots及两份sitemap保持与v0.1一致。
+
+草稿预览通过HTTP响应头标记noindex，canonical及sitemap继续指向mayu.my。正式构建维持原索引策略。构建与浏览器核验的适用范围、回执和截图见 `reports/v1-preview/`；平台抓取、收录和排名状态仍以对应平台的实时结果为准。

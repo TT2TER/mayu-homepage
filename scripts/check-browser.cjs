@@ -1,0 +1,21 @@
+const {chromium}=require('/Users/ma/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
+const root=path.resolve(__dirname,'..'),folder=path.join(root,'reports/v1-preview');
+async function ready(p){await p.waitForFunction(()=>document.querySelector('#scene').dataset.rendered==='true');await p.evaluate(()=>document.fonts.ready);}
+(async()=>{const b=await chromium.launch({headless:true,channel:'chrome'});const results=[],errors=[];try{
+ for(const width of [1440,1200,768,486,390,320]){
+  const viewport={width,height:1000};const p=await b.newPage({viewport});p.on('pageerror',e=>errors.push(e.message));
+  await p.goto('file://'+root+'/design/site/index.html?review=still&at=5000');await ready(p);const reference=await p.screenshot();
+  const expected=await p.evaluate(()=>{const r=document.querySelector('#academic-content').shadowRoot;return [...r.querySelectorAll('h2,h3,p,.publication,.page,.pub-links a')].slice(0,35).map(e=>{const s=getComputedStyle(e);return Object.fromEntries(['fontFamily','fontSize','fontWeight','lineHeight','letterSpacing','marginTop','marginBottom','paddingTop','paddingBottom','color','display','borderBottomWidth'].map(k=>[k,s[k]]))})});
+  await p.goto('file://'+root+'/dist/index.html?review=still&at=5000');await ready(p);const current=await p.screenshot({path:path.join(folder,`${width}.png`)});
+  const actual=await p.evaluate(()=>[...document.querySelectorAll('#academic-content h2,#academic-content h3,#academic-content p,#academic-content .publication,#academic-content .page,#academic-content .pub-links a')].slice(0,35).map(e=>{const s=getComputedStyle(e);return Object.fromEntries(['fontFamily','fontSize','fontWeight','lineHeight','letterSpacing','marginTop','marginBottom','paddingTop','paddingBottom','color','display','borderBottomWidth'].map(k=>[k,s[k]]))}));
+  fs.writeFileSync(path.join(folder,`styles-${width}.json`),JSON.stringify({expected,actual},null,2));assert.deepEqual(actual,expected,`academic styles at ${width}`);
+  const m=await p.evaluate(()=>({overflow:document.documentElement.scrollWidth>innerWidth,lightPapers:document.querySelectorAll('#academic-content article.publication').length,canvas:document.querySelector('#scene').getBoundingClientRect().width,contactBottom:document.querySelector('.contact-row').getBoundingClientRect().bottom,photoBottom:document.querySelector('#scene').getBoundingClientRect().bottom}));
+  assert.equal(m.overflow,false);assert.equal(m.lightPapers,6);assert.ok(m.contactBottom<m.photoBottom);assert.ok(reference.equals(current),`light DOM screenshot equals approved merged design at ${width}`);results.push({width,...m,pixelIdenticalToMergedDesign:true});
+  if(width===390){await p.locator('.page-down').focus();await p.keyboard.press('Enter');await p.waitForTimeout(700);assert.equal(await p.evaluate(()=>document.activeElement.tagName),'H2');await p.screenshot({path:path.join(folder,'390-about.png')});}
+  await p.close();
+ }
+ const p=await b.newPage({viewport:{width:390,height:844},isMobile:true,hasTouch:true,deviceScaleFactor:3});p.on('pageerror',e=>errors.push(e.message));await p.goto('file://'+root+'/dist/index.html');await ready(p);await p.waitForFunction(()=>document.querySelector('#scene').dataset.idleState==='sweeping');await p.touchscreen.tap(170,170);await p.waitForFunction(()=>document.querySelector('#scene').dataset.idleState==='waiting');await p.locator('.page-down').tap();await p.waitForTimeout(700);assert.equal(await p.evaluate(()=>location.hash),'#about');await p.emulateMedia({reducedMotion:'reduce'});await p.goto('file://'+root+'/dist/index.html');await p.waitForFunction(()=>document.querySelector('#scene').dataset.idleState==='disabled');await p.close();
+ const nojs=await b.newPage({javaScriptEnabled:false});await nojs.goto('file://'+root+'/dist/index.html');assert.equal(await nojs.locator('article.publication').count(),6);await nojs.close();assert.deepEqual(errors,[]);
+ fs.writeFileSync(path.join(folder,'browser-checks.json'),JSON.stringify({results,keyboardNavigation:true,touchAndIdle:true,reducedMotion:true,noJavaScriptPaperCount:6,errors},null,2));console.log(JSON.stringify({results,errors}));
+ }finally{await b.close()}})().catch(e=>{console.error(e);process.exit(1)});
