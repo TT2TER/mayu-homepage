@@ -1,0 +1,25 @@
+{
+  "results": [
+    {
+      "mode": "still",
+      "layoutIdentical": true
+    },
+    {
+      "mode": "hover",
+      "layoutIdentical": true
+    },
+    {
+      "mode": "idle",
+      "layoutIdentical": true
+    },
+    {
+      "mode": "inspection",
+      "layoutIdentical": true
+    },
+    {
+      "mode": "mobile",
+      "layoutIdentical": true
+    }
+  ],
+  "errors": []
+}
