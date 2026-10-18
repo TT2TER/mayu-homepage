@@ -2,7 +2,7 @@
  const host=document.querySelector('#academic-content'),root=host?.shadowRoot||host;if(!root)return;
  function go(hash,behavior,moveFocus=false){
   let id;try{id=decodeURIComponent(hash.slice(1))}catch{return false}
-  const section=root.getElementById(id);if(!section)return false;
+  const section=root.querySelector('#'+CSS.escape(id));if(!section)return false;
   section.scrollIntoView({behavior,block:'start'});
   if(moveFocus){
    const target=section.querySelector('h2,h3')||section;
