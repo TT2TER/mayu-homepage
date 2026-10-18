@@ -1,0 +1,16 @@
+{
+  "beforeMedianMs": 371.8999999985099,
+  "afterMedianMs": 139.29999999701977,
+  "firstSceneReductionPercent": 62.54369454219471,
+  "beforeBytes": 10470262,
+  "afterBytes": 2848440,
+  "byteReductionPercent": 72.79495011681657,
+  "assets": {
+    "site/index.html": 178644,
+    "site/assets/mountain-display.jpg": 2650198,
+    "site/assets/scene-depth.png": 19598
+  },
+  "runsPerVersion": 5,
+  "viewport": "1440x1000, DPR 1",
+  "method": "Local file, fresh Chromium browser context per run, warm OS file cache; data-rendered MutationObserver; not a network or Safari timing measurement."
+}

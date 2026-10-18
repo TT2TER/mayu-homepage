@@ -1,0 +1,77 @@
+/* Keep the approved desktop scene. Narrower windows reveal its left-hand crop.
+   At 750px the visible fraction reaches 1/1.92; below it scale that crop as a unit.
+   Canvas dimensions, terrain masks and pointer coordinates share one geometry. */
+@media screen and (max-width:1439.98px) {
+ .printed-study.pv-left .hero {
+  --scene-width:max(100vw,min(1440px,192vw));
+  --scene-height:calc(var(--scene-width) * 20.1 / 37);
+  position:relative;
+  display:block;
+  aspect-ratio:auto;
+  height:auto;
+  min-height:var(--scene-height);
+  padding:0;
+  overflow:hidden;
+  background:#fff;
+ }
+ .printed-study.pv-left #scene {
+  position:absolute;
+  inset:0 auto auto 0;
+  width:var(--scene-width);
+  height:calc(var(--scene-width) * 25 / 37);
+  margin:0;
+  clip-path:none;
+ }
+ .printed-study.pv-left .about-landscape {
+  position:relative;
+  inset:auto;
+  display:block;
+  min-height:var(--scene-height);
+  padding:calc(var(--scene-height) * .63) 0 70px;
+  background:transparent;
+  text-shadow:none;
+ }
+ .printed-study.pv-left .about-landscape .identity {
+  position:relative;
+  inset:auto;
+  left:calc(var(--scene-width) * .04);
+  width:calc(var(--scene-width) * .36);
+  max-width:calc(100% - 48px);
+  /* s = viewport / 750: text scales by 0.3 + 0.7s, slower than the image. */
+  font-size:clamp(12px,calc(6px + 1.866667vw),20px);
+  line-height:1.65;
+ }
+ .printed-study.pv-left .identity .contact-row {
+  color:#fff;
+  font-size:clamp(11px,calc(8px + .8vw),14px);
+  line-height:1.6;
+  text-shadow:0 1px 2px #000,0 2px 5px #000;
+ }
+ .printed-study.pv-left .identity .intro-first,
+ .printed-study.pv-left .identity .intro-second {
+  padding:.1em 0;
+  box-shadow:.3em 0 #fff,-.3em 0 #fff;
+ }
+ .printed-study.pv-left .identity .contact-row .links {gap:.43em 1.2857em}
+ .printed-study.pv-left .identity .contact-row>a,
+ .printed-study.pv-left .identity .contact-row .links a {padding:0 .357em}
+ .printed-study.pv-left .site-header {
+  position:absolute;
+  inset:0 0 auto;
+  height:auto;
+  padding:clamp(16px,2.5vw,36px) 4%;
+  background:transparent;
+  color:#fff;
+  text-shadow:0 1px 7px #0b192f99;
+ }
+ .printed-study.pv-left .site-header nav {
+  font-size:clamp(12px,1.9vw,17px);
+  gap:clamp(14px,3vw,34px);
+ }
+ .printed-study.pv-left .page-down {top:auto;bottom:14px}
+}
+@media screen and (max-width:749.98px) {
+ .printed-study.pv-left .about-landscape {padding-bottom:28px}
+ .printed-study.pv-left .identity .contact-row {margin-top:clamp(9px,1.6vw,12px);gap:clamp(3px,.533333vw,4px)}
+ .printed-study.pv-left .page-down {left:auto;right:12px;transform:none;bottom:10px}
+}

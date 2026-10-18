@@ -1,0 +1,39 @@
+[
+  {
+    "mode": "a",
+    "errors": [],
+    "hoverOnTextUpdatesCanvas": true,
+    "pointer": {
+      "x": "203.26",
+      "y": "1791.08"
+    },
+    "hitElement": "P"
+  },
+  {
+    "mode": "b",
+    "errors": [],
+    "hoverOnTextUpdatesCanvas": true,
+    "pointer": {
+      "x": "203.26",
+      "y": "1900.01"
+    },
+    "hitElement": "P"
+  },
+  {
+    "mode": "c",
+    "errors": [],
+    "hoverOnTextUpdatesCanvas": true,
+    "pointer": {
+      "x": "183.09",
+      "y": "1605.87"
+    },
+    "hitElement": "P"
+  },
+  {
+    "navigationFunding": true,
+    "contactSectionRemoved": true
+  },
+  {
+    "mobileOverflow": false
+  }
+]

@@ -1,0 +1,6 @@
+.option-g .site-header nav{font-weight:500}
+.option-g .reading #contact{padding:30px 0 28px}
+.option-g #contact h2{margin-bottom:18px}
+.option-g #contact .contact-row{justify-content:flex-start;padding:0;font-weight:400;font-size:15px;gap:28px}
+.option-g #contact .links{gap:28px}
+@media(max-width:700px){.option-g .reading #contact{padding:26px 0}.option-g #contact .contact-row{font-size:14px;gap:18px}.option-g #contact .links{gap:18px}}

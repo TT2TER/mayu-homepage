@@ -1,0 +1,1 @@
+{"checks":{"desktopMatchesCurrentApprovedBuild":true,"continuousResizeGeometry":true,"sourceMatchesBuild":true,"mobileSweepAndPointerInterrupt":true,"keyboardNavigationFocus":true,"reducedMotion":true,"touchNavigationAndPointerDpr3":true},"errors":[]}

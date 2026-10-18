@@ -1,0 +1,34 @@
+[
+  {
+    "mode": "e",
+    "errors": [],
+    "hoverUpdates": true,
+    "hoverTarget": "P",
+    "mailLabel": "yu.ma@bit.edu.cn",
+    "publications": 6
+  },
+  {
+    "mode": "e",
+    "groundShadowChangesRockPixels": true
+  },
+  {
+    "mode": "e",
+    "mobileOverflow": false
+  },
+  {
+    "mode": "f",
+    "errors": [],
+    "hoverUpdates": true,
+    "hoverTarget": "A",
+    "mailLabel": "yu.ma@bit.edu.cn",
+    "publications": 6
+  },
+  {
+    "mode": "f",
+    "groundShadowChangesRockPixels": true
+  },
+  {
+    "mode": "f",
+    "mobileOverflow": false
+  }
+]

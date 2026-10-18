@@ -1,0 +1,11 @@
+{
+  "source": "https://mayu.my/style.css",
+  "sha256": "f62c0dab1a5cc068ec0f438d898afe8b67fddbf822a2206e255141bfe9cabe1d",
+  "localStyleMatchesLive": true,
+  "bodySectionsMatchCurrentSource": [
+    "research",
+    "publications",
+    "funding"
+  ],
+  "aboutRemainingTextVerbatim": true
+}

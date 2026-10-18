@@ -1,0 +1,72 @@
+{
+  "onMove": {
+    "lastActivity": "507.90",
+    "idleTime": "633.70",
+    "idleNext": "1374.1999999994412",
+    "idleState": "waiting",
+    "idleGroup": "",
+    "idleX": "",
+    "rendered": "true",
+    "preset": "final",
+    "context": "ready",
+    "pointerX": "644.00",
+    "pointerY": "1865.80"
+  },
+  "afterIdle": {
+    "lastActivity": "507.90",
+    "idleTime": "2300.30",
+    "idleNext": "0",
+    "idleState": "sweeping",
+    "idleGroup": "main-skyline",
+    "idleX": "-115.79",
+    "rendered": "true",
+    "preset": "final",
+    "context": "ready",
+    "pointerX": "644.00",
+    "pointerY": "1865.80"
+  },
+  "interrupted": {
+    "lastActivity": "2717.50",
+    "idleTime": "2816.90",
+    "idleNext": "1400.6",
+    "idleState": "waiting",
+    "idleGroup": "",
+    "idleX": "",
+    "rendered": "true",
+    "preset": "final",
+    "context": "ready",
+    "pointerX": "1540.00",
+    "pointerY": "1893.80"
+  },
+  "colors": {
+    "#about h2": "rgb(0, 0, 0)",
+    "#about p": "rgb(0, 0, 0)",
+    ".publication .authors": "rgb(0, 0, 0)",
+    ".publication h3 a": "rgb(0, 0, 0)",
+    ".pub-links a": "rgb(0, 0, 0)",
+    ".publication .venue": "rgb(54, 92, 112)"
+  },
+  "arrow": {
+    "hash": "#about",
+    "aboutTop": 60.265625
+  },
+  "offscreenStops": true,
+  "returnResets": true,
+  "groups": [
+    {
+      "group": "main-skyline",
+      "x": "1946.93"
+    },
+    {
+      "group": "western-central-glacier,central-glacier-front,eastern-front-ridge",
+      "x": "2372.31"
+    },
+    {
+      "group": "western-glacier-hill,terrain-boundary",
+      "x": "1837.03"
+    }
+  ],
+  "mobileOverflow": false,
+  "reducedMotion": "disabled",
+  "errors": []
+}

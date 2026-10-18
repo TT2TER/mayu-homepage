@@ -1,0 +1,77 @@
+[
+  {
+    "firstScene": 141.39999999850988,
+    "dom": 49.30000000074506,
+    "paint": [
+      {
+        "name": "first-paint",
+        "time": 84
+      },
+      {
+        "name": "first-contentful-paint",
+        "time": 84
+      }
+    ],
+    "longTasks": []
+  },
+  {
+    "firstScene": 133.10000000149012,
+    "dom": 45.19999999925494,
+    "paint": [
+      {
+        "name": "first-paint",
+        "time": 72
+      },
+      {
+        "name": "first-contentful-paint",
+        "time": 72
+      }
+    ],
+    "longTasks": []
+  },
+  {
+    "firstScene": 122.69999999925494,
+    "dom": 47,
+    "paint": [
+      {
+        "name": "first-paint",
+        "time": 64
+      },
+      {
+        "name": "first-contentful-paint",
+        "time": 64
+      }
+    ],
+    "longTasks": []
+  },
+  {
+    "firstScene": 120.10000000149012,
+    "dom": 46.100000001490116,
+    "paint": [
+      {
+        "name": "first-paint",
+        "time": 60
+      },
+      {
+        "name": "first-contentful-paint",
+        "time": 60
+      }
+    ],
+    "longTasks": []
+  },
+  {
+    "firstScene": 117.39999999850988,
+    "dom": 44.099999997764826,
+    "paint": [
+      {
+        "name": "first-paint",
+        "time": 72
+      },
+      {
+        "name": "first-contentful-paint",
+        "time": 72
+      }
+    ],
+    "longTasks": []
+  }
+]

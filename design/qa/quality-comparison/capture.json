@@ -1,0 +1,16 @@
+[
+  {
+    "version": "original",
+    "viewport": "1440x1000",
+    "deviceScaleFactor": 2,
+    "photo": "assets/mountain-original.jpg",
+    "errors": []
+  },
+  {
+    "version": "optimized",
+    "viewport": "1440x1000",
+    "deviceScaleFactor": 2,
+    "photo": "assets/mountain-display.jpg",
+    "errors": []
+  }
+]

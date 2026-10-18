@@ -1,0 +1,29 @@
+{
+  "errors": [],
+  "hoverOnTextUpdates": true,
+  "content": {
+    "intro": "I am Yu Ma (马煜), a Ph.D. student at Beijing Institute of Technology and Beijing Zhongguancun Academy. My research focuses on AI for finance and token (semantic) communication. I began my doctoral studies in September 2025. I received my bachelor's degree in Computer Science and Technology from Beijing Institute of Technology.",
+    "contactBeforeResearch": true,
+    "contactLinks": [
+      {
+        "label": "yu.ma@bit.edu.cn",
+        "href": "mailto:yu.ma@bit.edu.cn"
+      },
+      {
+        "label": "Google Scholar",
+        "href": "https://scholar.google.com/citations?hl=en&user=uhgj7ooAAAAJ"
+      },
+      {
+        "label": "GitHub",
+        "href": "https://github.com/TT2TER"
+      },
+      {
+        "label": "Blog",
+        "href": "https://blog.1314171.xyz"
+      }
+    ],
+    "foregroundChineseScript": false,
+    "navigationWeight": "500"
+  },
+  "mobileOverflow": false
+}

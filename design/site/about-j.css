@@ -1,0 +1,4 @@
+.option-j .reading,.option-j .reading p,.option-j .reading li,.option-j .reading h2,.option-j .reading h3,.option-j .reading a{color:#000}
+.option-j .reading .venue{color:#365c70}
+.scroll-cue{position:absolute;bottom:9px;left:50%;transform:translateX(-50%);z-index:4;display:flex;align-items:center;justify-content:center;width:44px;height:36px;color:#8a969c;text-decoration:none}.scroll-cue svg{width:23px;height:16px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}.scroll-cue:hover{color:#35454e}.scroll-cue:focus-visible{outline:2px solid #35454e;outline-offset:2px}
+@media(max-width:1100px){.option-j .hero{padding-bottom:40px}.option-j .scroll-cue{bottom:2px}.option-j .scene-fade{pointer-events:none}}

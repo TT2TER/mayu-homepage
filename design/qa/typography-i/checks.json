@@ -1,0 +1,23 @@
+[
+  {
+    "viewport": 1440,
+    "titleWidth": 1147.21875,
+    "authorsWidth": 1147.21875,
+    "researchWidth": 1147.21875,
+    "bodyWidth": 1147.21875,
+    "titleMaxWidth": "none",
+    "authorMaxWidth": "none",
+    "manualBreaks": 0,
+    "headingFont": "Georgia, \"Times New Roman\", serif",
+    "navigationFontSize": "17px",
+    "introFontSize": "18px",
+    "overflow": false
+  },
+  {
+    "wideOverflow": false
+  },
+  {
+    "mobileOverflow": false,
+    "errors": []
+  }
+]

@@ -1,0 +1,16 @@
+/* Typography study: serif headings, neutral text, natural full-column wrapping. */
+.option-i .site-header{padding:2.5% 4%}
+.option-i .site-header nav{font-size:17px;line-height:1.4;gap:34px;font-weight:500}
+.option-i .about-landscape{font-size:clamp(17px,1.25vw,22px);line-height:1.62;text-shadow:0 1px 2px #000,0 2px 5px #000d}
+.option-i .about-landscape strong{font-weight:600}
+.option-i .identity{top:60%;width:55%}
+.option-i .identity .contact-row{font-size:clamp(15px,1.12vw,19px);line-height:1.8;margin-top:20px;text-shadow:0 1px 2px #000,0 2px 5px #000d}
+.option-i .reading h2,.option-i .reading h3{font-family:Georgia,"Times New Roman",serif;font-weight:400;letter-spacing:-.015em}
+.option-i .reading h2{font-size:36px;line-height:1.2}
+.option-i .reading h3,.option-i .reading .publication h3 a{font-size:22px;line-height:1.4}
+.option-i .reading p,.option-i .reading li,.option-i .reading #about p,.option-i .reading .research-block,.option-i .reading .publication h3,.option-i .reading .publication p{max-width:none;width:auto;white-space:normal;word-break:normal;overflow-wrap:break-word}
+.option-i .reading .publication .authors{font-size:14px;line-height:1.6}
+@media(max-width:1100px){.option-i .site-header{height:64px;padding:0 4%}.option-i .site-header nav{font-size:16px;gap:28px}.option-i .about-landscape{font-size:18px;line-height:1.65;text-shadow:none}.option-i .identity{top:auto;width:auto}.option-i .identity .contact-row{font-size:16px;text-shadow:none}}
+@media(max-width:700px){.option-i .site-header{height:56px}.option-i .site-header nav{font-size:14px;gap:20px}.option-i .about-landscape{font-size:17px}.option-i .identity .contact-row{font-size:15px}.option-i .reading h2{font-size:31px}.option-i .reading h3,.option-i .reading .publication h3 a{font-size:21px}}
+
+.option-i .authors .author{display:inline-block;white-space:nowrap}
