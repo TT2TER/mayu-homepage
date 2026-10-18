@@ -1,0 +1,5 @@
+{
+  "status": "rejected-before-upload",
+  "reason": "Installed Netlify CLI requires --build when --context is passed",
+  "recovery": "Use the already verified preview build with --no-build and omit --context; draft mode remains the default."
+}

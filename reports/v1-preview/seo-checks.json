@@ -14,5 +14,6 @@
   "lightDomContent": true,
   "duplicateIds": false,
   "robotsAndSitemapsMatchV01": true,
-  "draftNoindexHeader": true
+  "draftNoindexHeader": true,
+  "productionIndexable": false
 }

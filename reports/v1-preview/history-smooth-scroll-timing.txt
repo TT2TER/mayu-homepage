@@ -1,0 +1,10 @@
+{"research":1171,"publications":1888,"back":1240,"forward":986,"reloadBefore":1086,"reloadAfter":1086,"returnAfter":1086}
+AssertionError [ERR_ASSERTION]: back restores reading offset
+    at /Users/ma/Documents/projects/mayu-homepage-release/scripts/check-history.cjs:13:29 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}

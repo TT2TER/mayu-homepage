@@ -1,0 +1,16 @@
+HTTP/1.1 200 Connection established
+
+HTTP/2 200 
+accept-ranges: bytes
+age: 0
+cache-control: public,max-age=0,must-revalidate
+cache-status: "Netlify Edge"; fwd=miss; fwd-status=200; stored
+content-type: application/xml
+date: Sun, 18 Oct 2026 10:51:36 GMT
+etag: "ac1efe4aa63a593f6c5b38c497cf8ca3-ssl"
+server: Netlify
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+x-nf-request-id: 01M57A6VY882H1RWQ4J9RZNG3H
+x-robots-tag: noindex, nofollow
+content-length: 267
+

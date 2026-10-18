@@ -28,10 +28,12 @@ DEPLOY_TARGET=preview node build.mjs 2>&1 | tee /private/tmp/mayu-preview-build.
 
 ```sh
 python3 scripts/check-seo.py 2>&1 | tee /private/tmp/mayu-seo-check.txt
-node --test design/site/test-idle-market-sweep.js design/site/test-market-candles.js design/site/test-network.js design/site/test-scene-core.js design/site/test-scene-data.js 2>&1 | tee /private/tmp/mayu-unit-tests.txt
+node --test scripts/test-navigation-races.cjs design/site/test-idle-market-sweep.js design/site/test-market-candles.js design/site/test-network.js design/site/test-scene-core.js design/site/test-scene-data.js 2>&1 | tee /private/tmp/mayu-unit-tests.txt
 node scripts/check-browser.cjs 2>&1 | tee /private/tmp/mayu-browser-check.txt
 node scripts/check-first-frame.cjs 2>&1 | tee /private/tmp/mayu-first-frame-check.txt
 node scripts/check-resize.cjs after 2>&1 | tee /private/tmp/mayu-resize-check.txt
+node scripts/check-history.cjs after 2>&1 | tee /private/tmp/mayu-history-check.txt
+python3 scripts/check-http.py 2>&1 | tee /private/tmp/mayu-preview-http-check.txt
 ```
 
 浏览器检查使用本机已有Playwright与Chrome，启动时遵循本机沙箱提权规则。`check-seo.py` 针对预览构建检查noindex响应头文件。检索平台的抓取、收录、排名状态继续以平台实际结果为准。

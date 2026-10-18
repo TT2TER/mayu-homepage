@@ -1,6 +1,6 @@
 from html.parser import HTMLParser
 from pathlib import Path
-import json,subprocess,re,html,xml.etree.ElementTree as ET
+import json,subprocess,re,html,sys,xml.etree.ElementTree as ET
 class Page(HTMLParser):
  def __init__(self,html):
   super().__init__(convert_charrefs=True);self.ids=[];self.metas={};self.links={};self.papers=[];self.ld=[];self.capture=False;self.jsontext='';self.templates=0;self.feed(html)
@@ -36,6 +36,11 @@ def papers(text):
 assert papers(current)==papers(source),'Paper titles/authors/venues differ from production'
 assert 'Grant Recipient' in current
 assert 'src="/cdn-cgi/' not in current
-assert (root/'dist/_headers').read_text().strip()=='/*\n  X-Robots-Tag: noindex, nofollow'
-result={'metadataMatchesV01':True,'verificationTagsPreserved':True,'canonical':'https://mayu.my/','structuredEntities':len(new.ld[0]['@graph']),'paperAnchors':new.papers,'lightDomContent':True,'duplicateIds':False,'robotsAndSitemapsMatchV01':True,'draftNoindexHeader':True}
-(root/'reports/v1-preview/seo-checks.json').write_text(json.dumps(result,indent=2));print(json.dumps(result))
+preview='--production' not in sys.argv
+if preview:
+ assert (root/'dist/_headers').read_text().strip()=='/*\n  X-Robots-Tag: noindex, nofollow'
+else:
+ assert not (root/'dist/_headers').exists()
+ assert (root/'dist/_redirects').read_bytes()==(root/'_redirects').read_bytes()
+result={'metadataMatchesV01':True,'verificationTagsPreserved':True,'canonical':'https://mayu.my/','structuredEntities':len(new.ld[0]['@graph']),'paperAnchors':new.papers,'lightDomContent':True,'duplicateIds':False,'robotsAndSitemapsMatchV01':True,'draftNoindexHeader':preview,'productionIndexable':not preview}
+(root/('reports/v1-preview/seo-checks.json' if preview else 'reports/v1-preview/seo-production-checks.json')).write_text(json.dumps(result,indent=2));print(json.dumps(result))
