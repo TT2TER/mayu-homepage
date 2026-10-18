@@ -1,0 +1,10 @@
+{
+  "browser": "Safari",
+  "entry": "site/index.html",
+  "nativeMouseResearchJump": true,
+  "researchSectionBlueOutlineAbsent": true,
+  "nativeKeyboardPublicationsJump": true,
+  "keyboardFocusTarget": "Publications heading",
+  "nextKeyboardFocus": "first publication link",
+  "builtEntryRefreshedInSafari": true
+}
