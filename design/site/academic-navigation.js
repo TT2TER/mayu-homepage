@@ -23,7 +23,9 @@
    e.preventDefault();history.pushState(null,'',hash);
   }
  });
- addEventListener('hashchange',()=>go(location.hash,'instant'));
+ // Light-DOM fragments and history positions are restored by the browser.
+ // Shadow prototypes need an explicit bridge to their internal section IDs.
+ if(root!==host)addEventListener('hashchange',()=>go(location.hash,'instant'));
  const navigation=performance.getEntriesByType('navigation')[0];
  // Browser restoration owns reload and history positions; only new links need a hash jump.
  if(location.hash&&navigation?.type==='navigate')requestAnimationFrame(()=>go(location.hash,'instant'));
