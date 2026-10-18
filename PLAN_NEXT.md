@@ -2,9 +2,9 @@
 
 ## 当前确认状态
 
-项目：`/Users/ma/Documents/projects/mayu-homepage-design`。固定开发目录：`site/`。
+当前 Worktree：`/Users/ma/Documents/projects/mayu-homepage-responsive`，分支：`responsive-hero`。基础项目：`/Users/ma/Documents/projects/mayu-homepage-design`。固定开发目录：`site/`。
 
-用户已选择四个位置方案的第一版，源页面为 `site/printed-left.html`。介绍保留 20px 的逐行白底黑字，位于山景左侧；桌面位置为照片容器高度的 63%。邮箱、Google Scholar、GitHub、Blog 使用白字与黑色阴影，保持已确认的间距。窄屏采用照片下方的可读排版。
+用户已选择四个位置方案的第一版，源页面为 `site/printed-left.html`。介绍保留 20px 的逐行白底黑字，位于山景左侧；桌面位置为照片容器高度的 63%。邮箱、Google Scholar、GitHub、Blog 使用白字与黑色阴影，保持已确认的间距。本 Worktree 窄屏采用固定左侧连续裁切，750px 以下按固定构图整体缩小；介绍与联系方式位于照片上。规则及截图见 `qa/responsive/report.md`。
 
 山景姓名、石堆遮挡与地形投影沿用第十二轮视觉。K 线维持原有鼠标交互，静止 1500ms 后从上到中再到下依次从左向右扫亮，鼠标移动立即恢复交互；系统减少动态效果时关闭自动扫描。照片与正文由白色硬边界衔接；照片底部中央设有可点击、可键盘操作的白色向下箭头，目标为 About。
 
@@ -28,3 +28,7 @@ About 开始的正文完整复用现有学术主页 `mayu.my` 的原始样式，
 ## 启动性能维护
 
 当前构建入口使用独立图片资产，保留 `site/assets/` 目录。原照或地形几何变化后运行 `python3 site/prepare-startup-assets.py`，再构建；详见 `qa/startup/report.md`。本机性能样本、桌面/窄屏截图和交互验收保存在 `qa/startup/`。
+
+## 本轮确认与后续
+
+用户已查看当前响应式效果并确认可用，授权提交本轮修改。响应式、缩放重绘及首屏绘制核验材料保存在 `qa/responsive/`。触屏交互规则等待后续补充，当前保持现有实现。

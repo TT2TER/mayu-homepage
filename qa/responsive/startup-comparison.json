@@ -1,0 +1,487 @@
+{
+  "method": "Local file URLs, fresh context per sample, alternating A/B order, five samples per device/version, warm OS file cache, review still at 5000ms; firstScene is drawing completion observed through data-rendered.",
+  "samples": [
+    {
+      "device": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000,
+        "dpr": 1
+      },
+      "version": "baseline",
+      "iteration": 0,
+      "renders": 1,
+      "firstScene": 681.6999999955297,
+      "firstSceneRenders": 1,
+      "dom": 329.5,
+      "resources": [],
+      "canvas": {
+        "width": 1440,
+        "height": 973
+      }
+    },
+    {
+      "device": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000,
+        "dpr": 1
+      },
+      "version": "responsive",
+      "iteration": 0,
+      "renders": 2,
+      "firstScene": 576.8999999985099,
+      "firstSceneRenders": 1,
+      "dom": 240.5,
+      "resources": [],
+      "canvas": {
+        "width": 1440,
+        "height": 973
+      }
+    },
+    {
+      "device": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000,
+        "dpr": 1
+      },
+      "version": "responsive",
+      "iteration": 1,
+      "renders": 2,
+      "firstScene": 387.79999999701977,
+      "firstSceneRenders": 1,
+      "dom": 157.59999999403954,
+      "resources": [],
+      "canvas": {
+        "width": 1440,
+        "height": 973
+      }
+    },
+    {
+      "device": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000,
+        "dpr": 1
+      },
+      "version": "baseline",
+      "iteration": 1,
+      "renders": 1,
+      "firstScene": 409.30000000447035,
+      "firstSceneRenders": 1,
+      "dom": 176.10000000149012,
+      "resources": [],
+      "canvas": {
+        "width": 1440,
+        "height": 973
+      }
+    },
+    {
+      "device": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000,
+        "dpr": 1
+      },
+      "version": "baseline",
+      "iteration": 2,
+      "renders": 1,
+      "firstScene": 467.5,
+      "firstSceneRenders": 1,
+      "dom": 164.79999999701977,
+      "resources": [],
+      "canvas": {
+        "width": 1440,
+        "height": 973
+      }
+    },
+    {
+      "device": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000,
+        "dpr": 1
+      },
+      "version": "responsive",
+      "iteration": 2,
+      "renders": 2,
+      "firstScene": 590.5999999940395,
+      "firstSceneRenders": 1,
+      "dom": 154.39999999850988,
+      "resources": [],
+      "canvas": {
+        "width": 1440,
+        "height": 973
+      }
+    },
+    {
+      "device": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000,
+        "dpr": 1
+      },
+      "version": "responsive",
+      "iteration": 3,
+      "renders": 2,
+      "firstScene": 406.30000000447035,
+      "firstSceneRenders": 1,
+      "dom": 149.60000000149012,
+      "resources": [],
+      "canvas": {
+        "width": 1440,
+        "height": 973
+      }
+    },
+    {
+      "device": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000,
+        "dpr": 1
+      },
+      "version": "baseline",
+      "iteration": 3,
+      "renders": 1,
+      "firstScene": 432.6000000014901,
+      "firstSceneRenders": 1,
+      "dom": 170.70000000298023,
+      "resources": [],
+      "canvas": {
+        "width": 1440,
+        "height": 973
+      }
+    },
+    {
+      "device": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000,
+        "dpr": 1
+      },
+      "version": "baseline",
+      "iteration": 4,
+      "renders": 1,
+      "firstScene": 411.20000000298023,
+      "firstSceneRenders": 1,
+      "dom": 165,
+      "resources": [],
+      "canvas": {
+        "width": 1440,
+        "height": 973
+      }
+    },
+    {
+      "device": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000,
+        "dpr": 1
+      },
+      "version": "responsive",
+      "iteration": 4,
+      "renders": 2,
+      "firstScene": 378.5,
+      "firstSceneRenders": 1,
+      "dom": 155.10000000149012,
+      "resources": [],
+      "canvas": {
+        "width": 1440,
+        "height": 973
+      }
+    },
+    {
+      "device": {
+        "name": "phone",
+        "width": 390,
+        "height": 844,
+        "dpr": 3
+      },
+      "version": "baseline",
+      "iteration": 0,
+      "renders": 1,
+      "firstScene": 542.6000000014901,
+      "firstSceneRenders": 1,
+      "dom": 213.5,
+      "resources": [],
+      "canvas": {
+        "width": 780,
+        "height": 527
+      }
+    },
+    {
+      "device": {
+        "name": "phone",
+        "width": 390,
+        "height": 844,
+        "dpr": 3
+      },
+      "version": "responsive",
+      "iteration": 0,
+      "renders": 2,
+      "firstScene": 343.79999999701977,
+      "firstSceneRenders": 1,
+      "dom": 131.29999999701977,
+      "resources": [],
+      "canvas": {
+        "width": 1498,
+        "height": 1012
+      }
+    },
+    {
+      "device": {
+        "name": "phone",
+        "width": 390,
+        "height": 844,
+        "dpr": 3
+      },
+      "version": "responsive",
+      "iteration": 1,
+      "renders": 2,
+      "firstScene": 427,
+      "firstSceneRenders": 1,
+      "dom": 171.79999999701977,
+      "resources": [],
+      "canvas": {
+        "width": 1498,
+        "height": 1012
+      }
+    },
+    {
+      "device": {
+        "name": "phone",
+        "width": 390,
+        "height": 844,
+        "dpr": 3
+      },
+      "version": "baseline",
+      "iteration": 1,
+      "renders": 1,
+      "firstScene": 518.7999999970198,
+      "firstSceneRenders": 1,
+      "dom": 252.29999999701977,
+      "resources": [],
+      "canvas": {
+        "width": 780,
+        "height": 527
+      }
+    },
+    {
+      "device": {
+        "name": "phone",
+        "width": 390,
+        "height": 844,
+        "dpr": 3
+      },
+      "version": "baseline",
+      "iteration": 2,
+      "renders": 1,
+      "firstScene": 755.8000000044703,
+      "firstSceneRenders": 1,
+      "dom": 234.60000000149012,
+      "resources": [],
+      "canvas": {
+        "width": 780,
+        "height": 527
+      }
+    },
+    {
+      "device": {
+        "name": "phone",
+        "width": 390,
+        "height": 844,
+        "dpr": 3
+      },
+      "version": "responsive",
+      "iteration": 2,
+      "renders": 2,
+      "firstScene": 442,
+      "firstSceneRenders": 1,
+      "dom": 187.90000000596046,
+      "resources": [],
+      "canvas": {
+        "width": 1498,
+        "height": 1012
+      }
+    },
+    {
+      "device": {
+        "name": "phone",
+        "width": 390,
+        "height": 844,
+        "dpr": 3
+      },
+      "version": "responsive",
+      "iteration": 3,
+      "renders": 2,
+      "firstScene": 469.70000000298023,
+      "firstSceneRenders": 1,
+      "dom": 173.20000000298023,
+      "resources": [],
+      "canvas": {
+        "width": 1498,
+        "height": 1012
+      }
+    },
+    {
+      "device": {
+        "name": "phone",
+        "width": 390,
+        "height": 844,
+        "dpr": 3
+      },
+      "version": "baseline",
+      "iteration": 3,
+      "renders": 1,
+      "firstScene": 7539.5999999940395,
+      "firstSceneRenders": 1,
+      "dom": 382.5,
+      "resources": [],
+      "canvas": {
+        "width": 780,
+        "height": 527
+      }
+    },
+    {
+      "device": {
+        "name": "phone",
+        "width": 390,
+        "height": 844,
+        "dpr": 3
+      },
+      "version": "baseline",
+      "iteration": 4,
+      "renders": 1,
+      "firstScene": 595,
+      "firstSceneRenders": 1,
+      "dom": 243.09999999403954,
+      "resources": [],
+      "canvas": {
+        "width": 780,
+        "height": 527
+      }
+    },
+    {
+      "device": {
+        "name": "phone",
+        "width": 390,
+        "height": 844,
+        "dpr": 3
+      },
+      "version": "responsive",
+      "iteration": 4,
+      "renders": 2,
+      "firstScene": 1166,
+      "firstSceneRenders": 1,
+      "dom": 539.2000000029802,
+      "resources": [],
+      "canvas": {
+        "width": 1498,
+        "height": 1012
+      }
+    }
+  ],
+  "summary": [
+    {
+      "device": "desktop",
+      "version": "baseline",
+      "firstSceneMedianMs": 432.6000000014901,
+      "firstSceneSamplesMs": [
+        681.6999999955297,
+        409.30000000447035,
+        467.5,
+        432.6000000014901,
+        411.20000000298023
+      ],
+      "domMedianMs": 170.70000000298023,
+      "resourceNames": [],
+      "renderCounts": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "canvas": {
+        "width": 1440,
+        "height": 973
+      }
+    },
+    {
+      "device": "desktop",
+      "version": "responsive",
+      "firstSceneMedianMs": 406.30000000447035,
+      "firstSceneSamplesMs": [
+        576.8999999985099,
+        387.79999999701977,
+        590.5999999940395,
+        406.30000000447035,
+        378.5
+      ],
+      "domMedianMs": 155.10000000149012,
+      "resourceNames": [],
+      "renderCounts": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "canvas": {
+        "width": 1440,
+        "height": 973
+      }
+    },
+    {
+      "device": "phone",
+      "version": "baseline",
+      "firstSceneMedianMs": 595,
+      "firstSceneSamplesMs": [
+        542.6000000014901,
+        518.7999999970198,
+        755.8000000044703,
+        7539.5999999940395,
+        595
+      ],
+      "domMedianMs": 243.09999999403954,
+      "resourceNames": [],
+      "renderCounts": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "canvas": {
+        "width": 780,
+        "height": 527
+      }
+    },
+    {
+      "device": "phone",
+      "version": "responsive",
+      "firstSceneMedianMs": 442,
+      "firstSceneSamplesMs": [
+        343.79999999701977,
+        427,
+        442,
+        469.70000000298023,
+        1166
+      ],
+      "domMedianMs": 173.20000000298023,
+      "resourceNames": [],
+      "renderCounts": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "canvas": {
+        "width": 1498,
+        "height": 1012
+      }
+    }
+  ]
+}

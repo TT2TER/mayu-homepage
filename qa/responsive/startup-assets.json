@@ -1,0 +1,33 @@
+{
+  "files": [
+    {
+      "file": "index.html",
+      "baselineBytes": 178644,
+      "currentBytes": 181581,
+      "deltaBytes": 2937,
+      "identical": false
+    },
+    {
+      "file": "assets/mountain-display.jpg",
+      "baselineBytes": 2650198,
+      "currentBytes": 2650198,
+      "deltaBytes": 0,
+      "identical": true
+    },
+    {
+      "file": "assets/scene-depth.png",
+      "baselineBytes": 19598,
+      "currentBytes": 19598,
+      "deltaBytes": 0,
+      "identical": true
+    }
+  ],
+  "baselineLocalAssets": [
+    "assets/mountain-display.jpg",
+    "assets/scene-depth.png"
+  ],
+  "currentLocalAssets": [
+    "assets/mountain-display.jpg",
+    "assets/scene-depth.png"
+  ]
+}

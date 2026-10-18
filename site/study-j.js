@@ -96,7 +96,19 @@
   canvas.addEventListener('keydown',e=>{if(!['ArrowLeft','ArrowRight','ArrowUp','ArrowDown','Escape'].includes(e.key))return;e.preventDefault();activity();if(e.key==='Escape')target=null;else{const p=target||{x:2200,y:2400};target={x:clamp(p.x+({ArrowLeft:-120,ArrowRight:120}[e.key]||0),0,W),y:clamp(p.y+({ArrowUp:-100,ArrowDown:100}[e.key]||0),C.y,C.y+C.height)};}schedule();});
   function stop(){clearTimeout(wake);cancelAnimationFrame(raf);wake=raf=0;lastFrame=0;}
   document.addEventListener('visibilitychange',()=>document.hidden?stop():(activity(),schedule()));new IntersectionObserver(es=>{heroVisible=es[0].isIntersecting;if(heroVisible){activity();schedule();}else stop();}).observe(hero);reduced.addEventListener('change',schedule);
-  function resize(){const b=canvas.getBoundingClientRect(),dpr=Math.min(2,devicePixelRatio||1),w=Math.round(b.width*dpr),h=Math.round(b.height*dpr);if(canvas.width!==w||canvas.height!==h){canvas.width=w;canvas.height=h;}schedule();}
+  function resize(){
+    if(!ready)return;
+    const b=canvas.getBoundingClientRect(),dpr=Math.min(2,devicePixelRatio||1),w=Math.round(b.width*dpr),h=Math.round(b.height*dpr);
+    if(w<=0||h<=0)return;
+    if(canvas.width!==w||canvas.height!==h){
+      if(canvas.width!==w)canvas.width=w;
+      if(canvas.height!==h)canvas.height=h;
+      // Repaint an existing scene before the observer returns. Initial loading
+      // follows the normal RAF path so its first frame is drawn only once.
+      if(canvas.dataset.rendered==='true')render(performance.now()-start);
+    }
+    schedule();
+  }
   new ResizeObserver(resize).observe(canvas);canvas.addEventListener('contextlost',()=>{canvas.dataset.context='lost';});canvas.addEventListener('contextrestored',resize);window.addEventListener('error',e=>{canvas.dataset.renderError=e.message;});
   Promise.all([photo.decode(),depthReady,document.fonts.ready]).then(()=>{ready=true;resize();}).catch(e=>console.error(e));
 })();
